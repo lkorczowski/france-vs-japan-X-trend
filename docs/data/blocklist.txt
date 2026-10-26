@@ -1,0 +1,81 @@
+# Hall of fame exclusion list. A tracked post whose text matches any line is never shown.
+# Latin-script entries match whole words, case-insensitive. Japanese entries match as substrings.
+# Over-exclusion is acceptable: the page shows numbers, not text, and this only filters the top posts.
+
+# English
+nigger
+niggers
+nigga
+niggas
+n1gger
+negro
+negroes
+chink
+chinks
+jap
+japs
+nip
+nips
+gook
+gooks
+monkey
+monkeys
+ape
+apes
+frog
+frogs
+towelhead
+raghead
+sandnigger
+
+# French
+nègre
+nègres
+negre
+negres
+négro
+negro
+bougnoule
+bougnoules
+bicot
+bicots
+raton
+ratons
+crouille
+youpin
+youpins
+bridé
+bridés
+bridée
+bridées
+chinetoque
+chinetoques
+macaque
+macaques
+singe
+singes
+bamboula
+sale noir
+sale arabe
+sale musulman
+sales musulmans
+sale jaune
+
+# Japanese
+ニガー
+ニガ
+ニグロ
+黒んぼ
+くろんぼ
+クロンボ
+土人
+ゴキブリ
+下等生物
+動物園
+猿
+害国人
+チョン
+シナ人
+カエル野郎
+フランス野郎
+移民野郎

@@ -1,0 +1,14 @@
+{
+  "FR": {
+    "query": "(japonais OR japonaise OR japonaises OR japon) lang:fr -is:retweet",
+    "start": "2026-09-15",
+    "end": "2026-10-15",
+    "avg_per_day": 1734
+  },
+  "JA": {
+    "query": "(フランス人 OR フランス語 OR おフランス OR (フランス (差別 OR レイシスト OR 日本人 OR ヘイト OR 黒人 OR 原爆 OR 自殺))) lang:ja -is:retweet",
+    "start": "2026-09-15",
+    "end": "2026-10-15",
+    "avg_per_day": 1565
+  }
+}

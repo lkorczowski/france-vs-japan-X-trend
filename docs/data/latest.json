@@ -1,0 +1,102 @@
+{
+  "updated_at": "2026-10-26T22:35:45+00:00",
+  "day": "2026-10-25",
+  "title": "French-speaking X vs Japanese-speaking X",
+  "winner": "FR",
+  "winner_label": "French-speaking X",
+  "score_winners": {
+    "volume": "FR",
+    "heat": "FR",
+    "firepower": "FR"
+  },
+  "firepower_mode": "total",
+  "firepower_window_hours": null,
+  "war_start": "2026-10-19",
+  "sides": {
+    "FR": {
+      "label": "French-speaking X",
+      "query": "(japonais OR japonaise OR japonaises OR japon) lang:fr -is:retweet",
+      "baseline_avg": 1734,
+      "volume": 11208,
+      "heat": 6.46,
+      "firepower": 149544,
+      "top_posts": [
+        {
+          "handle": "jaylabhar",
+          "likes": 69414,
+          "views": 918643,
+          "url": "https://x.com/jaylabhar/status/2114175842704384164"
+        },
+        {
+          "handle": "ACULOTAKUytb",
+          "likes": 50033,
+          "views": 308430,
+          "url": "https://x.com/ACULOTAKUytb/status/2114438156745343044"
+        },
+        {
+          "handle": "Vyce_pacKm",
+          "likes": 11865,
+          "views": 1288617,
+          "url": "https://x.com/Vyce_pacKm/status/2114691274791887329"
+        },
+        {
+          "handle": "3arbi_1pulsif",
+          "likes": 5380,
+          "views": 31791,
+          "url": "https://x.com/3arbi_1pulsif/status/2114459740000444764"
+        },
+        {
+          "handle": "E2LaCaf",
+          "likes": 1449,
+          "views": 12745,
+          "url": "https://x.com/E2LaCaf/status/2114828020921852335"
+        }
+      ]
+    },
+    "JA": {
+      "label": "Japanese-speaking X",
+      "query": "(フランス人 OR フランス語 OR おフランス OR (フランス (差別 OR レイシスト OR 日本人 OR ヘイト OR 黒人 OR 原爆 OR 自殺))) lang:ja -is:retweet",
+      "baseline_avg": 1565,
+      "volume": 8588,
+      "heat": 5.49,
+      "firepower": 1718,
+      "top_posts": [
+        {
+          "handle": "junhagemay",
+          "likes": 1399,
+          "views": 84235,
+          "url": "https://x.com/junhagemay/status/2114683251768041612"
+        },
+        {
+          "handle": "jakusyadansei40",
+          "likes": 8,
+          "views": 608,
+          "url": "https://x.com/jakusyadansei40/status/2114026606482342380"
+        },
+        {
+          "handle": "dm6aNSoshrkKbvz",
+          "likes": 4,
+          "views": 946,
+          "url": "https://x.com/dm6aNSoshrkKbvz/status/2114763996733825338"
+        },
+        {
+          "handle": "jjppzt",
+          "likes": 2,
+          "views": 153,
+          "url": "https://x.com/jjppzt/status/2114748650354295045"
+        },
+        {
+          "handle": "rekishitos",
+          "likes": 1,
+          "views": 259,
+          "url": "https://x.com/rekishitos/status/2114216039898898465"
+        }
+      ]
+    }
+  },
+  "run": {
+    "posts_read": 85,
+    "requests": 6,
+    "estimated_cost_usd": 0.435
+  }
+}

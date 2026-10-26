@@ -1,0 +1,6 @@
+# Local only: these contain post text or internal notes
+poc_snapshot_v2.json
+audit/
+BRIEF-*.md
+__pycache__/
+.DS_Store

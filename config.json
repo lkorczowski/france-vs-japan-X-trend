@@ -1,0 +1,46 @@
+{
+  "title": "French-speaking X vs Japanese-speaking X",
+  "war_start": "2026-10-19",
+  "baseline": {
+    "start": "2026-09-15",
+    "end": "2026-10-15"
+  },
+  "sides": {
+    "FR": {
+      "label": "French-speaking X",
+      "lang": "fr",
+      "query": "(japonais OR japonaise OR japonaises OR japon) lang:fr -is:retweet"
+    },
+    "JA": {
+      "label": "Japanese-speaking X",
+      "lang": "ja",
+      "query": "(フランス人 OR フランス語 OR おフランス OR (フランス (差別 OR レイシスト OR 日本人 OR ヘイト OR 黒人 OR 原爆 OR 自殺))) lang:ja -is:retweet"
+    }
+  },
+  "hall_of_fame_handles": [
+    "BWhey69",
+    "keymee__",
+    "PkMemez0",
+    "E2LaCaf",
+    "akio_56183",
+    "4Ud1CCuftl19105",
+    "AsianDawn4",
+    "Penaltina"
+  ],
+  "tracking": {
+    "max_tracked": 30,
+    "min_likes": 1000,
+    "min_per_side": 10,
+    "discovery_per_side": 12,
+    "discovery_handles": 10
+  },
+  "limits": {
+    "max_posts_per_run": 150,
+    "max_cost_per_run_usd": 0.5
+  },
+  "prices_usd": {
+    "post_read": 0.005,
+    "counts_recent": 0.005,
+    "counts_all": 0.01
+  }
+}

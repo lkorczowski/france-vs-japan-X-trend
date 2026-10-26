@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>French vs Japanese X</title>
+<meta name="description" content="Daily scoreboard of the French-speaking X vs Japanese-speaking X clash. Volume, heat and firepower from the X API. Updated daily.">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #fcfcfb;
+  --card: #f3f2ef;
+  --line: #e2e1dc;
+  --text: #0b0b0b;
+  --text-2: #52514e;
+  --text-3: #75746f;
+  --fr: #2a78d6;
+  --ja: #eb6834;
+  --grid: #e8e7e2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #1a1a19;
+    --card: #242423;
+    --line: #353533;
+    --text: #f0efec;
+    --text-2: #c3c2b7;
+    --text-3: #9b9a92;
+    --fr: #3987e5;
+    --ja: #d95926;
+    --grid: #2e2e2c;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1a1a19;
+  --card: #242423;
+  --line: #353533;
+  --text: #f0efec;
+  --text-2: #c3c2b7;
+  --text-3: #9b9a92;
+  --fr: #3987e5;
+  --ja: #d95926;
+  --grid: #2e2e2c;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 1.5rem; line-height: 1.2; margin: 0 0 4px; letter-spacing: -0.01em; }
+h2 { font-size: 1.05rem; margin: 40px 0 12px; }
+.sub { color: var(--text-2); margin: 0; font-size: 0.95rem; }
+.hero { margin: 28px 0 8px; padding: 24px 20px; border-radius: 16px; background: var(--card); text-align: center; }
+.hero .k { color: var(--text-2); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.hero .w { font-size: clamp(2rem, 9vw, 3.2rem); font-weight: 750; line-height: 1.1; margin: 8px 0; letter-spacing: -0.02em; }
+.hero .w .dot { display: inline-block; width: 0.5em; height: 0.5em; border-radius: 50%; margin-right: 0.25em; vertical-align: 0.12em; }
+.hero .m { color: var(--text-2); font-size: 0.95rem; }
+.sides { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.side h3 { margin: 0 0 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+.sw { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+.tile { background: var(--card); border-radius: 12px; padding: 12px; margin-bottom: 8px; border: 2px solid transparent; }
+.tile.win { border-color: var(--text-3); }
+.tile .lab { color: var(--text-2); font-size: 0.8rem; display: flex; justify-content: space-between; gap: 6px; }
+.tile .val { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.25; }
+.tile .note { color: var(--text-3); font-size: 0.75rem; }
+.badge { font-size: 0.7rem; font-weight: 700; color: var(--text); background: var(--line); border-radius: 99px; padding: 0 7px; }
+.chart-wrap { position: relative; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.85rem; color: var(--text-2); margin-bottom: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.lk { width: 18px; height: 0; border-top: 2px solid; }
+.lk.d { border-top-style: dashed; }
+.tip { position: absolute; pointer-events: none; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: 0.8rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); white-space: nowrap; opacity: 0; transition: opacity 0.1s; }
+.tip b { font-variant-numeric: tabular-nums; }
+details { margin-top: 10px; color: var(--text-2); font-size: 0.85rem; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; margin-top: 8px; }
+th, td { text-align: right; padding: 4px 6px; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { text-align: left; }
+ol.posts { list-style: none; padding: 0; margin: 0; }
+ol.posts li { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+ol.posts .h { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+ol.posts .n { color: var(--text-2); font-variant-numeric: tabular-nums; font-size: 0.8rem; grid-column: 1; }
+ol.posts a { grid-row: 1 / span 2; grid-column: 2; align-self: center; color: var(--text); font-size: 0.8rem; border: 1px solid var(--line); border-radius: 99px; padding: 4px 10px; text-decoration: none; }
+ol.posts a:hover { border-color: var(--text-3); }
+.empty { color: var(--text-3); font-size: 0.85rem; }
+.method { color: var(--text-2); font-size: 0.9rem; padding-left: 18px; margin: 0; }
+.method li { margin-bottom: 6px; }
+code { font-size: 0.78rem; word-break: break-word; background: var(--card); padding: 1px 4px; border-radius: 4px; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--text-2); font-size: 0.85rem; }
+footer a { color: var(--text); }
+@media (max-width: 420px) {
+  .tile .val { font-size: 1.25rem; }
+  .sides { gap: 8px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <h1>French-speaking X vs Japanese-speaking X</h1>
+  <p class="sub">Who is winning the war on X today. Updated daily at 08:00 Paris.</p>
+
+  <section class="hero" aria-live="polite">
+    <div class="k">Today's winner</div>
+    <div class="w" id="winner">Loading</div>
+    <div class="m" id="winmeta"></div>
+  </section>
+
+  <h2>Scores</h2>
+  <div class="sides" id="tiles"></div>
+
+  <h2>Daily volume since the war started</h2>
+  <div class="legend" id="legend"></div>
+  <div class="chart-wrap" id="chartwrap">
+    <svg id="chart" role="img" aria-label="Line chart of daily post volume per side, with each side's pre-war baseline as a dashed line"></svg>
+    <div class="tip" id="tip"></div>
+  </div>
+  <details>
+    <summary>Show as a table</summary>
+    <table id="table"></table>
+  </details>
+
+  <h2>Top tracked posts</h2>
+  <div class="sides" id="posts"></div>
+
+  <h2>Method</h2>
+  <ol class="method" id="method">
+    <li>Data comes from the official X API: post counts per day and public metrics of tracked posts.</li>
+    <li id="m-queries">Queries:</li>
+    <li>Volume is the number of posts in the last full UTC day. Heat is volume divided by the daily average from 15 Sep to 15 Oct 2026. Firepower is the likes and reposts gained by tracked posts since the previous run.</li>
+    <li>Sides are the language of the post, not the nationality of the author. The winner takes 2 of the 3 scores.</li>
+    <li>Post text is never displayed, by choice. Posts matching a slur blocklist are excluded from the top posts.</li>
+  </ol>
+
+  <footer>
+    Built by Dr. Louis Korczowski · <a href="https://statur.co">statur.co</a>
+    <div id="runinfo" style="margin-top:6px;color:var(--text-3);font-size:0.78rem"></div>
+  </footer>
+</main>
+<script>
+(function () {
+  var SIDES = ["FR", "JA"];
+  var COLOR = { FR: "var(--fr)", JA: "var(--ja)" };
+  var nf = new Intl.NumberFormat("en-US");
+  var cf = new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 });
+  function el(tag, attrs, text) {
+    var e = document.createElement(tag);
+    for (var k in attrs || {}) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function svgEl(tag, attrs) {
+    var e = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+  function fmtDay(iso) {
+    return new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+  }
+  function parseCSV(text) {
+    var lines = text.trim().split(/\r?\n/), head = lines.shift().split(",");
+    return lines.map(function (l) {
+      var c = l.split(","), o = {};
+      head.forEach(function (h, i) { o[h] = c[i]; });
+      return o;
+    });
+  }
+
+  Promise.all([
+    fetch("data/latest.json", { cache: "no-store" }).then(function (r) { return r.json(); }),
+    fetch("data/history.csv", { cache: "no-store" }).then(function (r) { return r.text(); })
+  ]).then(function (res) { render(res[0], parseCSV(res[1])); })
+    .catch(function () { document.getElementById("winner").textContent = "Data unavailable"; });
+
+  function render(d, hist) {
+    var w = document.getElementById("winner");
+    w.textContent = "";
+    if (d.winner !== "Draw") {
+      var dot = el("span", { "class": "dot", "aria-hidden": "true" });
+      dot.style.background = COLOR[d.winner];
+      w.appendChild(dot);
+    }
+    w.appendChild(document.createTextNode(d.winner_label));
+    var nwins = Object.values(d.score_winners).filter(function (x) { return x === d.winner; }).length;
+    document.getElementById("winmeta").textContent =
+      (d.winner === "Draw" ? "No side took 2 of 3 scores. " : "Wins " + nwins + " of 3 scores. ") +
+      "Scores for " + fmtDay(d.day) + " (UTC).";
+
+    var tiles = document.getElementById("tiles");
+    var defs = [
+      { k: "volume", lab: "Volume", fmt: function (v) { return nf.format(v); }, note: "posts in the day" },
+      { k: "heat", lab: "Heat", fmt: function (v) { return v.toFixed(1) + "x"; }, note: "vs normal" },
+      { k: "firepower", lab: "Firepower", fmt: function (v) { return cf.format(v); },
+        note: d.firepower_mode === "delta" ? "likes + reposts gained" : "likes + reposts, first run" }
+    ];
+    SIDES.forEach(function (s) {
+      var side = d.sides[s], col = el("div", { "class": "side" });
+      var h = el("h3"); var sw = el("span", { "class": "sw", "aria-hidden": "true" });
+      sw.style.background = COLOR[s]; h.appendChild(sw); h.appendChild(document.createTextNode(side.label));
+      col.appendChild(h);
+      defs.forEach(function (df) {
+        var win = d.score_winners[df.k] === s;
+        var t = el("div", { "class": "tile" + (win ? " win" : "") });
+        var lab = el("div", { "class": "lab" }); lab.appendChild(el("span", null, df.lab));
+        if (win) lab.appendChild(el("span", { "class": "badge" }, "Wins"));
+        t.appendChild(lab);
+        t.appendChild(el("div", { "class": "val" }, df.fmt(side[df.k])));
+        t.appendChild(el("div", { "class": "note" }, df.note));
+        col.appendChild(t);
+      });
+      tiles.appendChild(col);
+    });
+
+    var posts = document.getElementById("posts");
+    SIDES.forEach(function (s) {
+      var side = d.sides[s], col = el("div", { "class": "side" });
+      var h = el("h3"); var sw = el("span", { "class": "sw", "aria-hidden": "true" });
+      sw.style.background = COLOR[s]; h.appendChild(sw); h.appendChild(document.createTextNode(side.label));
+      col.appendChild(h);
+      if (!side.top_posts.length) col.appendChild(el("p", { "class": "empty" }, "No tracked posts yet."));
+      var ol = el("ol", { "class": "posts" });
+      side.top_posts.forEach(function (p) {
+        var li = el("li");
+        li.appendChild(el("span", { "class": "h" }, "@" + p.handle));
+        li.appendChild(el("span", { "class": "n" }, cf.format(p.likes) + " likes · " + cf.format(p.views) + " views"));
+        li.appendChild(el("a", { href: p.url, target: "_blank", rel: "noopener", "aria-label": "Open the post by @" + p.handle + " on X" }, "Open"));
+        ol.appendChild(li);
+      });
+      col.appendChild(ol);
+      posts.appendChild(col);
+    });
+
+    var mq = document.getElementById("m-queries");
+    SIDES.forEach(function (s, i) {
+      mq.appendChild(document.createTextNode((i ? " " : " ") + d.sides[s].label + ": "));
+      mq.appendChild(el("code", null, d.sides[s].query));
+      mq.appendChild(document.createTextNode("."));
+    });
+    document.getElementById("runinfo").textContent =
+      "Last run " + d.updated_at.replace("T", " ").slice(0, 16) + " UTC. " +
+      d.run.posts_read + " posts read, about " + d.run.estimated_cost_usd.toFixed(2) + " USD.";
+
+    chart(d, hist.filter(function (r) { return r.date >= d.war_start; }));
+  }
+
+  function chart(d, hist) {
+    var dates = Array.from(new Set(hist.map(function (r) { return r.date; }))).sort();
+    var series = {};
+    SIDES.forEach(function (s) {
+      var m = {}; hist.forEach(function (r) { if (r.side === s) m[r.date] = +r.volume; });
+      series[s] = dates.map(function (dt) { return m[dt]; });
+    });
+
+    var legend = document.getElementById("legend");
+    SIDES.forEach(function (s) {
+      var a = el("span"); var k = el("i", { "class": "lk" }); k.style.borderColor = COLOR[s];
+      a.appendChild(k); a.appendChild(document.createTextNode(d.sides[s].label)); legend.appendChild(a);
+    });
+    var b = el("span"); var bk = el("i", { "class": "lk d" }); bk.style.borderColor = "var(--text-3)";
+    b.appendChild(bk); b.appendChild(document.createTextNode("Pre-war baseline")); legend.appendChild(b);
+
+    var svg = document.getElementById("chart");
+    var W = Math.max(300, Math.round(document.getElementById("chartwrap").clientWidth));
+    var H = W < 500 ? 240 : 300, L = 40, R = 76, T = 12, B = 28;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    var max = 0;
+    SIDES.forEach(function (s) { series[s].forEach(function (v) { if (v > max) max = v; }); });
+    var step = Math.pow(10, Math.floor(Math.log10(max || 1)));
+    var top = Math.ceil(max / step) * step; if (top / step < 4) { step /= 2; }
+    var x = function (i) { return L + (dates.length < 2 ? 0 : i * (W - L - R) / (dates.length - 1)); };
+    var y = function (v) { return T + (H - T - B) * (1 - v / top); };
+
+    for (var g = 0; g <= top + 1e-9; g += step) {
+      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(g), y2: y(g), stroke: "var(--grid)", "stroke-width": 1 }));
+      var t = svgEl("text", { x: L - 8, y: y(g) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--text-3)" });
+      t.textContent = cf.format(g); svg.appendChild(t);
+    }
+    var every = Math.max(1, Math.ceil(dates.length / (W < 500 ? 4 : 7)));
+    dates.forEach(function (dt, i) {
+      if (i % every && i !== dates.length - 1) return;
+      var t = svgEl("text", { x: x(i), y: H - 8, "text-anchor": "middle", "font-size": 11, fill: "var(--text-3)" });
+      t.textContent = fmtDay(dt); svg.appendChild(t);
+    });
+
+    var labels = [];
+    SIDES.forEach(function (s) {
+      var by = y(d.sides[s].baseline_avg);
+      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: by, y2: by, stroke: COLOR[s], "stroke-width": 1.5, "stroke-dasharray": "5 4", opacity: 0.7 }));
+      var pts = series[s].map(function (v, i) { return v == null ? null : [x(i), y(v)]; }).filter(Boolean);
+      svg.appendChild(svgEl("polyline", { points: pts.map(function (p) { return p.join(","); }).join(" "), fill: "none", stroke: COLOR[s], "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      var last = pts[pts.length - 1];
+      if (last) {
+        svg.appendChild(svgEl("circle", { cx: last[0], cy: last[1], r: 4, fill: COLOR[s], stroke: "var(--bg)", "stroke-width": 2 }));
+        labels.push({ s: s, y: last[1], x: last[0] });
+      }
+    });
+    labels.sort(function (a, b) { return a.y - b.y; });
+    for (var i = 1; i < labels.length; i++) if (labels[i].y - labels[i - 1].y < 16) labels[i].y = labels[i - 1].y + 16;
+    labels.forEach(function (lb) {
+      var t = svgEl("text", { x: lb.x + 10, y: lb.y + 4, "font-size": 12, fill: "var(--text-2)", "font-weight": 600 });
+      t.textContent = lb.s === "FR" ? "French" : "Japanese"; svg.appendChild(t);
+    });
+
+    var cross = svgEl("line", { y1: T, y2: H - B, stroke: "var(--text-3)", "stroke-width": 1, opacity: 0 });
+    svg.appendChild(cross);
+    var dots = {};
+    SIDES.forEach(function (s) {
+      dots[s] = svgEl("circle", { r: 4, fill: COLOR[s], stroke: "var(--bg)", "stroke-width": 2, opacity: 0 });
+      svg.appendChild(dots[s]);
+    });
+    var hit = svgEl("rect", { x: L - 10, y: 0, width: W - L - R + 20, height: H, fill: "transparent" });
+    svg.appendChild(hit);
+    var tip = document.getElementById("tip"), wrap = document.getElementById("chartwrap");
+    function move(ev) {
+      var r = svg.getBoundingClientRect();
+      var px = (ev.clientX - r.left) * W / r.width;
+      var i = Math.round((px - L) / ((W - L - R) / Math.max(dates.length - 1, 1)));
+      i = Math.max(0, Math.min(dates.length - 1, i));
+      cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("opacity", 0.6);
+      tip.textContent = "";
+      tip.appendChild(el("div", null, fmtDay(dates[i])));
+      SIDES.forEach(function (s) {
+        var v = series[s][i];
+        if (v == null) { dots[s].setAttribute("opacity", 0); return; }
+        dots[s].setAttribute("cx", x(i)); dots[s].setAttribute("cy", y(v)); dots[s].setAttribute("opacity", 1);
+        var row = el("div"); var sw = el("span", { "class": "sw", "aria-hidden": "true" });
+        sw.style.cssText = "display:inline-block;width:8px;height:8px;margin-right:6px;background:" + COLOR[s];
+        row.appendChild(sw); row.appendChild(document.createTextNode((s === "FR" ? "French " : "Japanese ")));
+        row.appendChild(el("b", null, nf.format(v))); tip.appendChild(row);
+      });
+      var tx = x(i) * r.width / W, tw = tip.offsetWidth;
+      tip.style.left = Math.max(0, Math.min(r.width - tw, tx - tw / 2)) + "px";
+      tip.style.top = "-8px";
+      tip.style.opacity = 1;
+    }
+    function leave() {
+      tip.style.opacity = 0; cross.setAttribute("opacity", 0);
+      SIDES.forEach(function (s) { dots[s].setAttribute("opacity", 0); });
+    }
+    hit.addEventListener("pointermove", move);
+    hit.addEventListener("pointerdown", move);
+    hit.addEventListener("pointerleave", leave);
+
+    var table = document.getElementById("table");
+    var hr = el("tr"); ["Day", "French", "Japanese"].forEach(function (h) { hr.appendChild(el("th", null, h)); });
+    table.appendChild(hr);
+    dates.forEach(function (dt, i) {
+      var tr = el("tr"); tr.appendChild(el("td", null, fmtDay(dt)));
+      SIDES.forEach(function (s) { tr.appendChild(el("td", null, series[s][i] == null ? "" : nf.format(series[s][i]))); });
+      table.appendChild(tr);
+    });
+    var br = el("tr"); br.appendChild(el("td", null, "Baseline avg"));
+    SIDES.forEach(function (s) { br.appendChild(el("td", null, nf.format(d.sides[s].baseline_avg))); });
+    table.appendChild(br);
+  }
+})();
+</script>
+</body>
+</html>
