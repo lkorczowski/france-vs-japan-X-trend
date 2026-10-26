@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-26T22:35:45.540778+00:00",
+  "run_at": "2026-10-26T22:42:51.754098+00:00",
   "day": "2026-10-25",
   "volume": {
     "FR": {
@@ -8,7 +8,7 @@
       "2026-10-22": 5895,
       "2026-10-23": 8335,
       "2026-10-24": 10456,
-      "2026-10-25": 11208
+      "2026-10-25": 11207
     },
     "JA": {
       "2026-10-20": 14558,
@@ -21,14 +21,14 @@
   },
   "scores": {
     "FR": {
-      "volume": 11208,
+      "volume": 11207,
       "heat": 6.46,
-      "firepower": 149544
+      "firepower": 158403
     },
     "JA": {
       "volume": 8588,
       "heat": 5.49,
-      "firepower": 1718
+      "firepower": 40686
     }
   },
   "posts": {
@@ -59,13 +59,6 @@
       "likes": 1,
       "reposts": 0,
       "views": 9
-    },
-    "2112695655751897191": {
-      "side": "FR",
-      "handle": "AkriosLee55728",
-      "likes": 0,
-      "reposts": 0,
-      "views": 8
     },
     "2112803455219712346": {
       "side": "FR",
@@ -116,6 +109,13 @@
       "reposts": 1,
       "views": 608
     },
+    "2114175842704384164": {
+      "side": "FR",
+      "handle": "jaylabhar",
+      "likes": 69484,
+      "reposts": 4395,
+      "views": 925494
+    },
     "2114216039898898465": {
       "side": "JA",
       "handle": "rekishitos",
@@ -130,6 +130,41 @@
       "reposts": 0,
       "views": 108
     },
+    "2114438156745343044": {
+      "side": "FR",
+      "handle": "ACULOTAKUytb",
+      "likes": 50066,
+      "reposts": 4427,
+      "views": 308798
+    },
+    "2114459740000444764": {
+      "side": "FR",
+      "handle": "3arbi_1pulsif",
+      "likes": 5384,
+      "reposts": 565,
+      "views": 31846
+    },
+    "2114644086825107516": {
+      "side": "FR",
+      "handle": "lefilsdaffou",
+      "likes": 1287,
+      "reposts": 171,
+      "views": 33249
+    },
+    "2114683251768041612": {
+      "side": "JA",
+      "handle": "junhagemay",
+      "likes": 1445,
+      "reposts": 312,
+      "views": 86692
+    },
+    "2114691274791887329": {
+      "side": "FR",
+      "handle": "Vyce_pacKm",
+      "likes": 12006,
+      "reposts": 378,
+      "views": 1306285
+    },
     "2114748650354295045": {
       "side": "JA",
       "handle": "jjppzt",
@@ -142,21 +177,28 @@
       "handle": "dm6aNSoshrkKbvz",
       "likes": 4,
       "reposts": 0,
-      "views": 946
+      "views": 950
+    },
+    "2114828020921852335": {
+      "side": "FR",
+      "handle": "E2LaCaf",
+      "likes": 1596,
+      "reposts": 113,
+      "views": 13876
     },
     "2114841544247419290": {
       "side": "FR",
       "handle": "BWhey69",
       "likes": 4,
       "reposts": 0,
-      "views": 315
+      "views": 392
     },
     "2114843486566379879": {
       "side": "FR",
       "handle": "BWhey69",
-      "likes": 42,
-      "reposts": 1,
-      "views": 661
+      "likes": 63,
+      "reposts": 2,
+      "views": 912
     },
     "2114845999000953293": {
       "side": "JA",
@@ -165,54 +207,19 @@
       "reposts": 0,
       "views": 33
     },
-    "2114175842704384164": {
-      "side": "FR",
-      "handle": "jaylabhar",
-      "likes": 69414,
-      "reposts": 4392,
-      "views": 918643
-    },
-    "2114438156745343044": {
-      "side": "FR",
-      "handle": "ACULOTAKUytb",
-      "likes": 50033,
-      "reposts": 4423,
-      "views": 308430
-    },
-    "2114691274791887329": {
-      "side": "FR",
-      "handle": "Vyce_pacKm",
-      "likes": 11865,
-      "reposts": 376,
-      "views": 1288617
-    },
-    "2114459740000444764": {
-      "side": "FR",
-      "handle": "3arbi_1pulsif",
-      "likes": 5380,
-      "reposts": 565,
-      "views": 31791
-    },
-    "2114828020921852335": {
-      "side": "FR",
-      "handle": "E2LaCaf",
-      "likes": 1449,
-      "reposts": 101,
-      "views": 12745
-    },
-    "2114683251768041612": {
+    "2114233493928706288": {
       "side": "JA",
-      "handle": "junhagemay",
-      "likes": 1399,
-      "reposts": 302,
-      "views": 84235
+      "handle": "zundamotisuki",
+      "likes": 34947,
+      "reposts": 3965,
+      "views": 533510
     },
-    "2114644086825107516": {
+    "2114792066765009233": {
       "side": "FR",
-      "handle": "lefilsdaffou",
-      "likes": 1280,
-      "reposts": 171,
-      "views": 33060
+      "handle": "regelegorila",
+      "likes": 7993,
+      "reposts": 421,
+      "views": 156711
     }
   }
 }
