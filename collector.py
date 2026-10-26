@@ -185,32 +185,43 @@ day = max(set.intersection(*(set(v) for v in volume.values())))
 blocked = load_blocklist()
 tracked_path = os.path.join(DATA, "tracked_posts.json")
 tracked = {t["id"]: t for t in load_json(tracked_path, [])}
+# Pinned posts: one post URL or ID per line. Always tracked, never evicted.
+pinned = set()
+pinned_path = os.path.join(DATA, "pinned_posts.txt")
+if os.path.exists(pinned_path):
+    with open(pinned_path, encoding="utf-8") as f:
+        for line in f:
+            m = re.search(r"(\d{15,})\s*$", line.split("?")[0].strip()) if not line.startswith("#") else None
+            if m:
+                pinned.add(m.group(1))
 # Refresh first: it is the part the scores need. Discovery then spends what is left of the run cap.
-fresh = {p["id"]: p for p in lookup(list(tracked))}
-handles_q = "(" + " OR ".join(f"from:{h}" for h in CFG["hall_of_fame_handles"]) + ") -is:retweet"
-candidates = []
+fresh = {p["id"]: p for p in lookup(sorted(set(tracked) | pinned))}
+# Discovery: the most relevant quotes of each side, plus the posts they quote.
+# Viral posts collect quotes, so the parents are where the hot posts are. (is:quote OR is:reply) returns HTTP 503.
+candidates = list(fresh.values())
 for side, s in CFG["sides"].items():
-    candidates += search(s["query"], TRACK["discovery_per_side"], sort="recency", parents=True)
-candidates += search(handles_q, TRACK["discovery_handles"])
-for p in sorted(candidates, key=lambda p: -metrics(p)["likes"]):
+    candidates += search(f"{s['query']} is:quote", TRACK["discovery_per_side"], parents=True)
+if TRACK.get("discovery_handles"):
+    handles_q = "(" + " OR ".join(f"from:{h}" for h in CFG["hall_of_fame_handles"]) + ") -is:retweet"
+    candidates += search(handles_q, TRACK["discovery_handles"])
+for p in candidates:
     side = side_of(p)
-    if not side or p["id"] in tracked or not p.get("handle") or blocked(p["text"]):
+    if not side or not p.get("handle") or blocked(p["text"]):
+        tracked.pop(p["id"], None)
+        fresh.pop(p["id"], None)
         continue
-    n_side = sum(1 for t in tracked.values() if t["side"] == side)
-    if metrics(p)["likes"] >= TRACK["min_likes"] or n_side < TRACK["min_per_side"]:
+    fresh[p["id"]] = p
+    if p["id"] not in tracked:
         tracked[p["id"]] = {"id": p["id"], "side": side, "handle": p["handle"],
                             "created_at": p.get("created_at"), "added": TODAY}
-for p in candidates:
-    if p["id"] in tracked:
-        fresh[p["id"]] = p
 for i in [i for i in tracked if i not in fresh]:
-    log(f"Tracked post {i} is gone (deleted or protected), dropped.")
+    log(f"Tracked post {i} is gone (deleted, protected or blocklisted), dropped.")
     del tracked[i]
 posts = {i: dict(side=t["side"], handle=fresh[i].get("handle") or t["handle"], **metrics(fresh[i]))
          for i, t in tracked.items()}
-keep = set()
+keep = set(pinned)
 for side in CFG["sides"]:
-    ranked = sorted((i for i in posts if posts[i]["side"] == side), key=lambda i: -posts[i]["likes"])
+    ranked = sorted((i for i in posts if posts[i]["side"] == side), key=lambda i: -posts[i]["views"])
     keep.update(ranked[:TRACK["max_tracked"] // len(CFG["sides"])])
 tracked = {i: t for i, t in tracked.items() if i in keep}
 posts = {i: p for i, p in posts.items() if i in keep}
@@ -299,7 +310,7 @@ latest = {
         "top_posts": [{"handle": posts[i]["handle"], "likes": posts[i]["likes"], "views": posts[i]["views"],
                        "url": f"https://x.com/{posts[i]['handle']}/status/{i}"}
                       for i in sorted((i for i in posts if posts[i]["side"] == side),
-                                      key=lambda i: -posts[i]["likes"])[:5]],
+                                      key=lambda i: -posts[i]["views"])[:5]],
     } for side, s in CFG["sides"].items()},
     "run": {"posts_read": spend["posts"], "requests": spend["requests"], "estimated_cost_usd": round(spend["cost"], 3)},
 }

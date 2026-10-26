@@ -15,9 +15,9 @@ Three scores per side, for the last full UTC day:
 - **Heat**: volume divided by the daily average from 15 Sep to 15 Oct 2026, before the clash.
 - **Firepower**: likes and reposts gained by tracked posts since the previous run.
 
-The side that wins 2 of the 3 scores wins the day. Otherwise it is a draw.
+Think of it as a tug of war on three ropes. The side that wins 2 of the 3 ropes wins the day. Otherwise it is a draw.
 
-Tracked posts are found two ways: the posts that replies and quotes point to (replies cluster under viral posts), and a list of known accounts. Up to 30 posts are tracked. Any post whose text matches `docs/data/blocklist.txt` is never tracked.
+Tracked posts are found through quotes: each run pulls the most relevant quote posts of each side and the posts they quote. Viral posts collect quotes, so this is where the hot posts are. The 15 most viewed posts per side are kept. Posts listed in `docs/data/pinned_posts.txt` are always tracked. Any post whose text matches `docs/data/blocklist.txt` is never tracked.
 
 ## Files
 
@@ -29,6 +29,7 @@ Tracked posts are found two ways: the posts that replies and quotes point to (re
 | `docs/data/latest.json` | Today's scores and top posts. Read by the page. |
 | `docs/data/history.csv` | One row per day and side: date, side, volume, baseline_ratio, likes_tracked, views_tracked. |
 | `docs/data/snapshots/` | One file per run day, used for the firepower delta. |
+| `docs/data/pinned_posts.txt` | Post URLs always tracked. |
 | `docs/data/runs.csv` | Posts read and estimated cost of every run. |
 | `GATE-REPORT.md` | Phase 0 audit: query relevance, baseline, money spent. |
 
@@ -38,7 +39,7 @@ Data lives under `docs/data/` so GitHub Pages can serve it next to the page.
 
 X API pay-per-use, rates read on docs.x.com on 2026-10-26: 0.005 USD per post read, 0.005 USD per counts/recent request, 0.010 USD per counts/all request.
 
-A daily run reads at most about 90 posts: 2 count requests, a refresh of up to 30 tracked posts, then discovery with what is left of the budget.
+A daily run reads at most about 95 posts: 2 count requests, a refresh of up to 30 tracked posts plus pinned ones, then 2 quote searches with their quoted posts.
 Expect about 0.30 to 0.45 USD per day. The code enforces two hard caps per run, set in `config.json`: 150 posts and 0.50 USD. Each run logs its estimated cost in `docs/data/runs.csv`.
 
 ## Set the secret

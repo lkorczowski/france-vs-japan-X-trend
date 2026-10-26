@@ -29,10 +29,8 @@
   ],
   "tracking": {
     "max_tracked": 30,
-    "min_likes": 1000,
-    "min_per_side": 10,
-    "discovery_per_side": 12,
-    "discovery_handles": 10
+    "discovery_per_side": 15,
+    "discovery_handles": 0
   },
   "limits": {
     "max_posts_per_run": 150,

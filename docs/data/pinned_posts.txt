@@ -1,0 +1,3 @@
+# Posts always tracked, one X post URL or ID per line.
+# Example: https://x.com/someone/status/2112827916048310537
+https://x.com/liistrk/status/2112827916048310537

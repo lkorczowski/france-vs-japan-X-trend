@@ -68,6 +68,21 @@ h2 { font-size: 1.05rem; margin: 40px 0 12px; }
 .tile .val { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.25; }
 .tile .note { color: var(--text-3); font-size: 0.75rem; }
 .badge { font-size: 0.7rem; font-weight: 700; color: var(--text); background: var(--line); border-radius: 99px; padding: 0 7px; }
+.rope { background: var(--card); border-radius: 14px; padding: 14px 14px 12px; margin-top: 12px; }
+.rope .rh { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.rope .rh b { font-size: 1.05rem; }
+.rope .rh span { color: var(--text-2); font-size: 0.85rem; font-weight: 600; }
+.rope .rx { color: var(--text-2); font-size: 0.85rem; margin: 4px 0 12px; }
+.rbar { position: relative; display: flex; gap: 2px; height: 14px; }
+.rbar i { display: block; height: 100%; }
+.rbar .rf { background: var(--fr); border-radius: 7px 0 0 7px; }
+.rbar .rj { background: var(--ja); border-radius: 0 7px 7px 0; flex: 1; }
+.rbar .mid { position: absolute; left: 50%; top: -5px; bottom: -5px; width: 2px; margin-left: -1px; background: var(--text-3); opacity: 0.6; }
+.rbar .knot { position: absolute; top: 50%; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: var(--text); border: 3px solid var(--card); }
+.rv { display: flex; justify-content: space-between; gap: 8px; margin-top: 8px; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.rv div:last-child { text-align: right; }
+.rv b { font-size: 1.1rem; display: block; }
+.rv small { color: var(--text-3); }
 .chart-wrap { position: relative; }
 svg { display: block; width: 100%; height: auto; overflow: visible; }
 .legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.85rem; color: var(--text-2); margin-bottom: 8px; }
@@ -109,8 +124,9 @@ footer a { color: var(--text); }
     <div class="m" id="winmeta"></div>
   </section>
 
-  <h2>Scores</h2>
-  <div class="sides" id="tiles"></div>
+  <h2>A tug of war on three ropes</h2>
+  <p class="sub">Each rope measures one way of being ahead. The rope moves toward the side that pulls harder. Win two ropes, win the day.</p>
+  <div id="ropes"></div>
 
   <h2>Daily volume since the war started</h2>
   <div class="legend" id="legend"></div>
@@ -123,15 +139,16 @@ footer a { color: var(--text); }
     <table id="table"></table>
   </details>
 
-  <h2>Top tracked posts</h2>
+  <h2>Most viewed posts</h2>
+  <p class="sub" style="margin-bottom:12px">The 5 most viewed tracked posts per side. Text hidden by choice.</p>
   <div class="sides" id="posts"></div>
 
   <h2>Method</h2>
   <ol class="method" id="method">
     <li>Data comes from the official X API: post counts per day and public metrics of tracked posts.</li>
     <li id="m-queries">Queries:</li>
-    <li>Volume is the number of posts in the last full UTC day. Heat is volume divided by the daily average from 15 Sep to 15 Oct 2026. Firepower is the likes and reposts gained by tracked posts since the previous run.</li>
-    <li>Sides are the language of the post, not the nationality of the author. The winner takes 2 of the 3 scores.</li>
+    <li>Volume is the number of posts in the last full UTC day. Heat is volume divided by the daily average from 15 Sep to 15 Oct 2026. Firepower is the likes and reposts gained by the 15 most viewed tracked posts of each side since the previous run. Hot posts are found through the posts people quote most.</li>
+    <li>Sides are the language of the post, not the nationality of the author. The winner takes 2 of the 3 ropes.</li>
     <li>Post text is never displayed, by choice. Posts matching a slur blocklist are excluded from the top posts.</li>
   </ol>
 
@@ -186,32 +203,49 @@ footer a { color: var(--text); }
     w.appendChild(document.createTextNode(d.winner_label));
     var nwins = Object.values(d.score_winners).filter(function (x) { return x === d.winner; }).length;
     document.getElementById("winmeta").textContent =
-      (d.winner === "Draw" ? "No side took 2 of 3 scores. " : "Wins " + nwins + " of 3 scores. ") +
+      (d.winner === "Draw" ? "No side won 2 of the 3 ropes. " : "Wins " + nwins + " of 3 ropes. ") +
       "Scores for " + fmtDay(d.day) + " (UTC).";
 
-    var tiles = document.getElementById("tiles");
+    var ropes = document.getElementById("ropes");
     var defs = [
-      { k: "volume", lab: "Volume", fmt: function (v) { return nf.format(v); }, note: "posts in the day" },
-      { k: "heat", lab: "Heat", fmt: function (v) { return v.toFixed(1) + "x"; }, note: "vs normal" },
-      { k: "firepower", lab: "Firepower", fmt: function (v) { return cf.format(v); },
-        note: d.firepower_mode === "delta" ? "likes + reposts gained" : "likes + reposts, first run" }
+      { k: "volume", lab: "Volume", q: "Who posts more",
+        x: "How many posts each side wrote about the other in the last full day.",
+        fmt: function (v) { return nf.format(v); }, unit: "posts" },
+      { k: "heat", lab: "Heat", q: "Who is more fired up",
+        x: "Posts that day compared with a normal day before the war (15 Sep to 15 Oct). 6x means six times the usual.",
+        fmt: function (v) { return v.toFixed(1) + "x"; }, unit: "normal" },
+      { k: "firepower", lab: "Firepower", q: "Whose posts hit harder",
+        x: d.firepower_mode === "delta"
+          ? "Likes and reposts gained since the previous update by each side's most viewed posts."
+          : "Likes and reposts of each side's most viewed posts. From the next update, only what they gain in 24 hours.",
+        fmt: function (v) { return cf.format(v); }, unit: "likes + reposts" }
     ];
-    SIDES.forEach(function (s) {
-      var side = d.sides[s], col = el("div", { "class": "side" });
-      var h = el("h3"); var sw = el("span", { "class": "sw", "aria-hidden": "true" });
-      sw.style.background = COLOR[s]; h.appendChild(sw); h.appendChild(document.createTextNode(side.label));
-      col.appendChild(h);
-      defs.forEach(function (df) {
-        var win = d.score_winners[df.k] === s;
-        var t = el("div", { "class": "tile" + (win ? " win" : "") });
-        var lab = el("div", { "class": "lab" }); lab.appendChild(el("span", null, df.lab));
-        if (win) lab.appendChild(el("span", { "class": "badge" }, "Wins"));
-        t.appendChild(lab);
-        t.appendChild(el("div", { "class": "val" }, df.fmt(side[df.k])));
-        t.appendChild(el("div", { "class": "note" }, df.note));
-        col.appendChild(t);
+    defs.forEach(function (df) {
+      var fr = d.sides.FR[df.k], ja = d.sides.JA[df.k];
+      var share = fr + ja > 0 ? fr / (fr + ja) : 0.5;
+      var pct = Math.round(share * 100);
+      var r = el("div", { "class": "rope" });
+      var rh = el("div", { "class": "rh" });
+      rh.appendChild(el("b", null, df.lab)); rh.appendChild(el("span", null, df.q));
+      r.appendChild(rh);
+      r.appendChild(el("p", { "class": "rx" }, df.x));
+      var bar = el("div", { "class": "rbar", role: "img",
+        "aria-label": df.lab + ": French-speaking X " + pct + " percent, Japanese-speaking X " + (100 - pct) + " percent" });
+      var f = el("i", { "class": "rf" }); f.style.width = "calc(" + (share * 100) + "% - 1px)";
+      bar.appendChild(f); bar.appendChild(el("i", { "class": "rj" }));
+      bar.appendChild(el("span", { "class": "mid", "aria-hidden": "true" }));
+      var k = el("span", { "class": "knot", "aria-hidden": "true" }); k.style.left = (share * 100) + "%";
+      bar.appendChild(k);
+      r.appendChild(bar);
+      var rv = el("div", { "class": "rv" });
+      SIDES.forEach(function (s) {
+        var c = el("div"), win = d.score_winners[df.k] === s;
+        c.appendChild(el("small", null, (s === "FR" ? "French " : "Japanese ") + (s === "FR" ? pct : 100 - pct) + "%" + (win ? " · wins" : "")));
+        c.appendChild(el("b", null, df.fmt(d.sides[s][df.k])));
+        rv.appendChild(c);
       });
-      tiles.appendChild(col);
+      r.appendChild(rv);
+      ropes.appendChild(r);
     });
 
     var posts = document.getElementById("posts");
@@ -225,7 +259,7 @@ footer a { color: var(--text); }
       side.top_posts.forEach(function (p) {
         var li = el("li");
         li.appendChild(el("span", { "class": "h" }, "@" + p.handle));
-        li.appendChild(el("span", { "class": "n" }, cf.format(p.likes) + " likes · " + cf.format(p.views) + " views"));
+        li.appendChild(el("span", { "class": "n" }, cf.format(p.views) + " views · " + cf.format(p.likes) + " likes"));
         li.appendChild(el("a", { href: p.url, target: "_blank", rel: "noopener", "aria-label": "Open the post by @" + p.handle + " on X" }, "Open"));
         ol.appendChild(li);
       });

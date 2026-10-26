@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T22:42:51+00:00",
+  "updated_at": "2026-10-26T22:51:14+00:00",
   "day": "2026-10-25",
   "title": "French-speaking X vs Japanese-speaking X",
   "winner": "FR",
@@ -17,39 +17,39 @@
       "label": "French-speaking X",
       "query": "(japonais OR japonaise OR japonaises OR japon) lang:fr -is:retweet",
       "baseline_avg": 1734,
-      "volume": 11207,
+      "volume": 11203,
       "heat": 6.46,
-      "firepower": 158403,
+      "firepower": 426930,
       "top_posts": [
         {
-          "handle": "jaylabhar",
-          "likes": 69484,
-          "views": 925494,
-          "url": "https://x.com/jaylabhar/status/2114175842704384164"
+          "handle": "G1NGERB3ER",
+          "likes": 1925,
+          "views": 3724942,
+          "url": "https://x.com/G1NGERB3ER/status/2112826374860013944"
         },
         {
-          "handle": "ACULOTAKUytb",
-          "likes": 50066,
-          "views": 308798,
-          "url": "https://x.com/ACULOTAKUytb/status/2114438156745343044"
+          "handle": "ecraseur2fachos",
+          "likes": 8989,
+          "views": 2927080,
+          "url": "https://x.com/ecraseur2fachos/status/2113722362445320375"
+        },
+        {
+          "handle": "maai_as_",
+          "likes": 155877,
+          "views": 1352733,
+          "url": "https://x.com/maai_as_/status/2114097408304992641"
         },
         {
           "handle": "Vyce_pacKm",
-          "likes": 12006,
-          "views": 1306285,
+          "likes": 12160,
+          "views": 1327834,
           "url": "https://x.com/Vyce_pacKm/status/2114691274791887329"
         },
         {
-          "handle": "regelegorila",
-          "likes": 7993,
-          "views": 156711,
-          "url": "https://x.com/regelegorila/status/2114792066765009233"
-        },
-        {
-          "handle": "3arbi_1pulsif",
-          "likes": 5384,
-          "views": 31846,
-          "url": "https://x.com/3arbi_1pulsif/status/2114459740000444764"
+          "handle": "Mileistesfr",
+          "likes": 29048,
+          "views": 1193142,
+          "url": "https://x.com/Mileistesfr/status/2112806599731622036"
         }
       ]
     },
@@ -59,44 +59,44 @@
       "baseline_avg": 1565,
       "volume": 8588,
       "heat": 5.49,
-      "firepower": 40686,
+      "firepower": 104845,
       "top_posts": [
         {
+          "handle": "Freza_sama",
+          "likes": 47750,
+          "views": 2343772,
+          "url": "https://x.com/Freza_sama/status/2111688466740461660"
+        },
+        {
+          "handle": "ganto_anime07",
+          "likes": 10794,
+          "views": 1853982,
+          "url": "https://x.com/ganto_anime07/status/2113600753524941210"
+        },
+        {
           "handle": "zundamotisuki",
-          "likes": 34947,
-          "views": 533510,
+          "likes": 34976,
+          "views": 533790,
           "url": "https://x.com/zundamotisuki/status/2114233493928706288"
         },
         {
+          "handle": "kanajunk",
+          "likes": 41,
+          "views": 147803,
+          "url": "https://x.com/kanajunk/status/2114377523660525697"
+        },
+        {
           "handle": "junhagemay",
-          "likes": 1445,
-          "views": 86692,
+          "likes": 1515,
+          "views": 89739,
           "url": "https://x.com/junhagemay/status/2114683251768041612"
-        },
-        {
-          "handle": "jakusyadansei40",
-          "likes": 8,
-          "views": 608,
-          "url": "https://x.com/jakusyadansei40/status/2114026606482342380"
-        },
-        {
-          "handle": "dm6aNSoshrkKbvz",
-          "likes": 4,
-          "views": 950,
-          "url": "https://x.com/dm6aNSoshrkKbvz/status/2114763996733825338"
-        },
-        {
-          "handle": "jjppzt",
-          "likes": 2,
-          "views": 153,
-          "url": "https://x.com/jjppzt/status/2114748650354295045"
         }
       ]
     }
   },
   "run": {
-    "posts_read": 77,
-    "requests": 6,
-    "estimated_cost_usd": 0.395
+    "posts_read": 84,
+    "requests": 5,
+    "estimated_cost_usd": 0.43
   }
 }
