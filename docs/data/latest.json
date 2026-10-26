@@ -98,5 +98,167 @@
     "posts_read": 88,
     "requests": 5,
     "estimated_cost_usd": 0.45
-  }
+  },
+  "feed": [
+    {
+      "side": "FR",
+      "handle": "regelegorila",
+      "likes": 8221,
+      "views": 162049,
+      "created_at": "2026-10-26T18:51:34.000Z",
+      "url": "https://x.com/regelegorila/status/2114792066765009233"
+    },
+    {
+      "side": "JA",
+      "handle": "dm6aNSoshrkKbvz",
+      "likes": 4,
+      "views": 968,
+      "created_at": "2026-10-26T17:00:01.000Z",
+      "url": "https://x.com/dm6aNSoshrkKbvz/status/2114763996733825338"
+    },
+    {
+      "side": "FR",
+      "handle": "Vyce_pacKm",
+      "likes": 12168,
+      "views": 1329348,
+      "created_at": "2026-10-26T12:11:03.000Z",
+      "url": "https://x.com/Vyce_pacKm/status/2114691274791887329"
+    },
+    {
+      "side": "JA",
+      "handle": "junhagemay",
+      "likes": 1518,
+      "views": 89934,
+      "created_at": "2026-10-26T11:39:10.000Z",
+      "url": "https://x.com/junhagemay/status/2114683251768041612"
+    },
+    {
+      "side": "JA",
+      "handle": "RAKSASA___",
+      "likes": 2,
+      "views": 312,
+      "created_at": "2026-10-26T08:39:56.000Z",
+      "url": "https://x.com/RAKSASA___/status/2114638143832088868"
+    },
+    {
+      "side": "JA",
+      "handle": "ichiichiyon_114",
+      "likes": 7,
+      "views": 2814,
+      "created_at": "2026-10-26T03:02:21.000Z",
+      "url": "https://x.com/ichiichiyon_114/status/2114553188506554773"
+    },
+    {
+      "side": "FR",
+      "handle": "rvvspberry",
+      "likes": 36723,
+      "views": 269425,
+      "created_at": "2026-10-25T19:45:11.000Z",
+      "url": "https://x.com/rvvspberry/status/2114443173145534546"
+    },
+    {
+      "side": "FR",
+      "handle": "ACULOTAKUytb",
+      "likes": 50110,
+      "views": 309274,
+      "created_at": "2026-10-25T19:25:15.000Z",
+      "url": "https://x.com/ACULOTAKUytb/status/2114438156745343044"
+    },
+    {
+      "side": "JA",
+      "handle": "kanajunk",
+      "likes": 41,
+      "views": 147863,
+      "created_at": "2026-10-25T15:24:19.000Z",
+      "url": "https://x.com/kanajunk/status/2114377523660525697"
+    },
+    {
+      "side": "FR",
+      "handle": "FraudeurDuFisk",
+      "likes": 5104,
+      "views": 98668,
+      "created_at": "2026-10-25T12:47:51.000Z",
+      "url": "https://x.com/FraudeurDuFisk/status/2114338146729255115"
+    },
+    {
+      "side": "JA",
+      "handle": "zundamotisuki",
+      "likes": 34979,
+      "views": 533803,
+      "created_at": "2026-10-25T05:52:00.000Z",
+      "url": "https://x.com/zundamotisuki/status/2114233493928706288"
+    },
+    {
+      "side": "JA",
+      "handle": "miwaty",
+      "likes": 21,
+      "views": 1506,
+      "created_at": "2026-10-25T03:17:39.000Z",
+      "url": "https://x.com/miwaty/status/2114194652056490299"
+    },
+    {
+      "side": "FR",
+      "handle": "jaylabhar",
+      "likes": 69541,
+      "views": 934504,
+      "created_at": "2026-10-25T02:02:55.000Z",
+      "url": "https://x.com/jaylabhar/status/2114175842704384164"
+    },
+    {
+      "side": "JA",
+      "handle": "primogohan",
+      "likes": 0,
+      "views": 1005,
+      "created_at": "2026-10-24T22:18:15.000Z",
+      "url": "https://x.com/primogohan/status/2114119306175021377"
+    },
+    {
+      "side": "FR",
+      "handle": "maai_as_",
+      "likes": 155879,
+      "views": 1352768,
+      "created_at": "2026-10-24T20:51:14.000Z",
+      "url": "https://x.com/maai_as_/status/2114097408304992641"
+    },
+    {
+      "side": "JA",
+      "handle": "miwaty",
+      "likes": 26,
+      "views": 3160,
+      "created_at": "2026-10-24T17:16:15.000Z",
+      "url": "https://x.com/miwaty/status/2114043305776525717"
+    },
+    {
+      "side": "JA",
+      "handle": "jakusyadansei40",
+      "likes": 8,
+      "views": 608,
+      "created_at": "2026-10-24T16:09:54.000Z",
+      "url": "https://x.com/jakusyadansei40/status/2114026606482342380"
+    },
+    {
+      "side": "JA",
+      "handle": "ShinHori1",
+      "likes": 402,
+      "views": 20865,
+      "created_at": "2026-10-24T01:17:51.000Z",
+      "url": "https://x.com/ShinHori1/status/2113802116833898615"
+    },
+    {
+      "side": "FR",
+      "handle": "SGiinn",
+      "likes": 7841,
+      "views": 294171,
+      "created_at": "2026-10-23T23:29:09.000Z",
+      "url": "https://x.com/SGiinn/status/2113774760374980787"
+    },
+    {
+      "side": "FR",
+      "handle": "ecraseur2fachos",
+      "likes": 8989,
+      "views": 2927163,
+      "created_at": "2026-10-23T20:00:56.000Z",
+      "url": "https://x.com/ecraseur2fachos/status/2113722362445320375"
+    }
+  ]
 }

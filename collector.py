@@ -217,7 +217,8 @@ for p in candidates:
 for i in [i for i in tracked if i not in fresh]:
     log(f"Tracked post {i} is gone (deleted, protected or blocklisted), dropped.")
     del tracked[i]
-posts = {i: dict(side=t["side"], handle=fresh[i].get("handle") or t["handle"], **metrics(fresh[i]))
+posts = {i: dict(side=t["side"], handle=fresh[i].get("handle") or t["handle"],
+                created_at=fresh[i].get("created_at") or t.get("created_at"), **metrics(fresh[i]))
          for i, t in tracked.items()}
 keep = set(pinned)
 for side in CFG["sides"]:
@@ -312,6 +313,11 @@ latest = {
                       for i in sorted((i for i in posts if posts[i]["side"] == side),
                                       key=lambda i: -posts[i]["views"])[:5]],
     } for side, s in CFG["sides"].items()},
+    "feed": [{"side": posts[i]["side"], "handle": posts[i]["handle"], "likes": posts[i]["likes"],
+              "views": posts[i]["views"], "created_at": posts[i]["created_at"],
+              "url": f"https://x.com/{posts[i]['handle']}/status/{i}"}
+             for i in sorted((i for i in posts if posts[i]["created_at"]),
+                             key=lambda i: posts[i]["created_at"], reverse=True)[:20]],
     "run": {"posts_read": spend["posts"], "requests": spend["requests"], "estimated_cost_usd": round(spend["cost"], 3)},
 }
 save_json(os.path.join(DATA, "latest.json"), latest)

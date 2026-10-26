@@ -4,165 +4,292 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>French vs Japanese X</title>
-<meta name="description" content="Daily scoreboard of the French-speaking X vs Japanese-speaking X clash. Volume, heat and firepower from the X API. Updated daily.">
+<meta name="description" content="A daily tug of war between French-speaking X and Japanese-speaking X. Volume, heat and firepower from the X API. A STATUR viral marketing lab experiment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
+/* STATUR brand V3.2: ink #0E0E0C, paper #F2EFE8, signal orange #E8501C (<10 %, never a full background). */
 :root {
-  color-scheme: light;
-  --bg: #fcfcfb;
-  --card: #f3f2ef;
-  --line: #e2e1dc;
-  --text: #0b0b0b;
-  --text-2: #52514e;
-  --text-3: #75746f;
-  --fr: #2a78d6;
-  --ja: #eb6834;
-  --grid: #e8e7e2;
+  color-scheme: dark;
+  --bg: #0E0E0C;
+  --surface: #1C1C19;
+  --line: rgba(242, 239, 232, 0.14);
+  --text: #F2EFE8;
+  --text-2: #BDB9AF;
+  --text-3: #8A8780;
+  --fr: #F2EFE8;
+  --ja: #E8501C;
+  --accent: #E8501C;
+  --grid: #24241F;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --bg: #1a1a19;
-    --card: #242423;
-    --line: #353533;
-    --text: #f0efec;
-    --text-2: #c3c2b7;
-    --text-3: #9b9a92;
-    --fr: #3987e5;
-    --ja: #d95926;
-    --grid: #2e2e2c;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: #F2EFE8;
+    --surface: #E8E4DA;
+    --line: #D3CEC2;
+    --text: #0E0E0C;
+    --text-2: #3D3C38;
+    --text-3: #6B6862;
+    --fr: #0E0E0C;
+    --ja: #E8501C;
+    --grid: #E0DCD1;
   }
 }
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #1a1a19;
-  --card: #242423;
-  --line: #353533;
-  --text: #f0efec;
-  --text-2: #c3c2b7;
-  --text-3: #9b9a92;
-  --fr: #3987e5;
-  --ja: #d95926;
-  --grid: #2e2e2c;
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #F2EFE8;
+  --surface: #E8E4DA;
+  --line: #D3CEC2;
+  --text: #0E0E0C;
+  --text-2: #3D3C38;
+  --text-3: #6B6862;
+  --fr: #0E0E0C;
+  --ja: #E8501C;
+  --grid: #E0DCD1;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--bg); color: var(--text);
-  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", sans-serif;
+  font: 16px/1.55 Archivo, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", sans-serif;
+  overflow-x: hidden;
 }
-main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
-h1 { font-size: 1.5rem; line-height: 1.2; margin: 0 0 4px; letter-spacing: -0.01em; }
-h2 { font-size: 1.05rem; margin: 40px 0 12px; }
-.sub { color: var(--text-2); margin: 0; font-size: 0.95rem; }
-.hero { margin: 28px 0 8px; padding: 24px 20px; border-radius: 16px; background: var(--card); text-align: center; }
-.hero .k { color: var(--text-2); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; }
-.hero .w { font-size: clamp(2rem, 9vw, 3.2rem); font-weight: 750; line-height: 1.1; margin: 8px 0; letter-spacing: -0.02em; }
-.hero .w .dot { display: inline-block; width: 0.5em; height: 0.5em; border-radius: 50%; margin-right: 0.25em; vertical-align: 0.12em; }
-.hero .m { color: var(--text-2); font-size: 0.95rem; }
-.sides { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.side h3 { margin: 0 0 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
-.sw { width: 12px; height: 12px; border-radius: 3px; flex: none; }
-.tile { background: var(--card); border-radius: 12px; padding: 12px; margin-bottom: 8px; border: 2px solid transparent; }
-.tile.win { border-color: var(--text-3); }
-.tile .lab { color: var(--text-2); font-size: 0.8rem; display: flex; justify-content: space-between; gap: 6px; }
-.tile .val { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.25; }
-.tile .note { color: var(--text-3); font-size: 0.75rem; }
-.badge { font-size: 0.7rem; font-weight: 700; color: var(--text); background: var(--line); border-radius: 99px; padding: 0 7px; }
-.rope { background: var(--card); border-radius: 14px; padding: 14px 14px 12px; margin-top: 12px; }
-.rope .rh { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
-.rope .rh b { font-size: 1.05rem; }
-.rope .rh span { color: var(--text-2); font-size: 0.85rem; font-weight: 600; }
-.rope .rx { color: var(--text-2); font-size: 0.85rem; margin: 4px 0 12px; }
-.rbar { position: relative; display: flex; gap: 2px; height: 14px; }
-.rbar i { display: block; height: 100%; }
-.rbar .rf { background: var(--fr); border-radius: 7px 0 0 7px; }
-.rbar .rj { background: var(--ja); border-radius: 0 7px 7px 0; flex: 1; }
-.rbar .mid { position: absolute; left: 50%; top: -5px; bottom: -5px; width: 2px; margin-left: -1px; background: var(--text-3); opacity: 0.6; }
-.rbar .knot { position: absolute; top: 50%; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: var(--text); border: 3px solid var(--card); }
-.rv { display: flex; justify-content: space-between; gap: 8px; margin-top: 8px; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
-.rv div:last-child { text-align: right; }
-.rv b { font-size: 1.1rem; display: block; }
-.rv small { color: var(--text-3); }
-.chart-wrap { position: relative; }
-svg { display: block; width: 100%; height: auto; overflow: visible; }
-.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.85rem; color: var(--text-2); margin-bottom: 8px; }
+a { color: inherit; }
+.mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+.wrap { max-width: 820px; margin: 0 auto; padding: 0 16px; }
+
+/* Top bar */
+.top { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; height: 52px; font-size: 0.72rem; }
+.brand { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.brand .sym { font-family: "JetBrains Mono", monospace; font-weight: 700; }
+.brand .wm { font-family: Archivo, sans-serif; font-weight: 900; letter-spacing: -0.03em; font-size: 1rem; }
+.brand .d { color: var(--accent); }
+.brand small { font-family: "JetBrains Mono", monospace; font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); }
+.status { display: flex; align-items: center; gap: 8px; color: var(--text-2); text-align: right; }
+@media (max-width: 480px) { .brand small, .status .nx { display: none; } }
+.pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; animation: pulse 2s ease-out infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(232, 80, 28, 0.55); } 100% { box-shadow: 0 0 0 10px rgba(232, 80, 28, 0); } }
+
+/* Sections */
+.sec { padding: 40px 0; border-bottom: 1px solid var(--line); }
+.label { font-size: 0.68rem; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 16px; display: flex; align-items: center; gap: 12px; }
+.label::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+.label b { font-weight: 700; }
+h1 { font-weight: 900; font-size: clamp(2.1rem, 9.5vw, 4.2rem); line-height: 0.98; letter-spacing: -0.035em; margin: 0 0 10px; text-transform: uppercase; }
+h1 .vs { color: var(--text-3); font-weight: 800; }
+h2 { font-weight: 800; font-size: clamp(1.35rem, 5.5vw, 1.9rem); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 8px; }
+.lead { color: var(--text-2); margin: 0; max-width: 560px; }
+
+/* Hero tug of war */
+.arena { margin-top: 28px; }
+.teams { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.team .code { font-weight: 900; font-size: clamp(2.6rem, 14vw, 4.6rem); line-height: 0.9; letter-spacing: -0.04em; display: inline-block; transform-origin: bottom center; }
+.team .name { font-size: 0.8rem; color: var(--text-2); margin-top: 6px; }
+.team .ropes { font-size: 0.72rem; color: var(--text-3); margin-top: 2px; }
+.team.ja { text-align: right; }
+.team.fr .code { color: var(--fr); }
+.team.ja .code { color: var(--ja); }
+.team.win .ropes { color: var(--text); }
+.rope-box { position: relative; margin: 18px -16px 0; }
+#rope { display: block; width: 100%; height: auto; overflow: visible; }
+.pull { margin-top: 14px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 0.78rem; color: var(--text-2); }
+.pull b { color: var(--text); font-size: 1.05rem; }
+.winner { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+.winner .k { font-size: 0.72rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.06em; }
+.winner .w { font-weight: 900; font-size: clamp(1.6rem, 7vw, 2.4rem); letter-spacing: -0.025em; line-height: 1.05; }
+.winner .m { font-size: 0.78rem; color: var(--text-2); }
+
+/* Ticker */
+.ticker { position: relative; overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 18px -16px 0; }
+.track { display: flex; width: max-content; animation: scroll var(--dur, 60s) linear infinite; }
+.ticker:hover .track, .ticker.paused .track { animation-play-state: paused; }
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.card { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; align-items: center; padding: 12px 18px; border-right: 1px solid var(--line); text-decoration: none; min-width: 210px; }
+.card:hover { background: var(--surface); }
+.chip { grid-row: 1 / span 2; font-size: 0.7rem; font-weight: 700; width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid; }
+.chip.fr { color: var(--fr); border-color: var(--fr); }
+.chip.ja { color: var(--bg); background: var(--ja); border-color: var(--ja); }
+.card .h { font-weight: 600; font-size: 0.88rem; white-space: nowrap; }
+.card .n { font-size: 0.7rem; color: var(--text-2); white-space: nowrap; }
+.card .n i { font-style: normal; color: var(--text-3); }
+
+/* Ropes */
+.rope3 { padding: 22px 0; border-top: 1px solid var(--line); }
+.rope3:first-of-type { border-top: 0; }
+.rope3 .rh { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.rope3 .rh b { font-weight: 800; font-size: 1.25rem; letter-spacing: -0.01em; }
+.rope3 .rh span { font-size: 0.72rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.05em; text-align: right; }
+.rope3 .rx { color: var(--text-2); font-size: 0.88rem; margin: 4px 0 14px; max-width: 560px; }
+.bar { position: relative; height: 10px; display: flex; gap: 2px; }
+.bar i { display: block; height: 100%; transition: flex-basis 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.bar .f { background: var(--fr); flex: 0 0 50%; }
+.bar .j { background: var(--ja); flex: 1 1 auto; }
+.bar .mid { position: absolute; left: 50%; top: -6px; bottom: -6px; width: 1px; background: var(--text-3); }
+.vals { display: flex; justify-content: space-between; gap: 10px; margin-top: 10px; }
+.vals div:last-child { text-align: right; }
+.vals b { display: block; font-weight: 900; font-size: 1.7rem; letter-spacing: -0.02em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.vals small { font-size: 0.7rem; color: var(--text-3); }
+.vals .win small { color: var(--text); }
+
+/* Chart */
+.legend { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.72rem; color: var(--text-2); margin: 16px 0 8px; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .lk { width: 18px; height: 0; border-top: 2px solid; }
 .lk.d { border-top-style: dashed; }
-.tip { position: absolute; pointer-events: none; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: 0.8rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); white-space: nowrap; opacity: 0; transition: opacity 0.1s; }
+.chart-wrap { position: relative; }
+#chart { display: block; width: 100%; height: auto; overflow: visible; }
+.tip { position: absolute; pointer-events: none; background: var(--bg); border: 1px solid var(--text-3); padding: 6px 10px; font-size: 0.72rem; white-space: nowrap; opacity: 0; }
 .tip b { font-variant-numeric: tabular-nums; }
-details { margin-top: 10px; color: var(--text-2); font-size: 0.85rem; }
+details { margin-top: 12px; color: var(--text-2); font-size: 0.8rem; }
+summary { cursor: pointer; }
 table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; margin-top: 8px; }
-th, td { text-align: right; padding: 4px 6px; border-bottom: 1px solid var(--line); }
+th, td { text-align: right; padding: 5px 6px; border-bottom: 1px solid var(--line); }
 th:first-child, td:first-child { text-align: left; }
-ol.posts { list-style: none; padding: 0; margin: 0; }
-ol.posts li { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
-ol.posts .h { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-ol.posts .n { color: var(--text-2); font-variant-numeric: tabular-nums; font-size: 0.8rem; grid-column: 1; }
-ol.posts a { grid-row: 1 / span 2; grid-column: 2; align-self: center; color: var(--text); font-size: 0.8rem; border: 1px solid var(--line); border-radius: 99px; padding: 4px 10px; text-decoration: none; }
-ol.posts a:hover { border-color: var(--text-3); }
-.empty { color: var(--text-3); font-size: 0.85rem; }
-.method { color: var(--text-2); font-size: 0.9rem; padding-left: 18px; margin: 0; }
-.method li { margin-bottom: 6px; }
-code { font-size: 0.78rem; word-break: break-word; background: var(--card); padding: 1px 4px; border-radius: 4px; }
-footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--text-2); font-size: 0.85rem; }
-footer a { color: var(--text); }
-@media (max-width: 420px) {
-  .tile .val { font-size: 1.25rem; }
-  .sides { gap: 8px; }
+
+/* Most viewed */
+.cols { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 18px; }
+@media (min-width: 640px) { .cols { grid-template-columns: 1fr 1fr; } }
+.col h3 { font-size: 0.72rem; margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-2); display: flex; align-items: center; gap: 8px; }
+.sq { width: 10px; height: 10px; flex: none; }
+.post { display: grid; grid-template-columns: 1.6rem 1fr auto; gap: 4px 10px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.post .rk { font-size: 0.72rem; color: var(--text-3); grid-row: 1 / span 2; }
+.post .h { font-weight: 600; font-size: 0.92rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.post .v { font-weight: 800; font-size: 1.05rem; font-variant-numeric: tabular-nums; text-align: right; }
+.post .vb { grid-column: 2 / span 2; height: 3px; background: var(--grid); }
+.post .vb i { display: block; height: 100%; width: 0; transition: width 1s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.post .l { grid-column: 2 / span 2; font-size: 0.7rem; color: var(--text-3); }
+.post:hover .h { text-decoration: underline; }
+
+/* Method and footer */
+.method { margin: 14px 0 0; padding: 0; list-style: none; counter-reset: m; }
+.method li { counter-increment: m; display: grid; grid-template-columns: 2.4rem 1fr; padding: 10px 0; border-top: 1px solid var(--line); color: var(--text-2); font-size: 0.88rem; }
+.method li::before { content: "0" counter(m); font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-3); padding-top: 2px; }
+code { font-family: "JetBrains Mono", monospace; font-size: 0.72rem; word-break: break-word; color: var(--text); }
+footer { padding: 36px 0 56px; font-size: 0.8rem; color: var(--text-2); }
+footer .brand { font-size: 1.1rem; display: inline-block; margin-bottom: 10px; }
+footer p { margin: 4px 0; }
+.run { color: var(--text-3); font-size: 0.7rem; margin-top: 14px; }
+
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .pulse, .track { animation: none; }
+  .ticker { overflow-x: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .bar i, .post .vb i { transition: none; }
 }
 </style>
 </head>
 <body>
-<main>
-  <h1>French-speaking X vs Japanese-speaking X</h1>
-  <p class="sub">Who is winning the war on X today. Updated daily at 08:00 Paris.</p>
+<header class="top">
+  <div class="wrap mono">
+    <a class="brand" href="https://statur.co"><span class="sym">[<span class="d">•</span>]</span><span class="wm">STATUR<span class="d">.</span></span><small>Viral marketing lab</small></a>
+    <div class="status"><span class="pulse" aria-hidden="true"></span><span id="ago">Loading data</span></div>
+  </div>
+</header>
 
-  <section class="hero" aria-live="polite">
-    <div class="k">Today's winner</div>
-    <div class="w" id="winner">Loading</div>
-    <div class="m" id="winmeta"></div>
+<main>
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§01</b>· Today's tug of war</p>
+      <h1>French-speaking X <span class="vs">vs</span> Japanese-speaking X</h1>
+      <p class="lead">Two language communities have been fighting on X since 19 October. This board measures who is pulling harder, from the X API, once a day.</p>
+
+      <div class="arena">
+        <div class="teams">
+          <div class="team fr" id="team-FR"><span class="code" id="code-FR">FR</span><div class="name">French-speaking X</div><div class="ropes mono" id="ropes-FR">&nbsp;</div></div>
+          <div class="team ja" id="team-JA"><span class="code" id="code-JA">JA</span><div class="name">Japanese-speaking X</div><div class="ropes mono" id="ropes-JA">&nbsp;</div></div>
+        </div>
+        <div class="rope-box">
+          <svg id="rope" viewBox="0 0 400 90" role="img" aria-label="Tug of war rope"></svg>
+        </div>
+        <div class="pull mono"><span id="pull-FR">&nbsp;</span><span id="pull-JA">&nbsp;</span></div>
+        <div class="winner">
+          <div><div class="k mono">Winner of the day</div><div class="w" id="winner">&nbsp;</div></div>
+          <div class="m mono" id="winmeta"></div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <h2>A tug of war on three ropes</h2>
-  <p class="sub">Each rope measures one way of being ahead. The rope moves toward the side that pulls harder. Win two ropes, win the day.</p>
-  <div id="ropes"></div>
+  <section class="sec" style="padding-bottom:0;border-bottom:0">
+    <div class="wrap">
+      <p class="label mono"><b>§02</b>· Latest hot posts</p>
+      <h2>The posts moving the rope</h2>
+      <p class="lead">The newest of the most viewed posts on each side. Tap one to open it on X. Text is hidden by choice.</p>
+      <div class="ticker" id="ticker"><div class="track" id="track"></div></div>
+    </div>
+  </section>
 
-  <h2>Daily volume since the war started</h2>
-  <div class="legend" id="legend"></div>
-  <div class="chart-wrap" id="chartwrap">
-    <svg id="chart" role="img" aria-label="Line chart of daily post volume per side, with each side's pre-war baseline as a dashed line"></svg>
-    <div class="tip" id="tip"></div>
-  </div>
-  <details>
-    <summary>Show as a table</summary>
-    <table id="table"></table>
-  </details>
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§03</b>· Three ropes</p>
+      <h2>How the winner is decided</h2>
+      <p class="lead">Each rope measures one way of being ahead. The side that wins two of the three ropes wins the day.</p>
+      <div id="ropes3" style="margin-top:10px"></div>
+    </div>
+  </section>
 
-  <h2>Most viewed posts</h2>
-  <p class="sub" style="margin-bottom:12px">The 5 most viewed tracked posts per side. Text hidden by choice.</p>
-  <div class="sides" id="posts"></div>
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§04</b>· Volume</p>
+      <h2>Posts per day since the war started</h2>
+      <div class="legend mono" id="legend"></div>
+      <div class="chart-wrap" id="chartwrap">
+        <svg id="chart" role="img" aria-label="Line chart of daily post volume per side, with each side's pre-war baseline as a dashed line"></svg>
+        <div class="tip mono" id="tip"></div>
+      </div>
+      <details><summary class="mono">Show as a table</summary><table id="table"></table></details>
+    </div>
+  </section>
 
-  <h2>Method</h2>
-  <ol class="method" id="method">
-    <li>Data comes from the official X API: post counts per day and public metrics of tracked posts.</li>
-    <li id="m-queries">Queries:</li>
-    <li>Volume is the number of posts in the last full UTC day. Heat is volume divided by the daily average from 15 Sep to 15 Oct 2026. Firepower is the likes and reposts gained by the 15 most viewed tracked posts of each side since the previous run. Hot posts are found through the posts people quote most.</li>
-    <li>Sides are the language of the post, not the nationality of the author. The winner takes 2 of the 3 ropes.</li>
-    <li>Post text is never displayed, by choice. Posts matching a slur blocklist are excluded from the top posts.</li>
-  </ol>
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§05</b>· Hall of fame</p>
+      <h2>Most viewed posts</h2>
+      <p class="lead">The five most viewed tracked posts per side.</p>
+      <div class="cols" id="posts"></div>
+    </div>
+  </section>
 
-  <footer>
-    Built by Dr. Louis Korczowski · <a href="https://statur.co">statur.co</a>
-    <div id="runinfo" style="margin-top:6px;color:var(--text-3);font-size:0.78rem"></div>
-  </footer>
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§06</b>· Method</p>
+      <h2>How this is measured</h2>
+      <ol class="method" id="method">
+        <li><span>Data comes from the official X API: post counts per day, and the public metrics of tracked posts.</span></li>
+        <li><span id="m-queries">Queries.</span></li>
+        <li><span>Volume counts posts in the last full UTC day. Heat divides volume by the daily average from 15 Sep to 15 Oct 2026. Firepower adds the likes and reposts that each side's 15 most viewed posts gained since the previous update. Hot posts are found through the posts people quote the most.</span></li>
+        <li><span>Sides are the language of the post, not the nationality of the author.</span></li>
+        <li><span>Post text is never displayed, by choice. Posts that match a slur blocklist are never tracked.</span></li>
+      </ol>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="https://statur.co" style="font-size:1.3rem"><span class="sym">[<span class="d">•</span>]</span><span class="wm" style="font-size:1.4rem">STATUR<span class="d">.</span></span></a>
+    <p>Built by Dr. Louis Korczowski · <a href="https://statur.co">statur.co</a></p>
+    <p>An experiment of the STATUR viral marketing lab. We study why some ideas travel and others do not.</p>
+    <p class="run mono" id="runinfo"></p>
+  </div>
+</footer>
+
 <script>
 (function () {
+  "use strict";
   var SIDES = ["FR", "JA"];
+  var NAME = { FR: "French-speaking X", JA: "Japanese-speaking X" };
+  var SHORT = { FR: "French", JA: "Japanese" };
   var COLOR = { FR: "var(--fr)", JA: "var(--ja)" };
+  var REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var nf = new Intl.NumberFormat("en-US");
   var cf = new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 });
+
   function el(tag, attrs, text) {
     var e = document.createElement(tag);
     for (var k in attrs || {}) e.setAttribute(k, attrs[k]);
@@ -177,6 +304,13 @@ footer a { color: var(--text); }
   function fmtDay(iso) {
     return new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
   }
+  function ago(ms) {
+    var m = Math.max(0, Math.round(ms / 60000));
+    if (m < 60) return m + "m";
+    var h = Math.floor(m / 60);
+    if (h < 48) return h + "h " + (m % 60) + "m";
+    return Math.floor(h / 24) + "d";
+  }
   function parseCSV(text) {
     var lines = text.trim().split(/\r?\n/), head = lines.shift().split(",");
     return lines.map(function (l) {
@@ -184,6 +318,24 @@ footer a { color: var(--text); }
       head.forEach(function (h, i) { o[h] = c[i]; });
       return o;
     });
+  }
+  function onView(node, fn) {
+    if (REDUCED || !("IntersectionObserver" in window)) { fn(); return; }
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { io.disconnect(); fn(); } });
+    }, { threshold: 0.25 });
+    io.observe(node);
+  }
+  function countUp(node, to, fmt, ms) {
+    if (REDUCED) { node.textContent = fmt(to); return; }
+    var t0 = null;
+    function step(t) {
+      if (!t0) t0 = t;
+      var p = Math.min(1, (t - t0) / (ms || 900)), e = 1 - Math.pow(1 - p, 3);
+      node.textContent = fmt(to * e);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
   }
 
   Promise.all([
@@ -193,91 +345,175 @@ footer a { color: var(--text); }
     .catch(function () { document.getElementById("winner").textContent = "Data unavailable"; });
 
   function render(d, hist) {
-    var w = document.getElementById("winner");
-    w.textContent = "";
-    if (d.winner !== "Draw") {
-      var dot = el("span", { "class": "dot", "aria-hidden": "true" });
-      dot.style.background = COLOR[d.winner];
-      w.appendChild(dot);
-    }
-    w.appendChild(document.createTextNode(d.winner_label));
-    var nwins = Object.values(d.score_winners).filter(function (x) { return x === d.winner; }).length;
-    document.getElementById("winmeta").textContent =
-      (d.winner === "Draw" ? "No side won 2 of the 3 ropes. " : "Wins " + nwins + " of 3 ropes. ") +
-      "Scores for " + fmtDay(d.day) + " (UTC).";
+    clock(d);
+    hero(d);
+    ticker(d);
+    ropes(d);
+    chart(d, hist.filter(function (r) { return r.date >= d.war_start; }));
+    hall(d);
+    var mq = document.getElementById("m-queries");
+    mq.textContent = "Queries. ";
+    SIDES.forEach(function (s) {
+      mq.appendChild(document.createTextNode(NAME[s] + ": "));
+      mq.appendChild(el("code", null, d.sides[s].query));
+      mq.appendChild(document.createTextNode(" "));
+    });
+    document.getElementById("runinfo").textContent =
+      "Last run " + d.updated_at.replace("T", " ").slice(0, 16) + " UTC · " +
+      d.run.posts_read + " posts read · about " + d.run.estimated_cost_usd.toFixed(2) + " USD";
+  }
 
-    var ropes = document.getElementById("ropes");
+  // Top bar: real time since the last update and until the next one (06:37 UTC daily).
+  function clock(d) {
+    var node = document.getElementById("ago"), upd = new Date(d.updated_at);
+    function tick() {
+      var now = new Date(), next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 6, 37));
+      if (next <= now) next = new Date(next.getTime() + 86400000);
+      node.textContent = "Updated " + ago(now - upd) + " ago";
+      node.appendChild(el("span", { "class": "nx" }, " · next in " + ago(next - now)));
+    }
+    tick();
+    setInterval(tick, 30000);
+  }
+
+  function shareOf(d, k) {
+    var fr = d.sides.FR[k], ja = d.sides.JA[k];
+    return fr + ja > 0 ? fr / (fr + ja) : 0.5;
+  }
+
+  // Hero: one rope, the knot sits at the average French share of the three ropes.
+  function hero(d) {
+    var won = { FR: 0, JA: 0 };
+    Object.keys(d.score_winners).forEach(function (k) { if (won[d.score_winners[k]] != null) won[d.score_winners[k]]++; });
+    var pull = (shareOf(d, "volume") + shareOf(d, "heat") + shareOf(d, "firepower")) / 3;
+    SIDES.forEach(function (s) {
+      document.getElementById("ropes-" + s).textContent = won[s] + (won[s] === 1 ? " rope" : " ropes") + " won";
+      if (d.winner === s) document.getElementById("team-" + s).classList.add("win");
+    });
+    var pf = Math.round(pull * 100);
+    document.getElementById("pull-FR").innerHTML = "";
+    document.getElementById("pull-FR").appendChild(el("b", null, pf + "%"));
+    document.getElementById("pull-FR").appendChild(document.createTextNode(" of the pull"));
+    document.getElementById("pull-JA").innerHTML = "";
+    document.getElementById("pull-JA").appendChild(document.createTextNode("of the pull "));
+    document.getElementById("pull-JA").appendChild(el("b", null, (100 - pf) + "%"));
+    document.getElementById("winner").textContent = d.winner === "Draw" ? "Draw" : NAME[d.winner];
+    document.getElementById("winmeta").textContent =
+      (d.winner === "Draw" ? "No side won two ropes" : won[d.winner] + " of 3 ropes") + " · scores for " + fmtDay(d.day) + " UTC";
+
+    var svg = document.getElementById("rope");
+    svg.setAttribute("aria-label", "Tug of war rope. French-speaking X pulls " + pf + " percent, Japanese-speaking X " + (100 - pf) + " percent.");
+    var W = 400, Y = 45, X0 = 18, X1 = 382;
+    var defs = svgEl("defs", {});
+    SIDES.forEach(function (s) {
+      var p = svgEl("pattern", { id: "tw-" + s, width: 8, height: 8, patternUnits: "userSpaceOnUse", patternTransform: "rotate(-35)" });
+      p.appendChild(svgEl("rect", { width: 8, height: 8, fill: COLOR[s] }));
+      p.appendChild(svgEl("rect", { width: 2, height: 8, fill: "var(--bg)", opacity: 0.35 }));
+      defs.appendChild(p);
+    });
+    svg.appendChild(defs);
+    for (var gx = 50; gx < W; gx += 50) svg.appendChild(svgEl("line", { x1: gx, x2: gx, y1: 8, y2: 82, stroke: "var(--grid)", "stroke-width": 1 }));
+    svg.appendChild(svgEl("line", { x1: 200, x2: 200, y1: 0, y2: 90, stroke: "var(--text-3)", "stroke-width": 1, "stroke-dasharray": "3 3" }));
+    var mid = svgEl("text", { x: 200, y: 88, "text-anchor": "middle", "font-size": 7, fill: "var(--text-3)", "font-family": "JetBrains Mono, monospace" });
+    mid.textContent = "MIDLINE"; svg.appendChild(mid);
+    var ropeFR = svgEl("path", { fill: "none", stroke: "url(#tw-FR)", "stroke-width": 9, "stroke-linecap": "butt" });
+    var ropeJA = svgEl("path", { fill: "none", stroke: "url(#tw-JA)", "stroke-width": 9, "stroke-linecap": "butt" });
+    svg.appendChild(ropeFR); svg.appendChild(ropeJA);
+    var gripFR = svgEl("rect", { x: X0 - 12, y: Y - 13, width: 12, height: 26, fill: "var(--fr)" });
+    var gripJA = svgEl("rect", { x: X1, y: Y - 13, width: 12, height: 26, fill: "var(--ja)" });
+    svg.appendChild(gripFR); svg.appendChild(gripJA);
+    var knot = svgEl("g", {});
+    knot.appendChild(svgEl("rect", { x: -11, y: -11, width: 22, height: 22, fill: "var(--bg)", stroke: "var(--text)", "stroke-width": 2 }));
+    knot.appendChild(svgEl("circle", { r: 4, fill: "var(--accent)" }));
+    svg.appendChild(knot);
+
+    var target = X0 + (X1 - X0) * pull, start = performance.now(), dur = REDUCED ? 0 : 1600;
+    var codeFR = document.getElementById("code-FR"), codeJA = document.getElementById("code-JA");
+    var lean = pull > 0.5 ? 1 : pull < 0.5 ? -1 : 0;
+    function frame(now) {
+      var t = (now - start) / 1000, p = dur ? Math.min(1, (now - start) / dur) : 1;
+      var e = 1 - Math.pow(1 - p, 3);
+      var x = 200 + (target - 200) * e;
+      var sway = REDUCED ? 0 : Math.sin(t * 1.7) * 1.6 * e + Math.sin(t * 4.3) * 0.5 * e;
+      var sag = REDUCED ? 2 : 3 + Math.sin(t * 2.1) * 1.2;
+      var kx = x + sway;
+      ropeFR.setAttribute("d", "M" + X0 + "," + Y + " Q" + ((X0 + kx) / 2) + "," + (Y + sag) + " " + kx + "," + Y);
+      ropeJA.setAttribute("d", "M" + kx + "," + Y + " Q" + ((kx + X1) / 2) + "," + (Y + sag) + " " + X1 + "," + Y);
+      knot.setAttribute("transform", "translate(" + kx + "," + Y + ") rotate(" + (sway * 3) + ")");
+      document.getElementById("tw-FR").setAttribute("patternTransform", "rotate(-35) translate(" + (-t * 6 * lean) + ",0)");
+      document.getElementById("tw-JA").setAttribute("patternTransform", "rotate(-35) translate(" + (-t * 6 * lean) + ",0)");
+      var tilt = REDUCED ? 0 : (3 + Math.sin(t * 1.7) * 1.5) * e;
+      codeFR.style.transform = "rotate(" + (-tilt * (lean >= 0 ? 1 : -0.5)) + "deg)";
+      codeJA.style.transform = "rotate(" + (tilt * (lean <= 0 ? 1 : -0.5)) + "deg)";
+      if (!REDUCED) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function ticker(d) {
+    var feed = d.feed || [];
+    var track = document.getElementById("track"), box = document.getElementById("ticker");
+    if (!feed.length) { box.style.display = "none"; return; }
+    var now = Date.now();
+    function card(p) {
+      var a = el("a", { "class": "card", href: p.url, target: "_blank", rel: "noopener", "aria-label": NAME[p.side] + " post by @" + p.handle + " on X" });
+      a.appendChild(el("span", { "class": "chip mono " + p.side.toLowerCase() }, p.side));
+      a.appendChild(el("span", { "class": "h" }, "@" + p.handle));
+      var n = el("span", { "class": "n mono" });
+      n.appendChild(document.createTextNode(cf.format(p.views) + " views · " + cf.format(p.likes) + " likes "));
+      n.appendChild(el("i", null, "· " + ago(now - new Date(p.created_at)) + " ago"));
+      a.appendChild(n);
+      return a;
+    }
+    var copies = REDUCED ? 1 : 2;
+    for (var c = 0; c < copies; c++) feed.forEach(function (p) {
+      var k = card(p); if (c) k.setAttribute("aria-hidden", "true"), k.setAttribute("tabindex", "-1"); track.appendChild(k);
+    });
+    track.style.setProperty("--dur", Math.max(30, feed.length * 3.5) + "s");
+    box.addEventListener("touchstart", function () { box.classList.toggle("paused"); }, { passive: true });
+  }
+
+  function ropes(d) {
+    var root = document.getElementById("ropes3");
     var defs = [
       { k: "volume", lab: "Volume", q: "Who posts more",
         x: "How many posts each side wrote about the other in the last full day.",
-        fmt: function (v) { return nf.format(v); }, unit: "posts" },
+        fmt: function (v) { return nf.format(Math.round(v)); } },
       { k: "heat", lab: "Heat", q: "Who is more fired up",
-        x: "Posts that day compared with a normal day before the war (15 Sep to 15 Oct). 6x means six times the usual.",
-        fmt: function (v) { return v.toFixed(1) + "x"; }, unit: "normal" },
+        x: "Posts that day compared with a normal day before the war. 6x means six times the usual.",
+        fmt: function (v) { return v.toFixed(1) + "x"; } },
       { k: "firepower", lab: "Firepower", q: "Whose posts hit harder",
         x: d.firepower_mode === "delta"
           ? "Likes and reposts gained since the previous update by each side's most viewed posts."
           : "Likes and reposts of each side's most viewed posts. From the next update, only what they gain in 24 hours.",
-        fmt: function (v) { return cf.format(v); }, unit: "likes + reposts" }
+        fmt: function (v) { return cf.format(v); } }
     ];
     defs.forEach(function (df) {
-      var fr = d.sides.FR[df.k], ja = d.sides.JA[df.k];
-      var share = fr + ja > 0 ? fr / (fr + ja) : 0.5;
-      var pct = Math.round(share * 100);
-      var r = el("div", { "class": "rope" });
+      var share = shareOf(d, df.k), pct = Math.round(share * 100);
+      var r = el("div", { "class": "rope3 reveal" });
       var rh = el("div", { "class": "rh" });
-      rh.appendChild(el("b", null, df.lab)); rh.appendChild(el("span", null, df.q));
+      rh.appendChild(el("b", null, df.lab)); rh.appendChild(el("span", { "class": "mono" }, df.q));
       r.appendChild(rh);
       r.appendChild(el("p", { "class": "rx" }, df.x));
-      var bar = el("div", { "class": "rbar", role: "img",
-        "aria-label": df.lab + ": French-speaking X " + pct + " percent, Japanese-speaking X " + (100 - pct) + " percent" });
-      var f = el("i", { "class": "rf" }); f.style.width = "calc(" + (share * 100) + "% - 1px)";
-      bar.appendChild(f); bar.appendChild(el("i", { "class": "rj" }));
+      var bar = el("div", { "class": "bar", role: "img", "aria-label": df.lab + ": French " + pct + " percent, Japanese " + (100 - pct) + " percent" });
+      var f = el("i", { "class": "f" }); bar.appendChild(f); bar.appendChild(el("i", { "class": "j" }));
       bar.appendChild(el("span", { "class": "mid", "aria-hidden": "true" }));
-      var k = el("span", { "class": "knot", "aria-hidden": "true" }); k.style.left = (share * 100) + "%";
-      bar.appendChild(k);
       r.appendChild(bar);
-      var rv = el("div", { "class": "rv" });
+      var vals = el("div", { "class": "vals" }), nums = [];
       SIDES.forEach(function (s) {
-        var c = el("div"), win = d.score_winners[df.k] === s;
-        c.appendChild(el("small", null, (s === "FR" ? "French " : "Japanese ") + (s === "FR" ? pct : 100 - pct) + "%" + (win ? " · wins" : "")));
-        c.appendChild(el("b", null, df.fmt(d.sides[s][df.k])));
-        rv.appendChild(c);
+        var c = el("div", { "class": d.score_winners[df.k] === s ? "win" : "" });
+        c.appendChild(el("small", { "class": "mono" }, SHORT[s] + " " + (s === "FR" ? pct : 100 - pct) + "%" + (d.score_winners[df.k] === s ? " · wins" : "")));
+        var b = el("b", null, df.fmt(0)); c.appendChild(b); nums.push([b, d.sides[s][df.k]]);
+        vals.appendChild(c);
       });
-      r.appendChild(rv);
-      ropes.appendChild(r);
-    });
-
-    var posts = document.getElementById("posts");
-    SIDES.forEach(function (s) {
-      var side = d.sides[s], col = el("div", { "class": "side" });
-      var h = el("h3"); var sw = el("span", { "class": "sw", "aria-hidden": "true" });
-      sw.style.background = COLOR[s]; h.appendChild(sw); h.appendChild(document.createTextNode(side.label));
-      col.appendChild(h);
-      if (!side.top_posts.length) col.appendChild(el("p", { "class": "empty" }, "No tracked posts yet."));
-      var ol = el("ol", { "class": "posts" });
-      side.top_posts.forEach(function (p) {
-        var li = el("li");
-        li.appendChild(el("span", { "class": "h" }, "@" + p.handle));
-        li.appendChild(el("span", { "class": "n" }, cf.format(p.views) + " views · " + cf.format(p.likes) + " likes"));
-        li.appendChild(el("a", { href: p.url, target: "_blank", rel: "noopener", "aria-label": "Open the post by @" + p.handle + " on X" }, "Open"));
-        ol.appendChild(li);
+      r.appendChild(vals);
+      root.appendChild(r);
+      onView(r, function () {
+        r.classList.add("in");
+        f.style.flexBasis = "calc(" + (share * 100) + "% - 1px)";
+        nums.forEach(function (n) { countUp(n[0], n[1], df.fmt); });
       });
-      col.appendChild(ol);
-      posts.appendChild(col);
     });
-
-    var mq = document.getElementById("m-queries");
-    SIDES.forEach(function (s, i) {
-      mq.appendChild(document.createTextNode((i ? " " : " ") + d.sides[s].label + ": "));
-      mq.appendChild(el("code", null, d.sides[s].query));
-      mq.appendChild(document.createTextNode("."));
-    });
-    document.getElementById("runinfo").textContent =
-      "Last run " + d.updated_at.replace("T", " ").slice(0, 16) + " UTC. " +
-      d.run.posts_read + " posts read, about " + d.run.estimated_cost_usd.toFixed(2) + " USD.";
-
-    chart(d, hist.filter(function (r) { return r.date >= d.war_start; }));
   }
 
   function chart(d, hist) {
@@ -287,93 +523,89 @@ footer a { color: var(--text); }
       var m = {}; hist.forEach(function (r) { if (r.side === s) m[r.date] = +r.volume; });
       series[s] = dates.map(function (dt) { return m[dt]; });
     });
-
     var legend = document.getElementById("legend");
     SIDES.forEach(function (s) {
       var a = el("span"); var k = el("i", { "class": "lk" }); k.style.borderColor = COLOR[s];
-      a.appendChild(k); a.appendChild(document.createTextNode(d.sides[s].label)); legend.appendChild(a);
+      a.appendChild(k); a.appendChild(document.createTextNode(NAME[s])); legend.appendChild(a);
     });
     var b = el("span"); var bk = el("i", { "class": "lk d" }); bk.style.borderColor = "var(--text-3)";
     b.appendChild(bk); b.appendChild(document.createTextNode("Pre-war baseline")); legend.appendChild(b);
 
-    var svg = document.getElementById("chart");
-    var W = Math.max(300, Math.round(document.getElementById("chartwrap").clientWidth));
-    var H = W < 500 ? 240 : 300, L = 40, R = 76, T = 12, B = 28;
+    var svg = document.getElementById("chart"), wrap = document.getElementById("chartwrap");
+    var W = Math.max(300, Math.round(wrap.clientWidth)), H = W < 500 ? 240 : 300, L = 40, R = 70, T = 12, B = 28;
     svg.setAttribute("viewBox", "0 0 " + W + " " + H);
     var max = 0;
     SIDES.forEach(function (s) { series[s].forEach(function (v) { if (v > max) max = v; }); });
     var step = Math.pow(10, Math.floor(Math.log10(max || 1)));
-    var top = Math.ceil(max / step) * step; if (top / step < 4) { step /= 2; }
+    var top = Math.ceil(max / step) * step; if (top / step < 4) step /= 2;
     var x = function (i) { return L + (dates.length < 2 ? 0 : i * (W - L - R) / (dates.length - 1)); };
     var y = function (v) { return T + (H - T - B) * (1 - v / top); };
-
+    var mono = "JetBrains Mono, monospace";
     for (var g = 0; g <= top + 1e-9; g += step) {
       svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(g), y2: y(g), stroke: "var(--grid)", "stroke-width": 1 }));
-      var t = svgEl("text", { x: L - 8, y: y(g) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--text-3)" });
+      var t = svgEl("text", { x: L - 8, y: y(g) + 4, "text-anchor": "end", "font-size": 10, fill: "var(--text-3)", "font-family": mono });
       t.textContent = cf.format(g); svg.appendChild(t);
     }
     var every = Math.max(1, Math.ceil(dates.length / (W < 500 ? 4 : 7)));
     dates.forEach(function (dt, i) {
       if (i % every && i !== dates.length - 1) return;
-      var t = svgEl("text", { x: x(i), y: H - 8, "text-anchor": "middle", "font-size": 11, fill: "var(--text-3)" });
+      var t = svgEl("text", { x: x(i), y: H - 8, "text-anchor": "middle", "font-size": 10, fill: "var(--text-3)", "font-family": mono });
       t.textContent = fmtDay(dt); svg.appendChild(t);
     });
-
-    var labels = [];
+    var lines = [], labels = [];
     SIDES.forEach(function (s) {
       var by = y(d.sides[s].baseline_avg);
       svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: by, y2: by, stroke: COLOR[s], "stroke-width": 1.5, "stroke-dasharray": "5 4", opacity: 0.7 }));
       var pts = series[s].map(function (v, i) { return v == null ? null : [x(i), y(v)]; }).filter(Boolean);
-      svg.appendChild(svgEl("polyline", { points: pts.map(function (p) { return p.join(","); }).join(" "), fill: "none", stroke: COLOR[s], "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      var pl = svgEl("polyline", { points: pts.map(function (p) { return p.join(","); }).join(" "), fill: "none", stroke: COLOR[s], "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" });
+      svg.appendChild(pl); lines.push(pl);
       var last = pts[pts.length - 1];
       if (last) {
-        svg.appendChild(svgEl("circle", { cx: last[0], cy: last[1], r: 4, fill: COLOR[s], stroke: "var(--bg)", "stroke-width": 2 }));
+        svg.appendChild(svgEl("rect", { x: last[0] - 4, y: last[1] - 4, width: 8, height: 8, fill: COLOR[s] }));
         labels.push({ s: s, y: last[1], x: last[0] });
       }
     });
     labels.sort(function (a, b) { return a.y - b.y; });
     for (var i = 1; i < labels.length; i++) if (labels[i].y - labels[i - 1].y < 16) labels[i].y = labels[i - 1].y + 16;
     labels.forEach(function (lb) {
-      var t = svgEl("text", { x: lb.x + 10, y: lb.y + 4, "font-size": 12, fill: "var(--text-2)", "font-weight": 600 });
-      t.textContent = lb.s === "FR" ? "French" : "Japanese"; svg.appendChild(t);
+      var t = svgEl("text", { x: lb.x + 10, y: lb.y + 4, "font-size": 11, fill: "var(--text-2)", "font-weight": 700, "font-family": mono });
+      t.textContent = lb.s; svg.appendChild(t);
     });
+    if (!REDUCED) {
+      lines.forEach(function (pl) {
+        var len = pl.getTotalLength();
+        pl.style.strokeDasharray = len; pl.style.strokeDashoffset = len;
+      });
+      onView(svg, function () {
+        lines.forEach(function (pl) { pl.style.transition = "stroke-dashoffset 1.2s ease-out"; pl.style.strokeDashoffset = 0; });
+      });
+    }
 
     var cross = svgEl("line", { y1: T, y2: H - B, stroke: "var(--text-3)", "stroke-width": 1, opacity: 0 });
     svg.appendChild(cross);
     var dots = {};
-    SIDES.forEach(function (s) {
-      dots[s] = svgEl("circle", { r: 4, fill: COLOR[s], stroke: "var(--bg)", "stroke-width": 2, opacity: 0 });
-      svg.appendChild(dots[s]);
-    });
+    SIDES.forEach(function (s) { dots[s] = svgEl("rect", { width: 8, height: 8, fill: COLOR[s], opacity: 0 }); svg.appendChild(dots[s]); });
     var hit = svgEl("rect", { x: L - 10, y: 0, width: W - L - R + 20, height: H, fill: "transparent" });
     svg.appendChild(hit);
-    var tip = document.getElementById("tip"), wrap = document.getElementById("chartwrap");
+    var tip = document.getElementById("tip");
     function move(ev) {
-      var r = svg.getBoundingClientRect();
-      var px = (ev.clientX - r.left) * W / r.width;
+      var r = svg.getBoundingClientRect(), px = (ev.clientX - r.left) * W / r.width;
       var i = Math.round((px - L) / ((W - L - R) / Math.max(dates.length - 1, 1)));
       i = Math.max(0, Math.min(dates.length - 1, i));
-      cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("opacity", 0.6);
-      tip.textContent = "";
-      tip.appendChild(el("div", null, fmtDay(dates[i])));
+      cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("opacity", 0.8);
+      tip.textContent = ""; tip.appendChild(el("div", null, fmtDay(dates[i])));
       SIDES.forEach(function (s) {
         var v = series[s][i];
         if (v == null) { dots[s].setAttribute("opacity", 0); return; }
-        dots[s].setAttribute("cx", x(i)); dots[s].setAttribute("cy", y(v)); dots[s].setAttribute("opacity", 1);
-        var row = el("div"); var sw = el("span", { "class": "sw", "aria-hidden": "true" });
-        sw.style.cssText = "display:inline-block;width:8px;height:8px;margin-right:6px;background:" + COLOR[s];
-        row.appendChild(sw); row.appendChild(document.createTextNode((s === "FR" ? "French " : "Japanese ")));
-        row.appendChild(el("b", null, nf.format(v))); tip.appendChild(row);
+        dots[s].setAttribute("x", x(i) - 4); dots[s].setAttribute("y", y(v) - 4); dots[s].setAttribute("opacity", 1);
+        var row = el("div"); row.appendChild(document.createTextNode(SHORT[s] + " ")); row.appendChild(el("b", null, nf.format(v)));
+        tip.appendChild(row);
       });
       var tx = x(i) * r.width / W, tw = tip.offsetWidth;
       tip.style.left = Math.max(0, Math.min(r.width - tw, tx - tw / 2)) + "px";
-      tip.style.top = "-8px";
-      tip.style.opacity = 1;
+      tip.style.top = "-10px"; tip.style.opacity = 1;
     }
-    function leave() {
-      tip.style.opacity = 0; cross.setAttribute("opacity", 0);
-      SIDES.forEach(function (s) { dots[s].setAttribute("opacity", 0); });
-    }
+    function leave() { tip.style.opacity = 0; cross.setAttribute("opacity", 0); SIDES.forEach(function (s) { dots[s].setAttribute("opacity", 0); }); }
     hit.addEventListener("pointermove", move);
     hit.addEventListener("pointerdown", move);
     hit.addEventListener("pointerleave", leave);
@@ -389,6 +621,34 @@ footer a { color: var(--text); }
     var br = el("tr"); br.appendChild(el("td", null, "Baseline avg"));
     SIDES.forEach(function (s) { br.appendChild(el("td", null, nf.format(d.sides[s].baseline_avg))); });
     table.appendChild(br);
+  }
+
+  function hall(d) {
+    var root = document.getElementById("posts"), max = 1;
+    SIDES.forEach(function (s) { d.sides[s].top_posts.forEach(function (p) { if (p.views > max) max = p.views; }); });
+    SIDES.forEach(function (s) {
+      var col = el("div", { "class": "col reveal" });
+      var h = el("h3", { "class": "mono" }); var sq = el("span", { "class": "sq", "aria-hidden": "true" });
+      sq.style.background = COLOR[s]; h.appendChild(sq); h.appendChild(document.createTextNode(NAME[s]));
+      col.appendChild(h);
+      var bars = [];
+      d.sides[s].top_posts.forEach(function (p, i) {
+        var a = el("a", { "class": "post", href: p.url, target: "_blank", rel: "noopener", "aria-label": "Open the post by @" + p.handle + " on X" });
+        a.appendChild(el("span", { "class": "rk mono" }, "0" + (i + 1)));
+        a.appendChild(el("span", { "class": "h" }, "@" + p.handle));
+        a.appendChild(el("span", { "class": "v" }, cf.format(p.views)));
+        var vb = el("span", { "class": "vb", "aria-hidden": "true" }); var fill = el("i"); fill.style.background = COLOR[s];
+        vb.appendChild(fill); a.appendChild(vb); bars.push([fill, p.views / max]);
+        a.appendChild(el("span", { "class": "l mono" }, "views · " + cf.format(p.likes) + " likes"));
+        col.appendChild(a);
+      });
+      if (!d.sides[s].top_posts.length) col.appendChild(el("p", { "class": "lead" }, "No tracked posts yet."));
+      root.appendChild(col);
+      onView(col, function () {
+        col.classList.add("in");
+        bars.forEach(function (b) { b[0].style.width = Math.max(2, b[1] * 100) + "%"; });
+      });
+    });
   }
 })();
 </script>
