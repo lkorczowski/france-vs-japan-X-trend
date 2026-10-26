@@ -50,3 +50,15 @@ Note: none of the screenshot accounts has a post at 1,000 likes or more in the l
 | **Total phase 0** | | **1.36** |
 
 Estimates from the rates read on docs.x.com on 2026-10-26. Check the X console billing page for the billed figure.
+
+## Spend so far (after phases 1 to 3)
+
+| Step | Posts | Cost (USD) |
+|---|---|---|
+| Phase 0 | 265 | 1.36 |
+| Collector, local run 1 | 30 | 0.18 |
+| Collector, local run 2 (parent-post discovery) | 85 | 0.435 |
+| Collector, first GitHub Action run, 2026-10-26 22:42 UTC | 77 | 0.395 |
+| **Total** | | **2.37** |
+
+Next runs: about 0.30 to 0.45 USD per day, logged in docs/data/runs.csv.
