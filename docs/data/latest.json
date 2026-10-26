@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T22:51:14+00:00",
+  "updated_at": "2026-10-26T22:51:55+00:00",
   "day": "2026-10-25",
   "title": "French-speaking X vs Japanese-speaking X",
   "winner": "FR",
@@ -19,37 +19,37 @@
       "baseline_avg": 1734,
       "volume": 11203,
       "heat": 6.46,
-      "firepower": 426930,
+      "firepower": 477578,
       "top_posts": [
+        {
+          "handle": "liistrk",
+          "likes": 49183,
+          "views": 17936538,
+          "url": "https://x.com/liistrk/status/2112827916048310537"
+        },
         {
           "handle": "G1NGERB3ER",
           "likes": 1925,
-          "views": 3724942,
+          "views": 3724947,
           "url": "https://x.com/G1NGERB3ER/status/2112826374860013944"
         },
         {
           "handle": "ecraseur2fachos",
           "likes": 8989,
-          "views": 2927080,
+          "views": 2927163,
           "url": "https://x.com/ecraseur2fachos/status/2113722362445320375"
         },
         {
           "handle": "maai_as_",
-          "likes": 155877,
-          "views": 1352733,
+          "likes": 155879,
+          "views": 1352768,
           "url": "https://x.com/maai_as_/status/2114097408304992641"
         },
         {
           "handle": "Vyce_pacKm",
-          "likes": 12160,
-          "views": 1327834,
+          "likes": 12168,
+          "views": 1329348,
           "url": "https://x.com/Vyce_pacKm/status/2114691274791887329"
-        },
-        {
-          "handle": "Mileistesfr",
-          "likes": 29048,
-          "views": 1193142,
-          "url": "https://x.com/Mileistesfr/status/2112806599731622036"
         }
       ]
     },
@@ -59,44 +59,44 @@
       "baseline_avg": 1565,
       "volume": 8588,
       "heat": 5.49,
-      "firepower": 104845,
+      "firepower": 104854,
       "top_posts": [
         {
           "handle": "Freza_sama",
           "likes": 47750,
-          "views": 2343772,
+          "views": 2343795,
           "url": "https://x.com/Freza_sama/status/2111688466740461660"
         },
         {
           "handle": "ganto_anime07",
           "likes": 10794,
-          "views": 1853982,
+          "views": 1853984,
           "url": "https://x.com/ganto_anime07/status/2113600753524941210"
         },
         {
           "handle": "zundamotisuki",
-          "likes": 34976,
-          "views": 533790,
+          "likes": 34979,
+          "views": 533803,
           "url": "https://x.com/zundamotisuki/status/2114233493928706288"
         },
         {
           "handle": "kanajunk",
           "likes": 41,
-          "views": 147803,
+          "views": 147863,
           "url": "https://x.com/kanajunk/status/2114377523660525697"
         },
         {
           "handle": "junhagemay",
-          "likes": 1515,
-          "views": 89739,
+          "likes": 1518,
+          "views": 89934,
           "url": "https://x.com/junhagemay/status/2114683251768041612"
         }
       ]
     }
   },
   "run": {
-    "posts_read": 84,
+    "posts_read": 88,
     "requests": 5,
-    "estimated_cost_usd": 0.43
+    "estimated_cost_usd": 0.45
   }
 }
