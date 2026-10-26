@@ -1,3 +1,11 @@
 # Posts always tracked, one X post URL or ID per line.
 # Example: https://x.com/someone/status/2112827916048310537
 https://x.com/liistrk/status/2112827916048310537
+# Sent by Louis on 2026-10-27, checked: language fr or ja, not blocklisted
+https://x.com/BWhey69/status/2113756235056947455
+https://x.com/namekoisvnr/status/2113753261220004070
+https://x.com/usernontrouver9/status/2113911120268550405
+https://x.com/pomleloupWP0/status/2114015538615906710
+https://x.com/E2LaCaf/status/2113295649768718363
+https://x.com/encorewassim/status/2114387710693589225
+https://x.com/4Ud1CCuftl19105/status/2113562963651301824
