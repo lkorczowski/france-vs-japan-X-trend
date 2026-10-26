@@ -1,7 +1,7 @@
 # French-speaking X vs Japanese-speaking X
 
 A daily scoreboard of the clash between French-speaking and Japanese-speaking X.
-Live page: https://lkorczowski.github.io/x-language-war-scoreboard/
+Live page: https://lkorczowski.github.io/france-vs-japan-X-trend/
 
 Every morning a GitHub Action reads the X API, scores both sides and updates the page.
 Sides are the language of the post, not the nationality of the author.
@@ -46,7 +46,7 @@ Expect about 0.30 to 0.45 USD per day. The code enforces two hard caps per run, 
 The X Bearer Token is read from the `X_BEARER_TOKEN` environment variable. It is never printed, logged or committed.
 
 ```bash
-gh secret set X_BEARER_TOKEN --repo lkorczowski/x-language-war-scoreboard
+gh secret set X_BEARER_TOKEN --repo lkorczowski/france-vs-japan-X-trend
 ```
 
 Run locally:
@@ -58,7 +58,7 @@ X_BEARER_TOKEN=... python3 collector.py
 The Action runs every day at 06:37 UTC (about 07:37 Paris in winter). Start it by hand from the Actions tab, or:
 
 ```bash
-gh workflow run daily.yml --repo lkorczowski/x-language-war-scoreboard
+gh workflow run daily.yml --repo lkorczowski/france-vs-japan-X-trend
 ```
 
 If the API returns an error, the run stops and turns red. It never retries.
