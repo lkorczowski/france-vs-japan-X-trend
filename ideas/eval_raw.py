@@ -7,8 +7,8 @@ d = json.load(open("docs/data/ideas.json")); C = json.load(open("analysis/corpus
 raw = {}
 for t in list(C["posts"].values()) + list(C["includes_posts"].values()):
     raw[t["id"]] = (t.get("note_tweet") or {}).get("text") or t["text"]
-for f in os.listdir("analysis/quotes"):
-    for line in open("analysis/quotes/" + f, encoding="utf-8"):
+for f in [("analysis/quotes/" + x) for x in os.listdir("analysis/quotes")] + [("analysis/thirdparty/" + x) for x in os.listdir("analysis/thirdparty")]:
+    for line in open(f, encoding="utf-8"):
         p = line.rstrip("\n").split("\t")
         if len(p) > 5: raw.setdefault(p[0], re.sub(r"^\[[^\]]*\]\s*", "", p[5]))
 U = [u for u in d["units"] if u["id"] in raw]

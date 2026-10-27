@@ -51,7 +51,7 @@ SEEDS = {
     "2114267468025778269": ("FR", "FR", "K03", "A Japanese father steals his daughter's used sanitary pads: perversion joke", "humor"),
     "2112826374860013944": ("FR", "FR", "K16", "Japan was never as friendly as its fiction: it took 17 October for you to notice", "argument"),
     "2112674939698643143": ("JA", "JA", "K07", "A viral cartoon of a rioter smashing a McDonald's shows what everyone thinks about who riots", "humor"),
-    "2112093487223177425": ("JA", "JA", "K13", "A Black supermarket clerk says protest if you want but do not attack shops and people", "testimony"),
+    "2112093487223177425": ("JA", "JA", "K13", "A supermarket clerk says protest if you want but do not attack shops and people", "testimony"),
     "2111981057704923597": ("JA", "JA", "K07", "Looters took everything except the pork: the rioters are Muslim", "argument"),
     "2111813174953681263": ("JA", "JA", "K19", "French speakers swarmed a Japanese voice who asked them not to misuse Naruto, like sharks smelling blood", "argument"),
     "2113722362445320375": ("FR", "FR", "K03", "Japanese men envy the French for their bigger penis", "humor"),
@@ -86,7 +86,7 @@ SEEDS = {
     "2112268945252069502": ("FR", "FR", "K11", "Is all of Japan far right? Never seen a non-racist Japanese on X", "humor"),
     "2112458439163261343": ("JA", "JA", "K13", "The anime-shop owner: looting was organized on Snapchat, not a protest", "testimony"),
     "2113562963651301824": ("JA", "NEU", "K19", "How it started: a Naruto cosplay at a burning car, a plea, then a pile-on", "info"),
-    "2114233493928706288": ("JA", "JA", "K10", "Self-proclaimed Black French insult us for drinking tap water", "argument"),
+    "2114233493928706288": ("JA", "JA", "K10", "The French who mock Japan for drinking tap water are not real French, and safe tap water is a point of pride", "argument"),
     "2114314444713161028": ("JA", "JA", "K10", "Racist joke about African migrants and goats", "insult"),
     "2112129777645817949": ("JA", "JA", "K12", "Uniqlo pushed immigration and immigrants wrecked its stores", "argument"),
     "2112100272449245554": ("JA", "NEU", "K08", "Japan's view is low resolution: 550,000 marched, students and citizens with real demands", "argument"),
@@ -115,7 +115,7 @@ EXTRA = {
 
 # Origin posts seen in screenshots (no id available): kept for the narrative, not linked.
 ORIGINS = {
-    "o-obito": ("FR", "NEU", "K01", "Obito cast a fire jutsu on a car: a Naruto cosplayer at a burning car, 17 October", "humor", 2300000),
+    "o-obito": ("FR", "NEU", "K01", "A Naruto cosplayer posing at a burning car during the riots, captioned as an anime fire attack", "humor", 2300000),
     "o-vices": ("FR", "FR", "K03", "Rape culture, pedophilia, suicide, submission to the US: the list of Japanese vices that seeded the French jokes", "insult", 2300000),
 }
 
@@ -336,7 +336,7 @@ SEARCH = {
     "2114065586598670575": ("FR", "FR", "K04", "Two colleagues planned their suicide at the same minute", "humor", "monkeydaske", 770028, 83888),
     "2112744844485660990": ("FR", "FR", "K17", "Now I understand why China and Korea hate Japan", "insult", "MohaaLcm", 769927, 29928),
     "2114135083296653677": ("FR", "FR", "K17", "The French, the Arabs and the Chinese when it is time to mock the Japanese", "humor", "Diazinho07", 767383, 80147),
-    "2113968749518967138": ("FR", "FR", "K10", "The only strong Japanese football player is Black", "humor", "RMAFC8MUFC", 753295, 42237),
+    "2113968749518967138": ("FR", "FR", "K10", "Racial joke about Japanese football players", "insult", "RMAFC8MUFC", 753295, 42237),
     "2114319284109504572": ("FR", "FR", "K03", "Pedophilia joke about the average Japanese man", "insult", "Jamais2sans42_", 627876, 64936),
     "2113559618634793389": ("FR", "FR", "K03", "Japan only knows hentai, racism and pedophilia", "insult", "l_p_b_m", 615704, 20965),
     "2113562020507251122": ("FR", "FR", "K03", "Father and son in love with the same sex doll", "humor", "rayaneAlg00", 576381, 44597),

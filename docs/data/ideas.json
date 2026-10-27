@@ -6,7 +6,10 @@
   "searched": 58,
   "quotes": 115,
   "concepts": 22,
-  "ari_auto_vs_hand": 0.22,
+  "ari_auto_vs_hand": 0.23,
+  "ari_raw_text": 0.1,
+  "first_post": "2026-10-06",
+  "last_post": "2026-10-26",
   "embedding": "all-mpnet-base-v2",
   "projection": "concept centroids, cosine distance, metric MDS (pyLDAvis style); UMAP and t-SNE of single ideas kept for comparison"
  },
@@ -32,8 +35,8 @@
    "label": "Japan's sexual taboos",
    "n": 24,
    "views": 50325946,
-   "x": 0.1402,
-   "y": 0.1676,
+   "x": 0.1347,
+   "y": 0.1682,
    "side_views": {
     "FR": 43959275,
     "JA": 6366671
@@ -88,8 +91,8 @@
    "label": "Absurd appropriation",
    "n": 14,
    "views": 29080451,
-   "x": 0.0083,
-   "y": 0.4416,
+   "x": 0.0089,
+   "y": 0.4341,
    "side_views": {
     "FR": 24372738,
     "JA": 4707713
@@ -143,8 +146,8 @@
    "label": "The spectators' verdict",
    "n": 37,
    "views": 28406624,
-   "x": 0.5852,
-   "y": 0.3936,
+   "x": 0.5979,
+   "y": 0.3926,
    "side_views": {
     "FR": 24515751,
     "NEU": 2377828,
@@ -202,8 +205,8 @@
    "label": "A Muslim and immigrant riot",
    "n": 18,
    "views": 26097743,
-   "x": 0.3775,
-   "y": 0.7176,
+   "x": 0.3182,
+   "y": 0.7043,
    "side_views": {
     "JA": 22223914,
     "FR": 3873829
@@ -257,7 +260,7 @@
    "label": "Suicide jokes",
    "n": 6,
    "views": 23848652,
-   "x": 0.4315,
+   "x": 0.421,
    "y": 0.0,
    "side_views": {
     "FR": 23848652
@@ -311,7 +314,7 @@
    "n": 6,
    "views": 21033294,
    "x": 1.0,
-   "y": 0.4718,
+   "y": 0.493,
    "side_views": {
     "NEU": 21033294
    },
@@ -364,8 +367,8 @@
    "label": "Love for Japan, lost or kept",
    "n": 8,
    "views": 18426924,
-   "x": 0.3203,
-   "y": 0.355,
+   "x": 0.3353,
+   "y": 0.3479,
    "side_views": {
     "FR": 7775388,
     "JA": 8891322,
@@ -421,7 +424,7 @@
    "n": 11,
    "views": 17242525,
    "x": 0.0,
-   "y": 0.3026,
+   "y": 0.3163,
    "side_views": {
     "JA": 9690513,
     "FR": 5252012,
@@ -476,8 +479,8 @@
    "label": "Overwork and submission",
    "n": 9,
    "views": 14691457,
-   "x": 0.3316,
-   "y": 0.1904,
+   "x": 0.3233,
+   "y": 0.1886,
    "side_views": {
     "FR": 14691457
    },
@@ -530,8 +533,8 @@
    "label": "Why are they fighting?",
    "n": 13,
    "views": 13693369,
-   "x": 0.5328,
-   "y": 0.3432,
+   "x": 0.5525,
+   "y": 0.3363,
    "side_views": {
     "NEU": 8632112,
     "FR": 5061257
@@ -587,8 +590,8 @@
    "label": "France in decline",
    "n": 9,
    "views": 11805288,
-   "x": 0.5074,
-   "y": 0.6605,
+   "x": 0.4837,
+   "y": 0.6633,
    "side_views": {
     "JA": 10159230,
     "NEU": 1646058
@@ -640,8 +643,8 @@
    "label": "The bomb and WWII",
    "n": 9,
    "views": 11424992,
-   "x": 0.4942,
-   "y": 0.2014,
+   "x": 0.4997,
+   "y": 0.1952,
    "side_views": {
     "FR": 8627245,
     "JA": 2797747
@@ -696,8 +699,8 @@
    "label": "Auto-translation",
    "n": 11,
    "views": 11254973,
-   "x": 0.824,
-   "y": 0.2158,
+   "x": 0.8348,
+   "y": 0.2223,
    "side_views": {
     "FR": 8121509,
     "NEU": 3133464
@@ -752,8 +755,8 @@
    "label": "The riot's real victims",
    "n": 6,
    "views": 10125796,
-   "x": 0.835,
-   "y": 0.7798,
+   "x": 0.7966,
+   "y": 0.7888,
    "side_views": {
     "JA": 10125796
    },
@@ -761,13 +764,13 @@
     "JA": 9005829,
     "FR": 1119967
    },
-   "lead_idea": "A Black supermarket clerk says protest if you want but do not attack shops and people",
+   "lead_idea": "A supermarket clerk says protest if you want but do not attack shops and people",
    "top": [
     {
      "handle": "SOWIETK",
      "views": 3387007,
      "url": "https://x.com/SOWIETK/status/2112093487223177425",
-     "idea": "A Black supermarket clerk says protest if you want but do not attack shops and people",
+     "idea": "A supermarket clerk says protest if you want but do not attack shops and people",
      "side": "JA",
      "community": "JA"
     },
@@ -805,8 +808,8 @@
    "label": "Who started it",
    "n": 9,
    "views": 8061675,
-   "x": 0.4071,
-   "y": 0.4787,
+   "x": 0.4373,
+   "y": 0.4704,
    "side_views": {
     "JA": 5378640,
     "NEU": 1788464,
@@ -861,8 +864,8 @@
    "label": "Old grudges join in",
    "n": 10,
    "views": 7072485,
-   "x": 0.4267,
-   "y": 0.3278,
+   "x": 0.44,
+   "y": 0.3206,
    "side_views": {
     "JA": 2365612,
     "FR": 4288944,
@@ -922,8 +925,8 @@
    "label": "Who is really French",
    "n": 11,
    "views": 6684833,
-   "x": 0.2067,
-   "y": 0.5867,
+   "x": 0.2791,
+   "y": 0.5445,
    "side_views": {
     "JA": 5636793,
     "FR": 1048040
@@ -933,21 +936,13 @@
     "FR": 753295,
     "EN": 389570
    },
-   "lead_idea": "The only strong Japanese football player is Black",
+   "lead_idea": "The French who mock Japan for drinking tap water are not real French, and safe tap water is a point of pride",
    "top": [
-    {
-     "handle": "RMAFC8MUFC",
-     "views": 753295,
-     "url": "https://x.com/RMAFC8MUFC/status/2113968749518967138",
-     "idea": "The only strong Japanese football player is Black",
-     "side": "FR",
-     "community": "FR"
-    },
     {
      "handle": "zundamotisuki",
      "views": 535782,
      "url": "https://x.com/zundamotisuki/status/2114233493928706288",
-     "idea": "Self-proclaimed Black French insult us for drinking tap water",
+     "idea": "The French who mock Japan for drinking tap water are not real French, and safe tap water is a point of pride",
      "side": "JA",
      "community": "JA"
     },
@@ -966,6 +961,14 @@
      "idea": "France's multicultural crew raised on manga beats a Japan obsessed with whiteness",
      "side": "FR",
      "community": "EN"
+    },
+    {
+     "handle": "lolitaleyley",
+     "views": 78404,
+     "url": "https://x.com/lolitaleyley/status/2113953805067059564",
+     "idea": "Applauds a racial comeback aimed at Black French users",
+     "side": "JA",
+     "community": "EN"
     }
    ],
    "elo": 1475,
@@ -977,8 +980,8 @@
    "label": "Japanese racism",
    "n": 9,
    "views": 6498074,
-   "x": 0.2802,
-   "y": 0.421,
+   "x": 0.2852,
+   "y": 0.406,
    "side_views": {
     "FR": 4533043,
     "JA": 1965031
@@ -1032,8 +1035,8 @@
    "label": "French insolence",
    "n": 8,
    "views": 4628774,
-   "x": 0.8629,
-   "y": 0.3636,
+   "x": 0.8762,
+   "y": 0.373,
    "side_views": {
     "FR": 4628774
    },
@@ -1084,8 +1087,8 @@
    "label": "Students born in France",
    "n": 4,
    "views": 4250250,
-   "x": 0.206,
-   "y": 0.8671,
+   "x": 0.1571,
+   "y": 0.8423,
    "side_views": {
     "NEU": 3250289,
     "JA": 999961
@@ -1137,8 +1140,8 @@
    "label": "What the media hides",
    "n": 7,
    "views": 3636208,
-   "x": 0.3145,
-   "y": 0.8712,
+   "x": 0.2632,
+   "y": 0.8537,
    "side_views": {
     "JA": 3636208
    },
@@ -1189,7 +1192,7 @@
    "label": "Foreign money behind the riots",
    "n": 1,
    "views": 1331612,
-   "x": 0.6722,
+   "x": 0.6258,
    "y": 1.0,
    "side_views": {
     "JA": 1331612
@@ -1971,7 +1974,7 @@
    "views": 3387007,
    "handle": "SOWIETK",
    "url": "https://x.com/SOWIETK/status/2112093487223177425",
-   "idea": "A Black supermarket clerk says protest if you want but do not attack shops and people",
+   "idea": "A supermarket clerk says protest if you want but do not attack shops and people",
    "register": "testimony",
    "parent": null,
    "rel": null
@@ -2426,7 +2429,7 @@
    "views": 535782,
    "handle": "zundamotisuki",
    "url": "https://x.com/zundamotisuki/status/2114233493928706288",
-   "idea": "Self-proclaimed Black French insult us for drinking tap water",
+   "idea": "The French who mock Japan for drinking tap water are not real French, and safe tap water is a point of pride",
    "register": "argument",
    "parent": null,
    "rel": null
@@ -2699,7 +2702,7 @@
    "views": 2300000,
    "handle": "origin",
    "url": null,
-   "idea": "Obito cast a fire jutsu on a car: a Naruto cosplayer at a burning car, 17 October",
+   "idea": "A Naruto cosplayer posing at a burning car during the riots, captioned as an anime fire attack",
    "register": "humor",
    "parent": null,
    "rel": null
@@ -3309,9 +3312,9 @@
    "community": "FR",
    "views": 753295,
    "handle": "RMAFC8MUFC",
-   "url": "https://x.com/RMAFC8MUFC/status/2113968749518967138",
-   "idea": "The only strong Japanese football player is Black",
-   "register": "humor",
+   "url": null,
+   "idea": "Racial joke about Japanese football players",
+   "register": "insult",
    "parent": null,
    "rel": null
   },
