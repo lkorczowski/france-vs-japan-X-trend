@@ -50,6 +50,11 @@ for uid, ann in A.EXTRA.items():
 for uid, ann in A.ORIGINS.items():
     add(uid, "origin", ann[5], 0, ann, linkable=False)
 
+for uid, ann in A.SEARCH.items():
+    if uid in units:
+        continue
+    add(uid, ann[5], ann[6], ann[7], ann[:5])
+
 qdir = os.path.join(ROOT, "analysis/quotes")
 for parent, quotes in A.QUOTES.items():
     rows = {}
@@ -174,7 +179,7 @@ total = sum(comm_views.values())
 
 out = dict(
     generated_at="2026-10-27",
-    method=dict(units=len(U), seeds=len(A.SEEDS), quotes=sum(len(v) for v in A.QUOTES.values()),
+    method=dict(units=len(U), seeds=len(A.SEEDS), searched=len(A.SEARCH), quotes=sum(len(v) for v in A.QUOTES.values()),
                 concepts=len(concepts), ari_auto_vs_hand=round(float(ari), 2), embedding="all-mpnet-base-v2",
                 projection="concept centroids, cosine distance, metric MDS (pyLDAvis style); UMAP and t-SNE of single ideas kept for comparison"),
     sides={k: int(v) for k, v in side_views.items()},

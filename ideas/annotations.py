@@ -35,6 +35,7 @@ CONCEPTS = {
     "K19": "Who started it",
     "K20": "French insolence",
     "K21": "Why are they fighting?",
+    "K22": "The translation world war",
 }
 
 # Seed posts: id -> (community, side, concept, idea, register)
@@ -280,4 +281,82 @@ API_EDGES = {
     "2114348078853685366": ("2114216029534429664", "rebut"),
     "2111673757987373508": ("2109562806064308323", "amplify"),
     "2112574440462782705": ("2112499335154012346", "amplify"),
+}
+
+
+# Posts found by searching X in Chrome on 2026-10-27 (top tab, min_faves, since 17 Oct), one search per language.
+# id -> (community, side, concept, idea, register, handle, views, likes). Threshold: 500K views, 250K for third parties.
+SEARCH = {
+    # Arabic
+    "2113750738572828880": ("AR", "FR", "K03", "The Japanese man when he learns the girl he talks to is not a minor", "humor", "ksapowery", 3677817, 123619),
+    "2113413245281112092": ("AR", "NEU", "K15", "Auto-translation was added so that peoples could get to know each other: they did", "humor", "iNa9eir", 3057387, 120306),
+    "2114720123542007969": ("AR", "NEU", "K22", "France vs Japan, Turkey vs China, Saudi Arabia vs Japan, Lebanon vs Algeria: a world of beefs", "meta", "Eyaaaad", 1335087, 6052),
+    "2113884851615285376": ("AR", "FR", "K11", "Japanese tweets: 'you are black'; French tweets: devastating jokes", "humor", "abdu__witcher", 976136, 94687),
+    "2114376919177216018": ("AR", "FR", "K05", "Auto-translation revealed which countries are most subservient to the West: Japan first", "humor", "Imenes2492", 677465, 13927),
+    "2114223773176234319": ("AR", "NEU", "K21", "Someone explain the beef between the Japanese and the French", "meta", "9nixl", 526649, 6437),
+    "2114379149523525802": ("AR", "NEU", "K16", "Amid the cursing of Japan, some gloated over innocent deaths: that crosses a line", "argument", "gojo_536", 519947, 5628),
+    # English
+    "2113784985098326332": ("EN", "NEU", "K22", "The Argentine when he discovers food in the fridge: the Saudi vs Argentina front", "humor", "ksapowery", 15702183, 163014),
+    "2114517041012965406": ("EN", "FR", "K14", "The Japanese cannot rage bait, the French make out-of-pocket jokes", "argument", "moietroses", 1520904, 93896),
+    "2114045070261284918": ("EN", "FR", "K14", "A Japanese delinquent versus a slightly irritated French person (meme)", "humor", "fwtsukishiro", 1469354, 107575),
+    "2113936112930472267": ("EN", "NEU", "K22", "Too busy laughing at France vs Japan to notice the China vs Turkey subplot", "humor", "Haeldian", 1396778, 178793),
+    "2114075294789472703": ("EN", "FR", "K14", "Not a fair war: Japan answers 'black people' and 'we work', France drops a tactical nuke every tweet", "argument", "lilifying", 1082566, 22116),
+    "2113697473914929476": ("EN", "FR", "K15", "Watching the France vs Japan tweets with automatic translation", "humor", "Haeldian", 831403, 114393),
+    "2114111657517662406": ("EN", "NEU", "K22", "The French, Japanese, Chinese and Turkish all studying history to insult each other better", "humor", "europemaxxed", 779530, 100094),
+    "2114045397664764351": ("EN", "NEU", "K22", "So busy with France vs Japan I missed the Saudi vs Argentina subplot", "humor", "donebyfish", 771861, 36386),
+    "2114521665845797142": ("EN", "FR", "K06", "Japanese Twitter: 'haha you are black'; French Twitter: '210,000 dead'", "humor", "TheNovaPlayss", 704623, 70230),
+    "2114077870398279807": ("EN", "JA", "K03", "France produced the most famous intellectual pedophiles and still bullies Japan about it", "argument", "blonkevnoci", 704247, 35607),
+    "2113958637593092563": ("EN", "NEU", "K14", "One Piece foreshadowed the France vs Japan beef", "humor", "Stitchymcfishy", 633489, 54588),
+    # Japanese posts missed by the seeds
+    "2111834743155355652": ("JA", "JA", "K01", "Every Japanese child learns copyright law at 12: anime is protected work", "argument", "Yu_min5000", 3741569, 64738),
+    "2111827307212230680": ("JA", "JA", "K12", "Paris is a society shattered by failed immigration, Japanese politicians must learn", "argument", "kitamuraharuo", 1169374, 109058),
+    "2112504639480594890": ("JA", "JA", "K13", "A Pulitzer-worthy photo: a French bookseller among the looting, a mob that saw no value in books", "argument", "cynanyc", 2072780, 50833),
+    "2111626965186953345": ("JA", "NEU", "K12", "Spare the Louvre: its treasures belong to humanity", "argument", "tomukun2gou", 1646058, 56537),
+    "2114146295850086773": ("JA", "JA", "K12", "A French tourist assaulted a woman in Roppongi: who is uncivilized?", "argument", "sxzBST", 1254667, 20470),
+    "2114362587836240112": ("JA", "JA", "K14", "They say the French love humor, but their jabs at Japan are lame", "argument", "Maria_Sanders_k", 636432, 9644),
+    "2111681875450450119": ("JA", "JA", "K09", "NHK says high-school protests because Japan wants to import the same people", "argument", "biglizardswife", 562380, 57063),
+    "2113847108763865306": ("JA", "JA", "K13", "A Chinese-run restaurant in France attacked by rioters", "testimony", "stern_118", 548460, 14783),
+    # French posts missed by the seeds
+    "2113169900131041391": ("FR", "JA", "K16", "Japan is an amazing country, only kind and helpful people, I never felt so good", "testimony", "Sonny__Alves", 7697678, 44414),
+    "2114081089350480105": ("FR", "FR", "K03", "Two Japanese men meet at a nursery while they have no children", "humor", "BWhey69", 2926131, 132403),
+    "2114250536224784720": ("FR", "FR", "K20", "Someone tell the French there is an ammunition crate here", "humor", "IncroyableSauce", 2621719, 176231),
+    "2113908938643255803": ("FR", "FR", "K03", "Two Japanese fighting over the last sex doll in the shop", "humor", "ychbb_", 2451472, 219126),
+    "2113748669354643654": ("FR", "FR", "K07", "Irony: an Algerian Muslim family of 300 announces it will move to Japan and not work", "humor", "Liquid3G", 2416461, 83509),
+    "2114391948471513123": ("FR", "FR", "K04", "Even the cells commit suicide in Japan", "humor", "E2LaCaf", 1415984, 144437),
+    "2114398218146451582": ("FR", "FR", "K03", "Suicide letter because his kindergarten crush rejected him, and he is the teacher", "humor", "puipui_vol2", 1382938, 190752),
+    "2114337025478279570": ("FR", "FR", "K03", "Japanese failing school on purpose to stay near little girls", "humor", "An1s213", 1073952, 146115),
+    "2114027870091723077": ("FR", "NEU", "K22", "France vs Japan, China vs Turkey, Argentina vs Saudi Arabia: it is a multiplex", "humor", "KhalilAit12", 1047855, 73781),
+    "2114391840438776264": ("FR", "FR", "K03", "A Japanese man buys a Petit Écolier and finds a biscuit (pedophilia pun)", "humor", "BriYosh_FR", 990227, 55012),
+    "2114345878664192399": ("FR", "FR", "K03", "Nightmare: a Japanese man dreams of an adult woman", "humor", "encorewassim", 946120, 155628),
+    "2113632990387638363": ("FR", "FR", "K05", "Japan is the only country that became a fan of the country that bombed it", "argument", "dorodateur", 936407, 42700),
+    "2114016489774715088": ("FR", "FR", "K03", "Penis-size joke about Japanese men", "insult", "E2LaCaf", 887855, 46517),
+    "2114125647878426735": ("FR", "FR", "K03", "Forgetting to remove the batteries from his girlfriend (sex doll)", "humor", "namekoisvnr", 873755, 33440),
+    "2112210311667216640": ("FR", "FR", "K17", "Chinese and Koreans, your hatred of the Japanese is understandable", "argument", "requin19899", 853487, 25658),
+    "2114290809155797254": ("FR", "FR", "K05", "He sleeps with the boss's daughter but he is self-employed (work obsession)", "humor", "rayaneAlg00", 800844, 65440),
+    "2114065586598670575": ("FR", "FR", "K04", "Two colleagues planned their suicide at the same minute", "humor", "monkeydaske", 770028, 83888),
+    "2112744844485660990": ("FR", "FR", "K17", "Now I understand why China and Korea hate Japan", "insult", "MohaaLcm", 769927, 29928),
+    "2114135083296653677": ("FR", "FR", "K17", "The French, the Arabs and the Chinese when it is time to mock the Japanese", "humor", "Diazinho07", 767383, 80147),
+    "2113968749518967138": ("FR", "FR", "K10", "The only strong Japanese football player is Black", "humor", "RMAFC8MUFC", 753295, 42237),
+    "2114319284109504572": ("FR", "FR", "K03", "Pedophilia joke about the average Japanese man", "insult", "Jamais2sans42_", 627876, 64936),
+    "2113559618634793389": ("FR", "FR", "K03", "Japan only knows hentai, racism and pedophilia", "insult", "l_p_b_m", 615704, 20965),
+    "2113562020507251122": ("FR", "FR", "K03", "Father and son in love with the same sex doll", "humor", "rayaneAlg00", 576381, 44597),
+    "2114062693367754888": ("FR", "FR", "K06", "The Japanese in 1945 seeing a little boy fall from the sky", "humor", "QueMirasBoBo92", 560295, 56858),
+    # Spanish, Thai (250K and more)
+    "2114328551323320410": ("ES", "FR", "K17", "Russians join the French and the Arabs against the Japanese", "humor", "Spektra94", 425693, 43471),
+    "2113667020579389841": ("ES", "JA", "K03", "Statistics say the opposite: rape rates rose in France and Europe", "argument", "Marte_Aleks", 350808, 10475),
+    "2114127189268480480": ("ES", "FR", "K14", "Watching the French drag the Japanese so deliciously", "humor", "_rojilla", 270288, 16735),
+    "2114055739220398480": ("ES", "FR", "K14", "Watching what the French are doing to the Japanese", "humor", "HagovWarhammer", 270178, 26977),
+    "2114298331962949653": ("TH", "NEU", "K19", "Explainer: it started when a Black French user said Japan without anime is nothing", "info", "LittleBirbMame", 801121, 8588),
+    "2114323758899220582": ("TH", "FR", "K14", "A list of the best French insults, translated for Thai readers", "humor", "appleonezeroone", 570364, 5923),
+    "2114547195936690679": ("TH", "NEU", "K21", "What is the deal with Japan and France? I like every post", "meta", "jae_jls", 467844, 10125),
+    "2114405724617077057": ("TH", "FR", "K17", "The French insult with the bomb's name; Thais were kinder in their last fight with Japan", "argument", "wskk0102", 300272, 5049),
+}
+
+EXCLUDED = {
+    "2113468092684841104": "LunarBlue_429, 9.0M: travel anecdote on French pride, not about the conflict",
+    "2114246349562806381": "kazuki335656, 870K: Luxembourg travel anecdote",
+    "2112488166984949873": "CvxbGU9LvH45242, 662K: about a Japanese domestic issue",
+    "2114287456296239150": "Stormbricht, 880K: unclear camp",
+    "2112509699266679207": "kakenamitoriten, 1.4M: baguette riot photo joke, camp unclear",
+    "2113045722744717360": "fiveoutofnine, 4.2M: PHP security news, off topic",
 }

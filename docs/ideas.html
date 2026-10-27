@@ -164,7 +164,7 @@ footer p { margin: 4px 0; }
     <div class="wrap">
       <p class="label mono"><b>§01</b>· Battle of ideas</p>
       <h1>The ideas that won the war</h1>
-      <p class="lead">Behind the tug of war, ideas fought for attention. We read 182 of the most viewed posts one by one, images and videos included, and mapped the ideas they carry. Each bubble is an idea. Its size is the attention it earned.</p>
+      <p class="lead">Behind the tug of war, ideas fought for attention. We read 240 of the most viewed posts one by one, in eight languages, images and videos included, and mapped the ideas they carry. Each bubble is an idea. Its size is the attention it earned.</p>
       <div class="stats" id="stats"></div>
     </div>
   </section>
@@ -247,7 +247,7 @@ footer p { margin: 4px 0; }
       <p class="label mono"><b>§08</b>· Method</p>
       <h2>How this was measured</h2>
       <ol class="method" id="method">
-        <li><span><b>Corpus.</b> 59 seed posts (every post above 500K views we tracked, plus posts found by hand), 8 posts they quote, 2 origin posts seen in screenshots, and 115 quotes read in the Quotes tab of the 15 most viewed posts. 182 posts, about 243M views.</span></li>
+        <li><span><b>Corpus.</b> 59 seed posts (every tracked post above 500K views, plus posts found by hand), 58 posts found by searching X in eight languages (500K views and more, 250K for third parties), 8 posts they quote, 2 origin posts seen in screenshots, and 115 quotes read in the Quotes tab of the 15 most viewed posts. 240 posts, about 330M views. Six viral posts that mention France or Japan without the conflict were excluded.</span></li>
         <li><span><b>Multimodal reading.</b> Every post was read with its image or video frame, because the joke often lives in the picture. Each post was annotated with one idea, written as a neutral sentence that states the implied meaning, the camp it serves, the community that posted it and its register.</span></li>
         <li><span><b>Concept induction.</b> The 21 concepts were induced from the posts, not fixed in advance, following concept induction with language models (LLooM). A concept is contested ground: both camps can hold ideas inside it.</span></li>
         <li><span><b>Map.</b> Ideas are embedded with a sentence model (all-mpnet-base-v2). Concept centroids are placed by metric MDS on cosine distance, like the intertopic map of pyLDAvis. Battle lines place each concept by the share of its views serving each camp.</span></li>
@@ -474,9 +474,10 @@ footer p { margin: 4px 0; }
     var f = [
       ["French jokes won the attention war.", "Ideas serving the French side earned " + cf.format(d.sides.FR) + " views, against " + cf.format(d.sides.JA) + " for the Japanese side. The four biggest French themes are jokes: sex, appropriation, suicide and work."],
       ["Humor beat argument, except on one front.", "The biggest Japanese idea is not a joke but a frame: the riots are a Muslim and immigrant revolt (" + cf.format(by.K07.views) + " views). It drew the Arabic-speaking world into the fight."],
-      ["One view in five came from neither camp.", "English-speaking spectators acted as the jury, quoting the French jokes with verdicts like 'Okay France you win'. One of the most viewed French jokes (7.6M) was posted by an English speaker posing as French."],
+      ["More than one view in four came from neither camp.", "Third parties earned " + Math.round(d.third_party_share * 100) + "% of the views. English-speaking spectators acted as the jury ('Okay France you win'), Arabic-speaking accounts opened their own fronts, and one of the most viewed French jokes (7.6M) was posted by an English speaker posing as French."],
       ["The correction won every duel it fought.", "A Japanese post showing that most rioters were students born in France (2.7M views) was never out-reached by the posts that rebutted it: " + by.K08.wins + " wins, " + by.K08.losses + " losses."],
-      ["Auto-translation was the weapon.", "X translated every insult in both directions. Spectators made it the punchline: 'Hitting translate on a tweet that starts with Les japonais'."]
+      ["Auto-translation was the weapon.", "X translated every insult in both directions. Spectators made it the punchline: 'Hitting translate on a tweet that starts with Les japonais'."],
+      ["France vs Japan was one front of a translation world war.", "The same week, auto-translation opened Turkey vs China, Saudi Arabia vs Argentina and Lebanon vs Algeria. Posts about this wider war earned " + cf.format(by.K22.views) + " views in our corpus."]
     ];
     var ol = document.getElementById("finds");
     f.forEach(function (x) { var li = el("li"); var dv = el("div"); dv.appendChild(el("b", null, x[0])); dv.appendChild(el("span", null, x[1])); li.appendChild(dv); ol.appendChild(li); reveal(li); });
