@@ -164,7 +164,7 @@ footer p { margin: 4px 0; }
     <div class="wrap">
       <p class="label mono"><b>§01</b>· Battle of ideas</p>
       <h1>The ideas that won the war</h1>
-      <p class="lead">Behind the tug of war, ideas fought for attention. We read 299 viral posts one by one, in eight languages, images and videos included, and mapped the ideas they carry. Each bubble is an idea. Its size is the attention it earned.</p>
+      <p class="lead">Behind the tug of war, ideas fought for attention. We read 330 viral posts one by one, in eight languages, images and videos included, and mapped the ideas they carry. Each bubble is an idea. Its size is the attention it earned.</p>
       <div class="stats" id="stats"></div>
     </div>
   </section>
@@ -247,7 +247,7 @@ footer p { margin: 4px 0; }
       <p class="label mono"><b>§08</b>· Method</p>
       <h2>How this was measured</h2>
       <ol class="method" id="method">
-        <li><span><b>Corpus.</b> 59 seed posts (every tracked post above 500K views, plus posts found by hand), 117 posts found by searching X in eight languages (two passes: 500K views and more, then 250K), 8 posts they quote, 2 origin posts seen in screenshots, and 115 quotes read in the Quotes tab of the 15 most viewed posts. 299 posts, about 354M views. Seven viral posts were excluded: off topic or camp unclear.</span></li>
+        <li><span><b>Corpus.</b> 59 seed posts (every tracked post above 500K views, plus posts found by hand), 148 posts found by searching X in eight languages (three passes: 500K views and more, then 250K, then 100K for the anime-as-a-protest-symbol idea), 8 posts they quote, 2 origin posts seen in screenshots, and 115 quotes read in the Quotes tab of the 15 most viewed posts. 330 posts, about 380M views. Seven viral posts were excluded: off topic or camp unclear.</span></li>
         <li><span><b>Multimodal reading.</b> Every post was read with its image or video frame, because the joke often lives in the picture. Each post was annotated with one idea, written as a neutral sentence that states the implied meaning, the camp it serves, the community that posted it and its register.</span></li>
         <li><span><b>Concept induction.</b> The 21 concepts were induced from the posts, not fixed in advance, following concept induction with language models (LLooM). A concept is contested ground: both camps can hold ideas inside it.</span></li>
         <li><span><b>Map.</b> Ideas are embedded with a sentence model (all-mpnet-base-v2). Concept centroids are placed by metric MDS on cosine distance, like the intertopic map of pyLDAvis. Battle lines place each concept by the share of its views serving each camp.</span></li>
@@ -475,6 +475,7 @@ footer p { margin: 4px 0; }
       ["French jokes won the attention war.", "Ideas serving the French side earned " + cf.format(d.sides.FR) + " views, against " + cf.format(d.sides.JA) + " for the Japanese side. The four biggest French themes are jokes: sex, appropriation, suicide and work."],
       ["Humor beat argument, except on one front.", "The biggest Japanese idea is not a joke but a frame: the riots are a Muslim and immigrant revolt (" + cf.format(by.K07.views) + " views). It drew the Arabic-speaking world into the fight."],
       ["More than one view in four went to neither camp.", "Third parties earned " + Math.round(d.third_party_share * 100) + "% of the views. English-speaking spectators acted as the jury with verdicts that France had won, Arabic-speaking accounts joined with their own jokes, and one of the most viewed French-side jokes (7.6M) was posted by an English speaker posing as French."],
+      ["A camp is not one voice.", "The Japanese plea to keep anime out of politics (a One Piece flag, a Naruto cosplay) earned " + cf.format(by.K23.side_views.JA) + " views for the Japanese side. Japanese-speaking critics of that reflex earned 1.5M more: one noted that Japan got angrier at a One Piece flag in French protests than at a Japanese robbery gang that called itself Luffy."],
       ["The correction won every duel it fought.", "A Japanese post showing that most rioters were students born in France (2.7M views) was never out-reached by the posts that rebutted it: " + by.K08.wins + " wins, " + by.K08.losses + " losses."],
       ["Auto-translation let the world watch.", "X translated every post in both directions, and spectators made the translate button the punchline of their own jokes."],
       ["France vs Japan was one fight among several.", "Other national fights ran on X the same week (Turkey vs China, Saudi Arabia vs Argentina, Lebanon vs Algeria). Posts about them earned " + cf.format(by.K22.views) + " views in our corpus, most of it from one post."]

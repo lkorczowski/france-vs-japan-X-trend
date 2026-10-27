@@ -36,6 +36,7 @@ CONCEPTS = {
     "K20": "French insolence",
     "K21": "Why are they fighting?",
     "K22": "The translation world war",
+    "K23": "Anime as a protest symbol",
 }
 
 # Seed posts: id -> (community, side, concept, idea, register)
@@ -60,7 +61,7 @@ SEEDS = {
     "2114044814480343159": ("EN", "FR", "K15", "\"Translated from French\": the auto-translate button as the source of the chaos", "humor"),
     "2111960971350823239": ("JA", "JA", "K13", "A nerd defends his anime shop against rioters: LGBT protester versus nerd", "humor"),
     "2112805392451559563": ("JA", "JA", "K17", "Korean users mock Japan yet side with it against Muslims: a Japan-Korea truce", "argument"),
-    "2111688466740461660": ("JA", "JA", "K01", "Stop soiling Japanese culture to do stupid things", "argument"),
+    "2111688466740461660": ("JA", "JA", "K23", "Stop soiling Japanese culture to do stupid things", "argument"),
     "2112759904301953365": ("JA", "NEU", "K21", "Brazilians, Thais and French all mock Japan, but East Asian netizens look even meaner", "meta"),
     "2113581141328572746": ("JA", "JA", "K10", "Racial comeback: France only counts through its white population", "insult"),
     "2111637672838193337": ("JA", "JA", "K12", "France is collapsing: luxury stores looted in daylight, this is multiculturalism", "argument"),
@@ -115,7 +116,7 @@ EXTRA = {
 
 # Origin posts seen in screenshots (no id available): kept for the narrative, not linked.
 ORIGINS = {
-    "o-obito": ("FR", "NEU", "K01", "A Naruto cosplayer posing at a burning car during the riots, captioned as an anime fire attack", "humor", 2300000),
+    "o-obito": ("FR", "NEU", "K23", "A Naruto cosplayer posing at a burning car during the riots, captioned as an anime fire attack", "humor", 2300000),
     "o-vices": ("FR", "FR", "K03", "Rape culture, pedophilia, suicide, submission to the US: the list of Japanese vices that seeded the French jokes", "insult", 2300000),
 }
 
@@ -180,10 +181,10 @@ QUOTES = {
     "2112102614045442491": {
         "2112173314617815523": ("JA", "JA", "K01", "Someone who thinks their own country is another world (anime is not Europe)", "insult", "rebut"),
         "2112697603808985313": ("JA", "JA", "K01", "Fine, once you burn every Impressionist painting inspired by Japan", "argument", "rebut"),
-        "2112189850166419816": ("JA", "JA", "K01", "The point is not making anime an icon of destruction", "argument", "rebut"),
+        "2112189850166419816": ("JA", "JA", "K23", "The point is not making anime an icon of destruction", "argument", "rebut"),
         "2112206864716825003": ("EN", "JA", "K01", "Parasites with no respect for Japan or anime", "insult", "rebut"),
         "2112722666906165596": ("JA", "JA", "K01", "Then burn the Impressionists and Debussy's scores", "argument", "rebut"),
-        "2112205245606695320": ("JA", "JA", "K01", "Make your own symbol instead of using anime", "argument", "rebut"),
+        "2112205245606695320": ("JA", "JA", "K23", "Make your own symbol instead of using anime", "argument", "rebut"),
     },
     "2112776123822346271": {
         "2113541763361386803": ("AR", "FR", "K15", "Auto-translation revealed what Japan really thinks", "humor", "rebut"),
@@ -229,7 +230,7 @@ QUOTES = {
         "2111814487988900137": ("JA", "JA", "K19", "French quotes are pure slander, nothing of liberty, equality, fraternity", "argument", "amplify"),
         "2114344232110457209": ("FR", "FR", "K16", "I loved Japan and wanted to visit, not anymore: it is a racist country", "argument", "rebut"),
         "2114390757339464184": ("ES", "NEU", "K21", "Can someone explain the French Japanese fight?", "meta", "verdict"),
-        "2111855460303487011": ("FR", "FR", "K01", "Sorry Kakashi sensei", "humor", "rebut"),
+        "2111855460303487011": ("FR", "FR", "K23", "Sorry Kakashi sensei", "humor", "rebut"),
     },
     "2113581141328572746": {
         "2113661628113645589": ("ES", "NEU", "K14", "Back to what matters: the Japanese tweets", "meta", "verdict"),

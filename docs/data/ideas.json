@@ -1,12 +1,12 @@
 {
  "generated_at": "2026-10-27",
  "method": {
-  "units": 299,
+  "units": 330,
   "seeds": 59,
-  "searched": 117,
+  "searched": 148,
   "quotes": 115,
-  "concepts": 22,
-  "ari_auto_vs_hand": 0.2,
+  "concepts": 23,
+  "ari_auto_vs_hand": 0.23,
   "ari_raw_text": 0.1,
   "first_post": "2026-10-06",
   "last_post": "2026-10-26",
@@ -15,12 +15,12 @@
  },
  "sides": {
   "FR": 193975906,
-  "JA": 108359710,
-  "NEU": 51947331
+  "JA": 132414554,
+  "NEU": 53723493
  },
  "communities": {
   "FR": 152443410,
-  "JA": 104928167,
+  "JA": 130759173,
   "EN": 73055906,
   "AR": 18341734,
   "ES": 2807417,
@@ -28,15 +28,15 @@
   "PT": 162655,
   "CN": 11389
  },
- "third_party_share": 0.274,
+ "third_party_share": 0.255,
  "concepts": [
   {
    "id": "K03",
    "label": "Japan's sexual taboos",
    "n": 32,
    "views": 53331514,
-   "x": 0.7581,
-   "y": 0.1541,
+   "x": 0.9892,
+   "y": 0.2559,
    "side_views": {
     "FR": 45624062,
     "JA": 7707452
@@ -83,7 +83,7 @@
      "community": "AR"
     }
    ],
-   "elo": 1469,
+   "elo": 1467,
    "wins": 0,
    "losses": 2
   },
@@ -92,8 +92,8 @@
    "label": "Absurd appropriation",
    "n": 15,
    "views": 29448754,
-   "x": 0.5539,
-   "y": 0.1923,
+   "x": 0.8854,
+   "y": 0.3422,
    "side_views": {
     "FR": 24741041,
     "JA": 4707713
@@ -147,8 +147,8 @@
    "label": "The spectators' verdict",
    "n": 40,
    "views": 29231797,
-   "x": 0.543,
-   "y": 0.3671,
+   "x": 0.775,
+   "y": 0.6052,
    "side_views": {
     "FR": 25054715,
     "NEU": 2377828,
@@ -204,16 +204,16 @@
   {
    "id": "K07",
    "label": "A Muslim and immigrant riot",
-   "n": 22,
-   "views": 27606911,
-   "x": 0.5341,
-   "y": 0.7295,
+   "n": 23,
+   "views": 27903157,
+   "x": 0.4329,
+   "y": 0.7933,
    "side_views": {
-    "JA": 23733082,
+    "JA": 24029328,
     "FR": 3873829
    },
    "community_views": {
-    "JA": 23733082,
+    "JA": 24029328,
     "FR": 2416461,
     "AR": 1457368
    },
@@ -261,7 +261,7 @@
    "label": "Suicide jokes",
    "n": 11,
    "views": 25878596,
-   "x": 0.6441,
+   "x": 0.8957,
    "y": 0.0,
    "side_views": {
     "FR": 25878596
@@ -314,8 +314,8 @@
    "label": "Love for Japan, lost or kept",
    "n": 18,
    "views": 22888659,
-   "x": 0.5755,
-   "y": 0.4193,
+   "x": 0.6789,
+   "y": 0.464,
    "side_views": {
     "FR": 8126899,
     "JA": 9906681,
@@ -361,17 +361,71 @@
      "community": "FR"
     }
    ],
-   "elo": 1499,
+   "elo": 1497,
    "wins": 1,
    "losses": 1
+  },
+  {
+   "id": "K13",
+   "label": "The riot's real victims",
+   "n": 12,
+   "views": 22224239,
+   "x": 0.3317,
+   "y": 0.9894,
+   "side_views": {
+    "JA": 21902523,
+    "NEU": 321716
+   },
+   "community_views": {
+    "JA": 21104272,
+    "FR": 1119967
+   },
+   "lead_idea": "A lone French otaku defends an anime shop from 'invaders'",
+   "top": [
+    {
+     "handle": "amatsuuni",
+     "views": 8439006,
+     "url": "https://x.com/amatsuuni/status/2112074920658337879",
+     "idea": "A lone French otaku defends an anime shop from 'invaders'",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "SOWIETK",
+     "views": 3387007,
+     "url": "https://x.com/SOWIETK/status/2112093487223177425",
+     "idea": "A supermarket clerk says protest if you want but do not attack shops and people",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "pondebekkio",
+     "views": 2434279,
+     "url": "https://x.com/pondebekkio/status/2111960971350823239",
+     "idea": "A nerd defends his anime shop against rioters: LGBT protester versus nerd",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "V7NnRqa0uZbvFqZ",
+     "views": 2277454,
+     "url": "https://x.com/V7NnRqa0uZbvFqZ/status/2112380780446134526",
+     "idea": "Shop workers are ordinary people: looting them is not fighting the rich",
+     "side": "JA",
+     "community": "JA"
+    }
+   ],
+   "elo": 1500,
+   "wins": 0,
+   "losses": 0
   },
   {
    "id": "K22",
    "label": "The translation world war",
    "n": 6,
    "views": 21033294,
-   "x": 1.0,
-   "y": 0.6459,
+   "x": 0.9158,
+   "y": 1.0,
    "side_views": {
     "NEU": 21033294
    },
@@ -420,37 +474,28 @@
    "losses": 0
   },
   {
-   "id": "K01",
-   "label": "Who owns anime",
-   "n": 11,
-   "views": 17242525,
-   "x": 0.3761,
-   "y": 0.1092,
+   "id": "K23",
+   "label": "Anime as a protest symbol",
+   "n": 25,
+   "views": 15633696,
+   "x": 0.5111,
+   "y": 0.4393,
    "side_views": {
-    "JA": 9690513,
-    "FR": 5252012,
-    "NEU": 2300000
+    "JA": 11712177,
+    "NEU": 3754446,
+    "FR": 167073
    },
    "community_views": {
-    "JA": 9656381,
-    "FR": 7552012,
-    "EN": 34132
+    "JA": 13166623,
+    "FR": 2467073
    },
-   "lead_idea": "Then withdraw all your anime inspired by Europe and France",
+   "lead_idea": "In the One Piece world, the Red-Haired Pirates would make the rioters pay",
    "top": [
     {
-     "handle": "Marbelladone",
-     "views": 5084939,
-     "url": "https://x.com/Marbelladone/status/2112102614045442491",
-     "idea": "Then withdraw all your anime inspired by Europe and France",
-     "side": "FR",
-     "community": "FR"
-    },
-    {
-     "handle": "Yu_min5000",
-     "views": 3741569,
-     "url": "https://x.com/Yu_min5000/status/2111834743155355652",
-     "idea": "Every Japanese child learns copyright law at 12: anime is protected work",
+     "handle": "milchass_223",
+     "views": 2365433,
+     "url": "https://x.com/milchass_223/status/2112799163822084186",
+     "idea": "In the One Piece world, the Red-Haired Pirates would make the rioters pay",
      "side": "JA",
      "community": "JA"
     },
@@ -463,25 +508,33 @@
      "community": "JA"
     },
     {
-     "handle": "kazama_fr",
-     "views": 167073,
-     "url": "https://x.com/kazama_fr/status/2111855460303487011",
-     "idea": "Sorry Kakashi sensei",
-     "side": "FR",
-     "community": "FR"
+     "handle": "freezetheidiotz",
+     "views": 1619978,
+     "url": "https://x.com/freezetheidiotz/status/2112397340632130025",
+     "idea": "Told not to use our anime as a looting symbol, the French should answer 'fine, our culture is better': no pride left?",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "sushi_zamurai_",
+     "views": 1460687,
+     "url": "https://x.com/sushi_zamurai_/status/2112204373791293499",
+     "idea": "A French person asking a Japanese if they read the same One Piece is the joke of the century",
+     "side": "JA",
+     "community": "JA"
     }
    ],
-   "elo": 1547,
-   "wins": 4,
-   "losses": 1
+   "elo": 1505,
+   "wins": 3,
+   "losses": 3
   },
   {
    "id": "K21",
    "label": "Why are they fighting?",
    "n": 16,
    "views": 14819575,
-   "x": 0.7802,
-   "y": 0.4096,
+   "x": 0.8604,
+   "y": 0.5641,
    "side_views": {
     "NEU": 9758318,
     "FR": 5061257
@@ -537,8 +590,8 @@
    "label": "Overwork and submission",
    "n": 9,
    "views": 14691457,
-   "x": 0.3834,
-   "y": 0.3071,
+   "x": 0.7662,
+   "y": 0.1772,
    "side_views": {
     "FR": 14691457
    },
@@ -591,8 +644,8 @@
    "label": "France in decline",
    "n": 13,
    "views": 14137233,
-   "x": 0.5197,
-   "y": 0.6395,
+   "x": 0.4908,
+   "y": 0.7204,
    "side_views": {
     "JA": 12491175,
     "NEU": 1646058
@@ -640,12 +693,67 @@
    "losses": 0
   },
   {
+   "id": "K01",
+   "label": "Who owns anime",
+   "n": 9,
+   "views": 13539790,
+   "x": 0.5747,
+   "y": 0.2728,
+   "side_views": {
+    "FR": 5084939,
+    "JA": 8454851
+   },
+   "community_views": {
+    "FR": 5084939,
+    "JA": 8420719,
+    "EN": 34132
+   },
+   "lead_idea": "Then withdraw all your anime inspired by Europe and France",
+   "top": [
+    {
+     "handle": "Marbelladone",
+     "views": 5084939,
+     "url": "https://x.com/Marbelladone/status/2112102614045442491",
+     "idea": "Then withdraw all your anime inspired by Europe and France",
+     "side": "FR",
+     "community": "FR"
+    },
+    {
+     "handle": "Yu_min5000",
+     "views": 3741569,
+     "url": "https://x.com/Yu_min5000/status/2111834743155355652",
+     "idea": "Every Japanese child learns copyright law at 12: anime is protected work",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "manam098",
+     "views": 681127,
+     "url": "https://x.com/manam098/status/2114176657712177617",
+     "idea": "Using Japanese anime to diss Japan is fine: nobody knows a single French anime",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "watch_dog_timer",
+     "views": 379685,
+     "url": "https://x.com/watch_dog_timer/status/2113930212702589049",
+     "idea": "France as manga's second market is a myth: it ranks third",
+     "side": "JA",
+     "community": "JA"
+    }
+   ],
+   "elo": 1546,
+   "wins": 3,
+   "losses": 0
+  },
+  {
    "id": "K06",
    "label": "The bomb and WWII",
    "n": 11,
    "views": 12184268,
-   "x": 0.843,
-   "y": 0.3144,
+   "x": 1.0,
+   "y": 0.519,
    "side_views": {
     "FR": 8905445,
     "JA": 3278823
@@ -700,8 +808,8 @@
    "label": "Auto-translation",
    "n": 12,
    "views": 11691373,
-   "x": 0.1268,
-   "y": 0.3436,
+   "x": 0.4722,
+   "y": 0.0798,
    "side_views": {
     "FR": 8121509,
     "NEU": 3569864
@@ -752,127 +860,19 @@
    "losses": 3
   },
   {
-   "id": "K13",
-   "label": "The riot's real victims",
-   "n": 8,
-   "views": 11020820,
-   "x": 0.0,
-   "y": 0.6135,
-   "side_views": {
-    "JA": 11020820
-   },
-   "community_views": {
-    "JA": 9900853,
-    "FR": 1119967
-   },
-   "lead_idea": "A supermarket clerk says protest if you want but do not attack shops and people",
-   "top": [
-    {
-     "handle": "SOWIETK",
-     "views": 3387007,
-     "url": "https://x.com/SOWIETK/status/2112093487223177425",
-     "idea": "A supermarket clerk says protest if you want but do not attack shops and people",
-     "side": "JA",
-     "community": "JA"
-    },
-    {
-     "handle": "pondebekkio",
-     "views": 2434279,
-     "url": "https://x.com/pondebekkio/status/2111960971350823239",
-     "idea": "A nerd defends his anime shop against rioters: LGBT protester versus nerd",
-     "side": "JA",
-     "community": "JA"
-    },
-    {
-     "handle": "cynanyc",
-     "views": 2072780,
-     "url": "https://x.com/cynanyc/status/2112504639480594890",
-     "idea": "A Pulitzer-worthy photo: a French bookseller among the looting, a mob that saw no value in books",
-     "side": "JA",
-     "community": "JA"
-    },
-    {
-     "handle": "RafaelSereti",
-     "views": 1119967,
-     "url": "https://x.com/RafaelSereti/status/2112189152343081468",
-     "idea": "Asian shopkeepers stand up to looters to protect their shop",
-     "side": "JA",
-     "community": "FR"
-    }
-   ],
-   "elo": 1500,
-   "wins": 0,
-   "losses": 0
-  },
-  {
-   "id": "K11",
-   "label": "Japanese racism",
-   "n": 15,
-   "views": 9148738,
-   "x": 0.6266,
-   "y": 0.3568,
-   "side_views": {
-    "FR": 7183707,
-    "JA": 1965031
-   },
-   "community_views": {
-    "FR": 4075219,
-    "AR": 1024847,
-    "EN": 4048672
-   },
-   "lead_idea": "Calling all Japanese pedophiles is racist",
-   "top": [
-    {
-     "handle": "monikapilledd",
-     "views": 1965031,
-     "url": "https://x.com/monikapilledd/status/2114461964835618880",
-     "idea": "Calling all Japanese pedophiles is racist",
-     "side": "JA",
-     "community": "EN"
-    },
-    {
-     "handle": "abdu__witcher",
-     "views": 976136,
-     "url": "https://x.com/abdu__witcher/status/2113884851615285376",
-     "idea": "Japanese tweets: 'you are black'; French tweets: devastating jokes",
-     "side": "FR",
-     "community": "AR"
-    },
-    {
-     "handle": "croissantkoo",
-     "views": 610913,
-     "url": "https://x.com/croissantkoo/status/2113762024089927747",
-     "idea": "My timeline is Japanese people calling the French monkeys and the French obliterating them",
-     "side": "FR",
-     "community": "EN"
-    },
-    {
-     "handle": "anaselfuego",
-     "views": 580386,
-     "url": "https://x.com/anaselfuego/status/2112268945252069502",
-     "idea": "Is all of Japan far right? Never seen a non-racist Japanese on X",
-     "side": "FR",
-     "community": "FR"
-    }
-   ],
-   "elo": 1455,
-   "wins": 1,
-   "losses": 4
-  },
-  {
    "id": "K17",
    "label": "Old grudges join in",
-   "n": 13,
-   "views": 9098973,
-   "x": 0.6866,
-   "y": 0.3923,
+   "n": 14,
+   "views": 9241787,
+   "x": 0.7702,
+   "y": 0.4827,
    "side_views": {
-    "JA": 4392100,
+    "JA": 4534914,
     "FR": 4288944,
     "NEU": 417929
    },
    "community_views": {
-    "JA": 4392100,
+    "JA": 4534914,
     "FR": 2390797,
     "ES": 425693,
     "TH": 300272,
@@ -921,12 +921,67 @@
    "losses": 2
   },
   {
+   "id": "K11",
+   "label": "Japanese racism",
+   "n": 15,
+   "views": 9148738,
+   "x": 0.7347,
+   "y": 0.4185,
+   "side_views": {
+    "FR": 7183707,
+    "JA": 1965031
+   },
+   "community_views": {
+    "FR": 4075219,
+    "AR": 1024847,
+    "EN": 4048672
+   },
+   "lead_idea": "Calling all Japanese pedophiles is racist",
+   "top": [
+    {
+     "handle": "monikapilledd",
+     "views": 1965031,
+     "url": "https://x.com/monikapilledd/status/2114461964835618880",
+     "idea": "Calling all Japanese pedophiles is racist",
+     "side": "JA",
+     "community": "EN"
+    },
+    {
+     "handle": "abdu__witcher",
+     "views": 976136,
+     "url": "https://x.com/abdu__witcher/status/2113884851615285376",
+     "idea": "Japanese tweets: 'you are black'; French tweets: devastating jokes",
+     "side": "FR",
+     "community": "AR"
+    },
+    {
+     "handle": "croissantkoo",
+     "views": 610913,
+     "url": "https://x.com/croissantkoo/status/2113762024089927747",
+     "idea": "My timeline is Japanese people calling the French monkeys and the French obliterating them",
+     "side": "FR",
+     "community": "EN"
+    },
+    {
+     "handle": "anaselfuego",
+     "views": 580386,
+     "url": "https://x.com/anaselfuego/status/2112268945252069502",
+     "idea": "Is all of Japan far right? Never seen a non-racist Japanese on X",
+     "side": "FR",
+     "community": "FR"
+    }
+   ],
+   "elo": 1453,
+   "wins": 1,
+   "losses": 4
+  },
+  {
    "id": "K19",
    "label": "Who started it",
    "n": 11,
    "views": 8741118,
-   "x": 0.4828,
-   "y": 0.4486,
+   "x": 0.5969,
+   "y": 0.4631,
    "side_views": {
     "JA": 5378640,
     "NEU": 2134200,
@@ -972,7 +1027,7 @@
      "community": "TH"
     }
    ],
-   "elo": 1542,
+   "elo": 1544,
    "wins": 4,
    "losses": 1
   },
@@ -981,8 +1036,8 @@
    "label": "Who is really French",
    "n": 13,
    "views": 7360200,
-   "x": 0.7078,
-   "y": 0.557,
+   "x": 0.664,
+   "y": 0.7058,
    "side_views": {
     "JA": 6044819,
     "FR": 1315381
@@ -1032,12 +1087,64 @@
    "losses": 4
   },
   {
+   "id": "K09",
+   "label": "What the media hides",
+   "n": 10,
+   "views": 6169600,
+   "x": 0.2769,
+   "y": 0.5426,
+   "side_views": {
+    "JA": 6169600
+   },
+   "community_views": {
+    "JA": 6169600
+   },
+   "lead_idea": "A video call with a French political influencer to say what Japan's old media will not",
+   "top": [
+    {
+     "handle": "amatsuuni",
+     "views": 1426474,
+     "url": "https://x.com/amatsuuni/status/2114351673896550807",
+     "idea": "A video call with a French political influencer to say what Japan's old media will not",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "May_Roma",
+     "views": 1199630,
+     "url": "https://x.com/May_Roma/status/2111771410418802911",
+     "idea": "How is this a student protest about education? (black bloc video)",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "amatsuuni",
+     "views": 831092,
+     "url": "https://x.com/amatsuuni/status/2114715657376059753",
+     "idea": "A Japanese mock exam pities immigrants and skips the French riots",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "keiai154614",
+     "views": 596657,
+     "url": "https://x.com/keiai154614/status/2112499335154012346",
+     "idea": "Limoges city hall arson suspect is a far-left antifa activist",
+     "side": "JA",
+     "community": "JA"
+    }
+   ],
+   "elo": 1500,
+   "wins": 0,
+   "losses": 0
+  },
+  {
    "id": "K20",
    "label": "French insolence",
    "n": 9,
    "views": 4892664,
-   "x": 0.2811,
-   "y": 0.2468,
+   "x": 0.9184,
+   "y": 0.7527,
    "side_views": {
     "FR": 4628774,
     "NEU": 263890
@@ -1089,8 +1196,8 @@
    "label": "Students born in France",
    "n": 5,
    "views": 4590832,
-   "x": 0.4574,
-   "y": 0.8037,
+   "x": 0.2501,
+   "y": 0.6744,
    "side_views": {
     "NEU": 3590871,
     "JA": 999961
@@ -1138,64 +1245,12 @@
    "losses": 0
   },
   {
-   "id": "K09",
-   "label": "What the media hides",
-   "n": 8,
-   "views": 3912034,
-   "x": 0.2326,
-   "y": 0.7822,
-   "side_views": {
-    "JA": 3912034
-   },
-   "community_views": {
-    "JA": 3912034
-   },
-   "lead_idea": "How is this a student protest about education? (black bloc video)",
-   "top": [
-    {
-     "handle": "May_Roma",
-     "views": 1199630,
-     "url": "https://x.com/May_Roma/status/2111771410418802911",
-     "idea": "How is this a student protest about education? (black bloc video)",
-     "side": "JA",
-     "community": "JA"
-    },
-    {
-     "handle": "keiai154614",
-     "views": 596657,
-     "url": "https://x.com/keiai154614/status/2112499335154012346",
-     "idea": "Limoges city hall arson suspect is a far-left antifa activist",
-     "side": "JA",
-     "community": "JA"
-    },
-    {
-     "handle": "biglizardswife",
-     "views": 562380,
-     "url": "https://x.com/biglizardswife/status/2111681875450450119",
-     "idea": "NHK says high-school protests because Japan wants to import the same people",
-     "side": "JA",
-     "community": "JA"
-    },
-    {
-     "handle": "hotahotasa45082",
-     "views": 485056,
-     "url": "https://x.com/hotahotasa45082/status/2112023208321003967",
-     "idea": "Japanese media call it a high-school demo to hide who rioted",
-     "side": "JA",
-     "community": "JA"
-    }
-   ],
-   "elo": 1500,
-   "wins": 0,
-   "losses": 0
-  },
-  {
    "id": "K18",
    "label": "Foreign money behind the riots",
    "n": 1,
    "views": 1331612,
-   "x": 0.3273,
-   "y": 1.0,
+   "x": 0.0,
+   "y": 0.4035,
    "side_views": {
     "JA": 1331612
    },
@@ -1227,23 +1282,37 @@
    "rel": "amplify"
   },
   {
-   "source": "K01",
+   "source": "K23",
    "target": "K19",
-   "views": 878607,
-   "n": 2,
+   "views": 427894,
+   "n": 1,
    "rel": "amplify"
   },
   {
-   "source": "K01",
-   "target": "K01",
-   "views": 3769800,
-   "n": 7,
+   "source": "K23",
+   "target": "K23",
+   "views": 167073,
+   "n": 1,
+   "rel": "rebut"
+  },
+  {
+   "source": "K23",
+   "target": "K11",
+   "views": 4441707,
+   "n": 2,
    "rel": "rebut"
   },
   {
    "source": "K01",
-   "target": "K11",
-   "views": 4441707,
+   "target": "K01",
+   "views": 3520178,
+   "n": 4,
+   "rel": "rebut"
+  },
+  {
+   "source": "K01",
+   "target": "K23",
+   "views": 82549,
    "n": 2,
    "rel": "rebut"
   },
@@ -1272,6 +1341,13 @@
    "source": "K19",
    "target": "K17",
    "views": 11389,
+   "n": 1,
+   "rel": "rebut"
+  },
+  {
+   "source": "K01",
+   "target": "K19",
+   "views": 450713,
    "n": 1,
    "rel": "rebut"
   },
@@ -1409,7 +1485,7 @@
    "rel": "verdict"
   },
   {
-   "source": "K01",
+   "source": "K23",
    "target": "K03",
    "views": 1717192,
    "n": 1,
@@ -1570,7 +1646,7 @@
    "rel": "verdict"
   },
   {
-   "source": "K01",
+   "source": "K23",
    "target": "K16",
    "views": 413635,
    "n": 1,
@@ -1591,7 +1667,7 @@
    "rel": "verdict"
   },
   {
-   "source": "K01",
+   "source": "K23",
    "target": "K21",
    "views": 411316,
    "n": 1,
@@ -1810,7 +1886,7 @@
     "idea": "Stop soiling Japanese culture to do stupid things",
     "side": "JA",
     "community": "JA",
-    "concept": "K01",
+    "concept": "K23",
     "url": "https://x.com/Freza_sama/status/2111688466740461660"
    },
    "child": {
@@ -2087,7 +2163,7 @@
   },
   {
    "id": "2111688466740461660",
-   "concept": "K01",
+   "concept": "K23",
    "side": "JA",
    "community": "JA",
    "views": 2346217,
@@ -2698,7 +2774,7 @@
   },
   {
    "id": "o-obito",
-   "concept": "K01",
+   "concept": "K23",
    "side": "NEU",
    "community": "FR",
    "views": 2300000,
@@ -4244,6 +4320,409 @@
    "rel": null
   },
   {
+   "id": "2114634151399690296",
+   "concept": "K23",
+   "side": "NEU",
+   "community": "JA",
+   "views": 138443,
+   "handle": "konaske",
+   "url": "https://x.com/konaske/status/2114634151399690296",
+   "idea": "Explainer for foreigners: Japanese otaku reject One Piece in French protests because they never saw the riots' background",
+   "register": "meta",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114634167267065862",
+   "concept": "K23",
+   "side": "NEU",
+   "community": "JA",
+   "views": 571000,
+   "handle": "konaske",
+   "url": "https://x.com/konaske/status/2114634167267065862",
+   "idea": "For Japanese otaku, anime is a politics-free safe haven: an anti-war Gundam or rainbow fan art already drew backlash",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112397340632130025",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 1619978,
+   "handle": "freezetheidiotz",
+   "url": "https://x.com/freezetheidiotz/status/2112397340632130025",
+   "idea": "Told not to use our anime as a looting symbol, the French should answer 'fine, our culture is better': no pride left?",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114028721212698796",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 974817,
+   "handle": "freezetheidiotz",
+   "url": null,
+   "idea": "Racial address telling Black people to make their own manga and anime",
+   "register": "insult",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112799163822084186",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 2365433,
+   "handle": "milchass_223",
+   "url": "https://x.com/milchass_223/status/2112799163822084186",
+   "idea": "In the One Piece world, the Red-Haired Pirates would make the rioters pay",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112204373791293499",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 1460687,
+   "handle": "sushi_zamurai_",
+   "url": "https://x.com/sushi_zamurai_/status/2112204373791293499",
+   "idea": "A French person asking a Japanese if they read the same One Piece is the joke of the century",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114155721076179389",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 741876,
+   "handle": "roikfbuwgc254",
+   "url": "https://x.com/roikfbuwgc254/status/2114155721076179389",
+   "idea": "Saying the French understand manga better than the Japanese is a huge generalization",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112376456949256297",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 566567,
+   "handle": "V7NnRqa0uZbvFqZ",
+   "url": "https://x.com/V7NnRqa0uZbvFqZ/status/2112376456949256297",
+   "idea": "You see yourselves as Luffy fighting the elite, yet you loot ordinary shops",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113479496158646316",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 312005,
+   "handle": "KoshimaTakashi",
+   "url": "https://x.com/KoshimaTakashi/status/2113479496158646316",
+   "idea": "One Piece's own symbols answer the French: an enemy weapon is named Napoleon",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112532553769078907",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 307080,
+   "handle": "ikettitencho",
+   "url": "https://x.com/ikettitencho/status/2112532553769078907",
+   "idea": "Explainer: anime cosplay and flags at French protests, French values and a 'woke' left",
+   "register": "info",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112318693967569123",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 240767,
+   "handle": "nasubi_mono",
+   "url": null,
+   "idea": "Mockery: the French cannot even read a manga, Luffy never looted an innocent shop",
+   "register": "insult",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112782655821615269",
+   "concept": "K23",
+   "side": "NEU",
+   "community": "JA",
+   "views": 239191,
+   "handle": "pen_pen2020",
+   "url": "https://x.com/pen_pen2020/status/2112782655821615269",
+   "idea": "Japanese got angrier at One Piece in French protests than at the Japanese 'Luffy' robbery gang",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113077655159689327",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 211939,
+   "handle": "saou0345",
+   "url": "https://x.com/saou0345/status/2113077655159689327",
+   "idea": "Some French now claim better manga taste than the Japanese: otaku have reasons to distrust that",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112472366987259925",
+   "concept": "K23",
+   "side": "NEU",
+   "community": "JA",
+   "views": 203513,
+   "handle": "BTCC_wakayama",
+   "url": "https://x.com/BTCC_wakayama/status/2112472366987259925",
+   "idea": "Cosplay at a protest is called politicizing anime, anime icons used for xenophobia are not",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112441553100956089",
+   "concept": "K23",
+   "side": "NEU",
+   "community": "JA",
+   "views": 175831,
+   "handle": "quadrumviro",
+   "url": "https://x.com/quadrumviro/status/2112441553100956089",
+   "idea": "The Straw Hat flag waved in French protests and the negative reactions in Japan",
+   "register": "info",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112724234665693455",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 146173,
+   "handle": "tmconchi303",
+   "url": null,
+   "idea": "Insult toward French users who answer 'One Piece is about revolution'",
+   "register": "insult",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112471258453643767",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 127333,
+   "handle": "kyu_tyou99",
+   "url": "https://x.com/kyu_tyou99/status/2112471258453643767",
+   "idea": "Is the French One Piece even the same work as Japan's? It looks like usurpation",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112418736137527412",
+   "concept": "K23",
+   "side": "NEU",
+   "community": "JA",
+   "views": 126468,
+   "handle": "catcherinthetw",
+   "url": "https://x.com/catcherinthetw/status/2112418736137527412",
+   "idea": "What part of One Piece are the people angry about Luffy in the French protests reading?",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112840163521167530",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 104528,
+   "handle": "V7NnRqa0uZbvFqZ",
+   "url": "https://x.com/V7NnRqa0uZbvFqZ/status/2112840163521167530",
+   "idea": "The French 'understanding' of Naruto ends in cosplay and arson",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112347183534297141",
+   "concept": "K23",
+   "side": "JA",
+   "community": "JA",
+   "views": 104228,
+   "handle": "sakami_keniti",
+   "url": "https://x.com/sakami_keniti/status/2112347183534297141",
+   "idea": "A manga artist invited protesters to use manga without holding the rights",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114176657712177617",
+   "concept": "K01",
+   "side": "JA",
+   "community": "JA",
+   "views": 681127,
+   "handle": "manam098",
+   "url": "https://x.com/manam098/status/2114176657712177617",
+   "idea": "Using Japanese anime to diss Japan is fine: nobody knows a single French anime",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113930212702589049",
+   "concept": "K01",
+   "side": "JA",
+   "community": "JA",
+   "views": 379685,
+   "handle": "watch_dog_timer",
+   "url": "https://x.com/watch_dog_timer/status/2113930212702589049",
+   "idea": "France as manga's second market is a myth: it ranks third",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112786360256147587",
+   "concept": "K01",
+   "side": "JA",
+   "community": "JA",
+   "views": 132292,
+   "handle": "BiX49686038",
+   "url": "https://x.com/BiX49686038/status/2112786360256147587",
+   "idea": "French speakers use Japanese anime to trash Japan and claim anime is theirs",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112074920658337879",
+   "concept": "K13",
+   "side": "JA",
+   "community": "JA",
+   "views": 8439006,
+   "handle": "amatsuuni",
+   "url": "https://x.com/amatsuuni/status/2112074920658337879",
+   "idea": "A lone French otaku defends an anime shop from 'invaders'",
+   "register": "testimony",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112380780446134526",
+   "concept": "K13",
+   "side": "JA",
+   "community": "JA",
+   "views": 2277454,
+   "handle": "V7NnRqa0uZbvFqZ",
+   "url": "https://x.com/V7NnRqa0uZbvFqZ/status/2112380780446134526",
+   "idea": "Shop workers are ordinary people: looting them is not fighting the rich",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114351673896550807",
+   "concept": "K09",
+   "side": "JA",
+   "community": "JA",
+   "views": 1426474,
+   "handle": "amatsuuni",
+   "url": "https://x.com/amatsuuni/status/2114351673896550807",
+   "idea": "A video call with a French political influencer to say what Japan's old media will not",
+   "register": "testimony",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114715657376059753",
+   "concept": "K09",
+   "side": "JA",
+   "community": "JA",
+   "views": 831092,
+   "handle": "amatsuuni",
+   "url": "https://x.com/amatsuuni/status/2114715657376059753",
+   "idea": "A Japanese mock exam pities immigrants and skips the French riots",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112562881283928110",
+   "concept": "K13",
+   "side": "NEU",
+   "community": "JA",
+   "views": 321716,
+   "handle": "konmarihj",
+   "url": "https://x.com/konmarihj/status/2112562881283928110",
+   "idea": "The looted comic-store owner still supports the students",
+   "register": "testimony",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114387909730320437",
+   "concept": "K07",
+   "side": "JA",
+   "community": "JA",
+   "views": 296246,
+   "handle": "ichiichiyon_114",
+   "url": null,
+   "idea": "Religious mockery: Muslims are forbidden anime yet watch it",
+   "register": "insult",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112493980197769492",
+   "concept": "K13",
+   "side": "JA",
+   "community": "JA",
+   "views": 165243,
+   "handle": "May_Roma",
+   "url": "https://x.com/May_Roma/status/2112493980197769492",
+   "idea": "CCTV of an anime shop raided by looters in France",
+   "register": "info",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112715090999066784",
+   "concept": "K17",
+   "side": "JA",
+   "community": "JA",
+   "views": 142814,
+   "handle": "Katsuragi356420",
+   "url": "https://x.com/Katsuragi356420/status/2112715090999066784",
+   "idea": "Westerners lectured Japan on anime diversity, now they say do not meddle",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
    "id": "2113158310014906460",
    "concept": "K07",
    "side": "JA",
@@ -4869,7 +5348,7 @@
   },
   {
    "id": "2112189850166419816",
-   "concept": "K01",
+   "concept": "K23",
    "side": "JA",
    "community": "JA",
    "views": 82404,
@@ -4908,7 +5387,7 @@
   },
   {
    "id": "2112205245606695320",
-   "concept": "K01",
+   "concept": "K23",
    "side": "JA",
    "community": "JA",
    "views": 145,
@@ -5350,7 +5829,7 @@
   },
   {
    "id": "2111855460303487011",
-   "concept": "K01",
+   "concept": "K23",
    "side": "FR",
    "community": "FR",
    "views": 167073,

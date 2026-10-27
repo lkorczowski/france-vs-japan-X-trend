@@ -65,3 +65,42 @@ SEARCH2.update({
     "2114054392240656566": ("EN", "FR", "K14", "A Japanese delinquent versus a slightly irritated French person (meme repost)", "humor", "yvngxkou", 252699, 32333),
     "2112530543774441615": ("EN", "JA", "K03", "The French are in no position to lecture Japan on rape culture (answering the list of vices)", "argument", "politicalawake", 250112, 11210),
 })
+
+# Third pass, 2026-10-28: the "anime as a protest symbol" idea (konaske's thread, One Piece flag), Chrome search
+# lang:ja since 17 Oct, min_faves 300 and 2000, threshold 100K views. Likes not read (0).
+SEARCH2.update({
+    "2114634151399690296": ("JA", "NEU", "K23", "Explainer for foreigners: Japanese otaku reject One Piece in French protests because they never saw the riots' background", "meta", "konaske", 138443, 0),
+    "2114634167267065862": ("JA", "NEU", "K23", "For Japanese otaku, anime is a politics-free safe haven: an anti-war Gundam or rainbow fan art already drew backlash", "argument", "konaske", 571000, 0),
+    "2112397340632130025": ("JA", "JA", "K23", "Told not to use our anime as a looting symbol, the French should answer 'fine, our culture is better': no pride left?", "argument", "freezetheidiotz", 1619978, 0),
+    "2114028721212698796": ("JA", "JA", "K23", "Racial address telling Black people to make their own manga and anime", "insult", "freezetheidiotz", 974817, 0),
+    "2112799163822084186": ("JA", "JA", "K23", "In the One Piece world, the Red-Haired Pirates would make the rioters pay", "humor", "milchass_223", 2365433, 0),
+    "2112204373791293499": ("JA", "JA", "K23", "A French person asking a Japanese if they read the same One Piece is the joke of the century", "humor", "sushi_zamurai_", 1460687, 0),
+    "2114155721076179389": ("JA", "JA", "K23", "Saying the French understand manga better than the Japanese is a huge generalization", "argument", "roikfbuwgc254", 741876, 0),
+    "2112376456949256297": ("JA", "JA", "K23", "You see yourselves as Luffy fighting the elite, yet you loot ordinary shops", "argument", "V7NnRqa0uZbvFqZ", 566567, 0),
+    "2113479496158646316": ("JA", "JA", "K23", "One Piece's own symbols answer the French: an enemy weapon is named Napoleon", "argument", "KoshimaTakashi", 312005, 0),
+    "2112532553769078907": ("JA", "JA", "K23", "Explainer: anime cosplay and flags at French protests, French values and a 'woke' left", "info", "ikettitencho", 307080, 0),
+    "2112318693967569123": ("JA", "JA", "K23", "Mockery: the French cannot even read a manga, Luffy never looted an innocent shop", "insult", "nasubi_mono", 240767, 0),
+    "2112782655821615269": ("JA", "NEU", "K23", "Japanese got angrier at One Piece in French protests than at the Japanese 'Luffy' robbery gang", "argument", "pen_pen2020", 239191, 0),
+    "2113077655159689327": ("JA", "JA", "K23", "Some French now claim better manga taste than the Japanese: otaku have reasons to distrust that", "argument", "saou0345", 211939, 0),
+    "2112472366987259925": ("JA", "NEU", "K23", "Cosplay at a protest is called politicizing anime, anime icons used for xenophobia are not", "argument", "BTCC_wakayama", 203513, 0),
+    "2112441553100956089": ("JA", "NEU", "K23", "The Straw Hat flag waved in French protests and the negative reactions in Japan", "info", "quadrumviro", 175831, 0),
+    "2112724234665693455": ("JA", "JA", "K23", "Insult toward French users who answer 'One Piece is about revolution'", "insult", "tmconchi303", 146173, 0),
+    "2112471258453643767": ("JA", "JA", "K23", "Is the French One Piece even the same work as Japan's? It looks like usurpation", "argument", "kyu_tyou99", 127333, 0),
+    "2112418736137527412": ("JA", "NEU", "K23", "What part of One Piece are the people angry about Luffy in the French protests reading?", "argument", "catcherinthetw", 126468, 0),
+    "2112840163521167530": ("JA", "JA", "K23", "The French 'understanding' of Naruto ends in cosplay and arson", "argument", "V7NnRqa0uZbvFqZ", 104528, 0),
+    "2112347183534297141": ("JA", "JA", "K23", "A manga artist invited protesters to use manga without holding the rights", "argument", "sakami_keniti", 104228, 0),
+    "2114176657712177617": ("JA", "JA", "K01", "Using Japanese anime to diss Japan is fine: nobody knows a single French anime", "humor", "manam098", 681127, 0),
+    "2113930212702589049": ("JA", "JA", "K01", "France as manga's second market is a myth: it ranks third", "argument", "watch_dog_timer", 379685, 0),
+    "2112786360256147587": ("JA", "JA", "K01", "French speakers use Japanese anime to trash Japan and claim anime is theirs", "argument", "BiX49686038", 132292, 0),
+    # Found on the same searches, other concepts (500K+ rule)
+    "2112074920658337879": ("JA", "JA", "K13", "A lone French otaku defends an anime shop from 'invaders'", "testimony", "amatsuuni", 8439006, 0),
+    "2112380780446134526": ("JA", "JA", "K13", "Shop workers are ordinary people: looting them is not fighting the rich", "argument", "V7NnRqa0uZbvFqZ", 2277454, 0),
+    "2114351673896550807": ("JA", "JA", "K09", "A video call with a French political influencer to say what Japan's old media will not", "testimony", "amatsuuni", 1426474, 0),
+    "2114715657376059753": ("JA", "JA", "K09", "A Japanese mock exam pities immigrants and skips the French riots", "argument", "amatsuuni", 831092, 0),
+    "2112562881283928110": ("JA", "NEU", "K13", "The looted comic-store owner still supports the students", "testimony", "konmarihj", 321716, 0),
+    "2114387909730320437": ("JA", "JA", "K07", "Religious mockery: Muslims are forbidden anime yet watch it", "insult", "ichiichiyon_114", 296246, 0),
+    "2112493980197769492": ("JA", "JA", "K13", "CCTV of an anime shop raided by looters in France", "info", "May_Roma", 165243, 0),
+    "2112715090999066784": ("JA", "JA", "K17", "Westerners lectured Japan on anime diversity, now they say do not meddle", "argument", "Katsuragi356420", 142814, 0),
+})
+EXCLUDED2["2113605443402776760"] = "amatsuuni, 683K: restaurant anecdote about a family, not about the conflict"
+EXCLUDED2["2113698343369289945"] = "wN4lzRDDL, 183K: slur, under threshold"
