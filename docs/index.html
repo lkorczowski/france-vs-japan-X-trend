@@ -171,6 +171,8 @@ code { font-family: "JetBrains Mono", monospace; font-size: 0.72rem; word-break:
 footer { padding: 36px 0 56px; font-size: 0.8rem; color: var(--text-2); }
 footer .brand { font-size: 1.1rem; display: inline-block; margin-bottom: 10px; }
 footer p { margin: 4px 0; }
+.cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 20px; padding: 14px 18px; border: 1px solid var(--text); text-decoration: none; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.cta:hover { border-color: var(--accent); color: var(--accent); }
 .run { color: var(--text-3); font-size: 0.7rem; margin-top: 14px; }
 
 .reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
@@ -257,7 +259,16 @@ footer p { margin: 4px 0; }
 
   <section class="sec">
     <div class="wrap">
-      <p class="label mono"><b>§06</b>· Method</p>
+      <p class="label mono"><b>§06</b>· Battle of ideas</p>
+      <h2>Which ideas won the war</h2>
+      <p class="lead">Behind the tug of war, ideas fought for attention. We read the most viewed posts one by one, images and videos included, and mapped 21 ideas in conflict, their camp and their duels.</p>
+      <a class="cta mono" href="ideas.html">Open the map of ideas <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§07</b>· Method</p>
       <h2>How this is measured</h2>
       <ol class="method" id="method">
         <li><span>Data comes from the official X API: post counts per day, and the public metrics of tracked posts.</span></li>

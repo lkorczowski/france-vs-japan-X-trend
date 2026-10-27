@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Battle of Ideas</title>
+<meta name="description" content="Which ideas won the French vs Japanese war on X. 182 posts read one by one, 21 ideas mapped, duels measured by reach. A STATUR viral marketing lab study.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* STATUR brand V3.2: ink #0E0E0C, paper #F2EFE8, signal orange #E8501C (<10 %, never a full background). */
+:root {
+  color-scheme: dark;
+  --bg: #0E0E0C; --surface: #1C1C19; --line: rgba(242, 239, 232, 0.14); --text: #F2EFE8; --text-2: #BDB9AF; --text-3: #8A8780;
+  --fr: #F2EFE8; --ja: #E8501C; --neu: #8A8780; --accent: #E8501C; --grid: #24241F;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: #F2EFE8; --surface: #E8E4DA; --line: #D3CEC2; --text: #0E0E0C; --text-2: #3D3C38; --text-3: #6B6862;
+    --fr: #0E0E0C; --ja: #E8501C; --neu: #8A8780; --grid: #E0DCD1;
+  }
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #F2EFE8; --surface: #E8E4DA; --line: #D3CEC2; --text: #0E0E0C; --text-2: #3D3C38; --text-3: #6B6862;
+  --fr: #0E0E0C; --ja: #E8501C; --neu: #8A8780; --grid: #E0DCD1;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 Archivo, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; overflow-x: hidden; }
+a { color: inherit; }
+.mono { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+.top { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; height: 52px; font-size: 0.72rem; }
+.brand { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.brand .sym { font-family: "JetBrains Mono", monospace; font-weight: 700; }
+.brand .wm { font-weight: 900; letter-spacing: -0.03em; font-size: 1rem; }
+.brand .d { color: var(--accent); }
+.brand small { font-family: "JetBrains Mono", monospace; font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); }
+.nav a { color: var(--text-2); text-decoration: none; text-transform: uppercase; letter-spacing: 0.06em; }
+.nav a:hover { color: var(--text); }
+@media (max-width: 480px) { .brand small { display: none; } }
+.sec { padding: 44px 0; border-bottom: 1px solid var(--line); }
+.label { font-size: 0.68rem; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 16px; display: flex; align-items: center; gap: 12px; }
+.label::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+h1 { font-weight: 900; font-size: clamp(2.4rem, 11vw, 5rem); line-height: 0.95; letter-spacing: -0.04em; margin: 0 0 14px; text-transform: uppercase; }
+h2 { font-weight: 800; font-size: clamp(1.4rem, 5.5vw, 2rem); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 8px; }
+.lead { color: var(--text-2); margin: 0; max-width: 640px; }
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 28px; }
+@media (min-width: 720px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+.stats div { background: var(--bg); padding: 16px 14px; }
+.stats b { display: block; font-weight: 900; font-size: clamp(1.6rem, 6vw, 2.3rem); letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+.stats span { font-size: 0.68rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* Map */
+.toggle { display: inline-flex; border: 1px solid var(--line); margin: 20px 0 12px; }
+.toggle button { font: 700 0.7rem "JetBrains Mono", monospace; letter-spacing: 0.06em; text-transform: uppercase; background: transparent; color: var(--text-2); border: 0; padding: 10px 14px; cursor: pointer; }
+.toggle button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.7rem; color: var(--text-2); margin-bottom: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 10px; height: 10px; display: inline-block; flex: none; }
+.ln { width: 18px; height: 0; border-top: 1.5px solid var(--text-3); display: inline-block; }
+.ln.atk { border-top: 1.5px dashed var(--accent); }
+.mapgrid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 900px) { .mapgrid { grid-template-columns: 1fr 300px; } }
+.mapbox { position: relative; border: 1px solid var(--line); }
+#map { display: block; width: 100%; height: auto; touch-action: manipulation; }
+#map .bub { cursor: pointer; }
+#map .bub:focus { outline: none; }
+#map .bub:focus .ring0 { stroke: var(--accent); }
+.panel { border: 1px solid var(--line); padding: 16px; min-height: 280px; }
+.panel .k { font-size: 0.66rem; color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; }
+.panel h3 { font-weight: 900; font-size: 1.45rem; letter-spacing: -0.02em; line-height: 1.1; margin: 6px 0 8px; }
+.panel .idea { color: var(--text-2); font-size: 0.9rem; margin: 0 0 12px; }
+.panel .big { font-weight: 900; font-size: 1.9rem; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+.panel .row { display: flex; justify-content: space-between; gap: 8px; font-size: 0.7rem; color: var(--text-3); margin: 12px 0 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+.stack { display: flex; height: 8px; gap: 2px; }
+.stack i { display: block; height: 100%; }
+.panel ul { list-style: none; padding: 0; margin: 10px 0 0; }
+.panel li { border-top: 1px solid var(--line); padding: 8px 0; font-size: 0.82rem; }
+.panel li a { text-decoration: none; font-weight: 600; }
+.panel li a:hover { text-decoration: underline; }
+.panel li small { display: block; color: var(--text-3); font-size: 0.72rem; }
+
+/* Findings */
+.finds { margin: 22px 0 0; padding: 0; list-style: none; counter-reset: f; }
+.finds li { counter-increment: f; display: grid; grid-template-columns: 2.6rem 1fr; gap: 4px; padding: 16px 0; border-top: 1px solid var(--line); }
+.finds li::before { content: "0" counter(f); font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--accent); padding-top: 4px; }
+.finds b { display: block; font-weight: 800; font-size: 1.12rem; letter-spacing: -0.01em; line-height: 1.25; margin-bottom: 4px; }
+.finds span { color: var(--text-2); font-size: 0.9rem; }
+
+/* Elo */
+.elo { margin-top: 18px; }
+.elo .r { display: grid; grid-template-columns: 1.8rem 1fr 3.4rem 3rem; gap: 10px; align-items: center; padding: 9px 0; border-top: 1px solid var(--line); font-size: 0.88rem; }
+.elo .r .n { color: var(--text-3); font-size: 0.7rem; }
+.elo .r .bar { height: 3px; background: var(--grid); margin-top: 5px; }
+.elo .r .bar i { display: block; height: 100%; width: 0; transition: width 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.elo .r .s { text-align: right; font-weight: 800; font-variant-numeric: tabular-nums; }
+.elo .r .wl { text-align: right; color: var(--text-3); font-size: 0.72rem; }
+
+/* Duels */
+.duels { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 20px; }
+@media (min-width: 760px) { .duels { grid-template-columns: 1fr 1fr; } }
+.duel { background: var(--bg); padding: 18px 16px; }
+.duel .side { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: start; }
+.chip { font: 700 0.62rem "JetBrains Mono", monospace; width: 28px; height: 22px; display: grid; place-items: center; border: 1px solid; flex: none; }
+.chip.FR { color: var(--fr); border-color: var(--fr); }
+.chip.JA { color: var(--bg); background: var(--ja); border-color: var(--ja); }
+.chip.NEU { color: var(--neu); border-color: var(--neu); }
+.duel p { margin: 0; font-size: 0.88rem; line-height: 1.4; }
+.duel .h { font-size: 0.7rem; color: var(--text-3); display: block; margin-top: 3px; }
+.duel .h a { color: var(--text-2); }
+.duel .v { font-weight: 800; font-variant-numeric: tabular-nums; font-size: 0.95rem; white-space: nowrap; }
+.duel .vs { font: 700 0.62rem "JetBrains Mono", monospace; color: var(--accent); letter-spacing: 0.12em; margin: 10px 0 10px 38px; }
+.duel .ratio { margin-top: 12px; font: 0.7rem "JetBrains Mono", monospace; color: var(--text-2); }
+.duel .rb { height: 4px; background: var(--grid); margin-top: 6px; position: relative; }
+.duel .rb i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); }
+
+/* Communities */
+.comm { margin-top: 18px; }
+.comm .r { display: grid; grid-template-columns: 5.6rem 1fr 4.2rem; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); font-size: 0.85rem; }
+.comm .bar { height: 8px; background: var(--grid); }
+.comm .bar i { display: block; height: 100%; width: 0; transition: width 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.comm .v { text-align: right; font-weight: 800; font-variant-numeric: tabular-nums; }
+
+/* Timeline */
+.tl { margin: 22px 0 0; padding: 0; list-style: none; border-left: 1px solid var(--line); }
+.tl li { position: relative; padding: 0 0 22px 22px; }
+.tl li::before { content: ""; position: absolute; left: -5px; top: 6px; width: 9px; height: 9px; background: var(--bg); border: 1px solid var(--text); }
+.tl li.hot::before { background: var(--accent); border-color: var(--accent); }
+.tl .d { font: 0.7rem "JetBrains Mono", monospace; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.06em; }
+.tl p { margin: 2px 0 0; color: var(--text-2); font-size: 0.92rem; }
+.tl b { color: var(--text); }
+
+.method { margin: 14px 0 0; padding: 0; list-style: none; counter-reset: m; }
+.method li { counter-increment: m; display: grid; grid-template-columns: 2.4rem 1fr; padding: 10px 0; border-top: 1px solid var(--line); color: var(--text-2); font-size: 0.88rem; }
+.method li::before { content: "0" counter(m); font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--text-3); padding-top: 2px; }
+.method b { color: var(--text); }
+.refs { font-size: 0.78rem; color: var(--text-3); margin-top: 18px; }
+.refs a { color: var(--text-2); }
+footer { padding: 36px 0 56px; font-size: 0.8rem; color: var(--text-2); }
+footer p { margin: 4px 0; }
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .elo .r .bar i, .comm .bar i { transition: none; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap mono">
+    <a class="brand" href="https://statur.co"><span class="sym">[<span class="d">•</span>]</span><span class="wm">STATUR<span class="d">.</span></span><small>Viral marketing lab</small></a>
+    <nav class="nav"><a href="./">Scoreboard</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§01</b>· Battle of ideas</p>
+      <h1>The ideas that won the war</h1>
+      <p class="lead">Behind the tug of war, ideas fought for attention. We read 182 of the most viewed posts one by one, images and videos included, and mapped the ideas they carry. Each bubble is an idea. Its size is the attention it earned.</p>
+      <div class="stats" id="stats"></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§02</b>· The map</p>
+      <h2>Where each idea stands</h2>
+      <p class="lead" id="maplead">Battle lines: ideas serving the French side on the left, the Japanese side on the right, neutral ideas in the middle. Lines are quotes: one idea answering another.</p>
+      <div class="toggle" role="group" aria-label="Map view">
+        <button type="button" id="v-battle" aria-pressed="true">Battle lines</button>
+        <button type="button" id="v-space" aria-pressed="false">Idea space</button>
+      </div>
+      <div class="legend mono">
+        <span><i class="sw" style="background:var(--fr)"></i>Serves French side</span>
+        <span><i class="sw" style="background:var(--ja)"></i>Serves Japanese side</span>
+        <span><i class="sw" style="background:var(--neu)"></i>Neutral</span>
+        <span><i class="ln atk"></i>Rebuttal</span>
+        <span><i class="ln"></i>Amplification</span>
+      </div>
+      <div class="mapgrid">
+        <div class="mapbox" id="mapbox"><svg id="map" role="img" aria-label="Map of the ideas of the French versus Japanese war on X"></svg></div>
+        <aside class="panel" id="panel" aria-live="polite"></aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§03</b>· What we found</p>
+      <h2>Five lessons from the battlefield</h2>
+      <ol class="finds" id="finds"></ol>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§04</b>· Duels</p>
+      <h2>When an idea answers another</h2>
+      <p class="lead">A quote is a duel: someone takes a post and answers it with another idea. The ratio is the reach of the answer divided by the reach of the original. Above 1, the answer won.</p>
+      <div class="duels" id="duels"></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§05</b>· Ranking</p>
+      <h2>Which ideas win their duels</h2>
+      <p class="lead">An Elo rating, as in chess. Every rebuttal is a match between two ideas. The idea whose post reached more people wins the match.</p>
+      <div class="elo" id="elo"></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§06</b>· Third parties</p>
+      <h2>Who else was fighting</h2>
+      <p class="lead" id="commlead"></p>
+      <div class="comm" id="comm"></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§07</b>· Origin</p>
+      <h2>How one cosplay started it</h2>
+      <ol class="tl">
+        <li><span class="d mono">17 Oct</span><p>High-school protests in France turn into riots and looting in several cities.</p></li>
+        <li class="hot"><span class="d mono">18 Oct</span><p>A French post shows a <b>Naruto cosplayer</b> next to a burning car: "Obito cast a fire jutsu". 2.3M views.</p></li>
+        <li class="hot"><span class="d mono">18 Oct</span><p>A Japanese account answers: <b>stop soiling Japanese culture</b> to do stupid things. 2.3M views.</p></li>
+        <li class="hot"><span class="d mono">18 Oct</span><p>French answers: <b>withdraw every anime inspired by Europe</b> (5.1M views), and a list of Japanese "vices" that becomes the script of the jokes to come.</p></li>
+        <li><span class="d mono">19 to 22 Oct</span><p>Japanese X frames the riots as <b>a Muslim and immigrant revolt</b>. A minority answers with data: most rioters are students born in France.</p></li>
+        <li class="hot"><span class="d mono">21 to 25 Oct</span><p>The French joke wave: <b>Vegeta is Algerian</b> (17.9M), sperm and sex dolls (11.5M), the 65-hour week (10.1M). X auto-translates every one of them, and the English-speaking world watches.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="label mono"><b>§08</b>· Method</p>
+      <h2>How this was measured</h2>
+      <ol class="method" id="method">
+        <li><span><b>Corpus.</b> 59 seed posts (every post above 500K views we tracked, plus posts found by hand), 8 posts they quote, 2 origin posts seen in screenshots, and 115 quotes read in the Quotes tab of the 15 most viewed posts. 182 posts, about 243M views.</span></li>
+        <li><span><b>Multimodal reading.</b> Every post was read with its image or video frame, because the joke often lives in the picture. Each post was annotated with one idea, written as a neutral sentence that states the implied meaning, the camp it serves, the community that posted it and its register.</span></li>
+        <li><span><b>Concept induction.</b> The 21 concepts were induced from the posts, not fixed in advance, following concept induction with language models (LLooM). A concept is contested ground: both camps can hold ideas inside it.</span></li>
+        <li><span><b>Map.</b> Ideas are embedded with a sentence model (all-mpnet-base-v2). Concept centroids are placed by metric MDS on cosine distance, like the intertopic map of pyLDAvis. Battle lines place each concept by the share of its views serving each camp.</span></li>
+        <li id="m-ari"><span><b>Can it be automated?</b></span></li>
+        <li><span><b>Limits.</b> Seed posts were partly chosen by hand. Views measure reach, not agreement. The camp of a post is a reading, never an assumption about the origin of a person. Post text is never displayed: ideas are paraphrased, and insults are counted but not linked.</span></li>
+      </ol>
+      <p class="refs mono">References: Lam et al., <a href="https://arxiv.org/abs/2404.12259">Concept Induction with LLooM</a>, CHI 2024 · Pham et al., <a href="https://arxiv.org/abs/2311.01449">TopicGPT</a>, NAACL 2024 · Grootendorst, <a href="https://arxiv.org/abs/2203.05794">BERTopic</a>, 2022 · Hwang and Shwartz, <a href="https://aclanthology.org/2023.emnlp-main.89">MemeCap</a>, EMNLP 2023 · Sievert and Shirley, LDAvis, 2014.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Built by Dr. Louis Korczowski · <a href="https://statur.co">statur.co</a></p>
+    <p>A study of the STATUR viral marketing lab. We study why some ideas travel and others do not.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var cf = new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 });
+  var NAME = { FR: "French side", JA: "Japanese side", NEU: "Neutral" };
+  var COMM = { FR: "French", JA: "Japanese", EN: "English", AR: "Arabic", ES: "Spanish", TH: "Thai", PT: "Portuguese", CN: "Chinese", KO: "Korean" };
+  var COLOR = { FR: "var(--fr)", JA: "var(--ja)", NEU: "var(--neu)" };
+  function el(tag, attrs, text) { var e = document.createElement(tag); for (var k in attrs || {}) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; }
+  function svgEl(tag, attrs) { var e = document.createElementNS("http://www.w3.org/2000/svg", tag); for (var k in attrs) e.setAttribute(k, attrs[k]); return e; }
+  function onView(node, fn) {
+    if (REDUCED || !("IntersectionObserver" in window)) { fn(); return; }
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { io.disconnect(); fn(); } }); }, { threshold: 0.2 });
+    io.observe(node);
+  }
+  function reveal(node) { node.classList.add("reveal"); onView(node, function () { node.classList.add("in"); }); }
+
+  fetch("data/ideas.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(render);
+
+  function sideShares(c) {
+    var t = (c.side_views.FR || 0) + (c.side_views.JA || 0) + (c.side_views.NEU || 0) || 1;
+    return { FR: (c.side_views.FR || 0) / t, JA: (c.side_views.JA || 0) / t, NEU: (c.side_views.NEU || 0) / t };
+  }
+
+  function render(d) {
+    var total = Object.values(d.communities).reduce(function (a, b) { return a + b; }, 0);
+    var stats = document.getElementById("stats");
+    [[d.method.units, "posts read one by one"], [cf.format(total), "views analysed"], [d.method.concepts, "ideas in conflict"], [Math.round(d.third_party_share * 100) + "%", "of views from third parties"]]
+      .forEach(function (s) { var x = el("div"); x.appendChild(el("b", null, String(s[0]))); x.appendChild(el("span", { "class": "mono" }, s[1])); stats.appendChild(x); });
+
+    map(d);
+    findings(d);
+    duels(d);
+    elo(d);
+    communities(d, total);
+    var a = document.getElementById("m-ari").querySelector("span");
+    a.appendChild(document.createTextNode(" Partly. Clustering raw post text with a multilingual sentence model recovers almost none of the concepts (adjusted Rand index 0.11). Clustering our idea sentences, where the hidden meaning of each joke is written out, reaches " + d.method.ari_auto_vs_hand.toFixed(2) + ". The jump from there to clean concepts takes reasoning about the image and the joke. A vision-language model can do that step, and that is the part worth automating."));
+  }
+
+  // ---------- Map ----------
+  function map(d) {
+    var box = document.getElementById("mapbox"), svg = document.getElementById("map");
+    var W = Math.max(320, Math.round(box.clientWidth)), H = Math.round(W < 600 ? W * 1.4 : W * 0.72);
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    var pad = W < 600 ? 34 : 56;
+    var C = d.concepts, max = C[0].views;
+    var R = function (v) { return Math.max(10, (W < 600 ? 0.15 : 0.105) * W * Math.sqrt(v / max)); };
+    C.forEach(function (c) { c.r = R(c.views); c.sh = sideShares(c); });
+
+    function battlePos() {
+      // x from the camp balance, y from the semantic MDS axis, then relax collisions
+      var pts = C.map(function (c) {
+        var bal = c.sh.JA - c.sh.FR;
+        return { c: c, x: W / 2 + bal * (W / 2 - pad - c.r * 0.6), y: pad + c.y * (H - 2 * pad) };
+      });
+      relax(pts);
+      return pts;
+    }
+    function spacePos() {
+      var pts = C.map(function (c) { return { c: c, x: pad + c.x * (W - 2 * pad), y: pad + c.y * (H - 2 * pad) }; });
+      relax(pts);
+      return pts;
+    }
+    function relax(pts) {
+      for (var it = 0; it < 240; it++) {
+        for (var i = 0; i < pts.length; i++) for (var j = i + 1; j < pts.length; j++) {
+          var a = pts[i], b = pts[j], dx = b.x - a.x, dy = b.y - a.y, dist = Math.sqrt(dx * dx + dy * dy) || 0.01, min = a.c.r + b.c.r + 18;
+          if (dist < min) { var p = (min - dist) / 2, ux = dx / dist, uy = dy / dist; a.x -= ux * p * 0.6; a.y -= uy * p; b.x += ux * p * 0.6; b.y += uy * p; }
+        }
+        pts.forEach(function (p) { var mx = p.c.r < 34 ? Math.max(p.c.r, 44) : p.c.r + 2, my = p.c.r < 34 ? p.c.r + 26 : p.c.r + 2; p.x = Math.max(mx, Math.min(W - mx, p.x)); p.y = Math.max(p.c.r + 26, Math.min(H - my, p.y)); });
+      }
+    }
+    var layouts = { battle: battlePos(), space: spacePos() };
+
+    // background: battle-lines guides
+    var guides = svgEl("g", {});
+    guides.appendChild(svgEl("line", { x1: W / 2, x2: W / 2, y1: 8, y2: H - 8, stroke: "var(--text-3)", "stroke-dasharray": "3 4", "stroke-width": 1 }));
+    [["FRENCH SIDE", 10, "start"], ["NEUTRAL", W / 2, "middle"], ["JAPANESE SIDE", W - 10, "end"]].forEach(function (g) {
+      var t = svgEl("text", { x: g[1], y: 18, "text-anchor": g[2], "font-size": 10, "font-family": "JetBrains Mono, monospace", fill: "var(--text-3)", "letter-spacing": "1" });
+      t.textContent = g[0]; guides.appendChild(t);
+    });
+    svg.appendChild(guides);
+
+    var edgeG = svgEl("g", {}), bubG = svgEl("g", {});
+    svg.appendChild(edgeG); svg.appendChild(bubG);
+    var byId = {}; C.forEach(function (c) { byId[c.id] = c; });
+    var E = d.edges.filter(function (e) { return e.source !== e.target && e.views > 300000; });
+    var emax = Math.max.apply(null, E.map(function (e) { return e.views; }));
+    var edgeEls = E.map(function (e) {
+      var p = svgEl("path", { fill: "none", stroke: e.rel === "rebut" ? "var(--accent)" : "var(--text-3)", "stroke-width": 0.8 + 2.6 * Math.sqrt(e.views / emax), "stroke-dasharray": e.rel === "rebut" ? "4 3" : "none", opacity: 0.4 });
+      edgeG.appendChild(p); return { e: e, p: p };
+    });
+
+    var nodes = C.map(function (c, i) {
+      var g = svgEl("g", { "class": "bub", tabindex: 0, role: "button", "aria-label": c.label + ", " + cf.format(c.views) + " views" });
+      g.appendChild(svgEl("circle", { r: c.r, fill: "var(--surface)", "class": "ring0", stroke: "var(--line)", "stroke-width": 1 }));
+      // ring split by camp share
+      var circ = 2 * Math.PI * (c.r - 2), off = 0;
+      ["FR", "JA", "NEU"].forEach(function (s) {
+        var len = circ * c.sh[s]; if (len < 0.5) return;
+        g.appendChild(svgEl("circle", { r: c.r - 2, fill: "none", stroke: COLOR[s], "stroke-width": 4, "stroke-dasharray": len + " " + (circ - len), "stroke-dashoffset": -off, transform: "rotate(-90)" }));
+        off += len;
+      });
+      // Fit the label inside the bubble when it can be read at 9px or more, otherwise write it below.
+      function wrap(maxChars) {
+        var lines = [], cur = "";
+        c.label.split(" ").forEach(function (w) { if (cur && (cur + " " + w).length > maxChars) { lines.push(cur); cur = w; } else cur = cur ? cur + " " + w : w; });
+        lines.push(cur); return lines;
+      }
+      var fs = Math.min(14, c.r / 3.4), lines, fits = false;
+      for (; fs >= 9; fs -= 0.5) {
+        lines = wrap(Math.max(6, Math.floor(1.55 * c.r / (0.56 * fs))));
+        var widest = Math.max.apply(null, lines.map(function (l) { return l.length; })) * 0.56 * fs;
+        if (widest <= 1.7 * c.r && (lines.length + 0.9) * fs * 1.12 <= 1.5 * c.r) { fits = true; break; }
+      }
+      if (fits) {
+        lines.forEach(function (ln, k) {
+          var t = svgEl("text", { y: (k - (lines.length - 1) / 2) * fs * 1.12 - fs * 0.4, "text-anchor": "middle", "font-size": fs, "font-weight": 800, fill: "var(--text)" });
+          t.textContent = ln; g.appendChild(t);
+        });
+        var v = svgEl("text", { y: (lines.length / 2) * fs * 1.12 + 1, "text-anchor": "middle", "font-size": Math.max(8, fs * 0.78), "font-family": "JetBrains Mono, monospace", fill: "var(--text-3)" });
+        v.textContent = cf.format(c.views); g.appendChild(v);
+      } else {
+        wrap(14).slice(0, 3).forEach(function (ln, k) {
+          var t = svgEl("text", { y: c.r + 11 + k * 11, "text-anchor": "middle", "font-size": 9.5, "font-weight": 700, fill: "var(--text-2)", stroke: "var(--bg)", "stroke-width": 3, "paint-order": "stroke" });
+          t.textContent = ln; g.appendChild(t);
+        });
+      }
+      g.addEventListener("click", function () { select(c); });
+      g.addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); select(c); } });
+      bubG.appendChild(g);
+      return { c: c, g: g, x: W / 2, y: H / 2, tx: 0, ty: 0, phase: i * 0.7, born: i * 60 };
+    });
+
+    var mode = "battle", t0 = performance.now(), moveStart = t0, from = null;
+    function target(m) { var pts = layouts[m]; nodes.forEach(function (n, i) { n.tx = pts[i].x; n.ty = pts[i].y; }); }
+    target(mode);
+    nodes.forEach(function (n) { n.fx = n.tx; n.fy = n.ty; });
+    guides.style.transition = "opacity 0.6s";
+
+    function frame(now) {
+      var dt = now - t0, mv = Math.min(1, (now - moveStart) / 900), e = 1 - Math.pow(1 - mv, 3);
+      nodes.forEach(function (n) {
+        var x = n.fx + (n.tx - n.fx) * e, y = n.fy + (n.ty - n.fy) * e;
+        var fl = REDUCED ? 0 : Math.sin(dt / 1400 + n.phase) * 2.2;
+        n.x = x; n.y = y + fl;
+        var s = REDUCED ? 1 : Math.min(1, Math.max(0, (dt - n.born) / 500));
+        s = 1 - Math.pow(1 - s, 3);
+        n.g.setAttribute("transform", "translate(" + n.x.toFixed(1) + "," + n.y.toFixed(1) + ") scale(" + s.toFixed(3) + ")");
+      });
+      var pos = {}; nodes.forEach(function (n) { pos[n.c.id] = n; });
+      edgeEls.forEach(function (o) {
+        var a = pos[o.e.source], b = pos[o.e.target]; if (!a || !b) return;
+        var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2, dx = b.x - a.x, dy = b.y - a.y;
+        var cx = mx - dy * 0.18, cy = my + dx * 0.18;
+        o.p.setAttribute("d", "M" + a.x.toFixed(1) + "," + a.y.toFixed(1) + " Q" + cx.toFixed(1) + "," + cy.toFixed(1) + " " + b.x.toFixed(1) + "," + b.y.toFixed(1));
+        o.p.style.opacity = REDUCED ? 0.4 : Math.min(0.4, Math.max(0, (dt - 900) / 1200));
+      });
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+
+    function setMode(m) {
+      if (m === mode) return;
+      nodes.forEach(function (n) { n.fx = n.x; n.fy = n.y; });
+      mode = m; target(m); moveStart = performance.now();
+      guides.style.opacity = m === "battle" ? 1 : 0;
+      document.getElementById("v-battle").setAttribute("aria-pressed", m === "battle");
+      document.getElementById("v-space").setAttribute("aria-pressed", m === "space");
+      document.getElementById("maplead").textContent = m === "battle"
+        ? "Battle lines: ideas serving the French side on the left, the Japanese side on the right, neutral ideas in the middle. Lines are quotes: one idea answering another."
+        : "Idea space: ideas that mean similar things sit close together, measured by a sentence model, like the topic maps of pyLDAvis. Lines are quotes: one idea answering another.";
+    }
+    document.getElementById("v-battle").addEventListener("click", function () { setMode("battle"); });
+    document.getElementById("v-space").addEventListener("click", function () { setMode("space"); });
+
+    function select(c) {
+      var p = document.getElementById("panel"); p.textContent = "";
+      p.appendChild(el("div", { "class": "k mono" }, c.id + " · " + (c.wins + c.losses ? "Elo " + c.elo + " · " + c.wins + "W " + c.losses + "L" : "No duel")));
+      p.appendChild(el("h3", null, c.label));
+      p.appendChild(el("p", { "class": "idea" }, c.lead_idea));
+      p.appendChild(el("div", { "class": "big" }, cf.format(c.views)));
+      p.appendChild(el("div", { "class": "mono", style: "font-size:0.7rem;color:var(--text-3)" }, "views on " + c.n + " posts"));
+      var r1 = el("div", { "class": "row mono" }); r1.appendChild(el("span", null, "Serves")); r1.appendChild(el("span", null, ["FR", "JA", "NEU"].filter(function (s) { return c.sh[s] > 0.01; }).map(function (s) { return s + " " + Math.round(c.sh[s] * 100) + "%"; }).join(" · ")));
+      p.appendChild(r1);
+      var st = el("div", { "class": "stack" });
+      ["FR", "JA", "NEU"].forEach(function (s) { if (c.sh[s] > 0) { var i = el("i"); i.style.flex = c.sh[s]; i.style.background = COLOR[s]; st.appendChild(i); } });
+      p.appendChild(st);
+      var cv = c.community_views, ct = Object.values(cv).reduce(function (a, b) { return a + b; }, 0);
+      var r2 = el("div", { "class": "row mono" }); r2.appendChild(el("span", null, "Posted by"));
+      r2.appendChild(el("span", null, Object.keys(cv).sort(function (a, b) { return cv[b] - cv[a]; }).slice(0, 3).map(function (k) { return (COMM[k] || k) + " " + Math.round(cv[k] / ct * 100) + "%"; }).join(" · ")));
+      p.appendChild(r2);
+      var ul = el("ul");
+      c.top.forEach(function (t) {
+        var li = el("li"); var a = el("a", { href: t.url, target: "_blank", rel: "noopener" }, "@" + t.handle + " · " + cf.format(t.views));
+        li.appendChild(a); li.appendChild(el("small", null, t.idea)); ul.appendChild(li);
+      });
+      p.appendChild(ul);
+    }
+    select(C[0]);
+  }
+
+  // ---------- Findings ----------
+  function findings(d) {
+    var by = {}; d.concepts.forEach(function (c) { by[c.id] = c; });
+    var f = [
+      ["French jokes won the attention war.", "Ideas serving the French side earned " + cf.format(d.sides.FR) + " views, against " + cf.format(d.sides.JA) + " for the Japanese side. The four biggest French themes are jokes: sex, appropriation, suicide and work."],
+      ["Humor beat argument, except on one front.", "The biggest Japanese idea is not a joke but a frame: the riots are a Muslim and immigrant revolt (" + cf.format(by.K07.views) + " views). It drew the Arabic-speaking world into the fight."],
+      ["One view in five came from neither camp.", "English-speaking spectators acted as the jury, quoting the French jokes with verdicts like 'Okay France you win'. One of the most viewed French jokes (7.6M) was posted by an English speaker posing as French."],
+      ["The correction won every duel it fought.", "A Japanese post showing that most rioters were students born in France (2.7M views) was never out-reached by the posts that rebutted it: " + by.K08.wins + " wins, " + by.K08.losses + " losses."],
+      ["Auto-translation was the weapon.", "X translated every insult in both directions. Spectators made it the punchline: 'Hitting translate on a tweet that starts with Les japonais'."]
+    ];
+    var ol = document.getElementById("finds");
+    f.forEach(function (x) { var li = el("li"); var dv = el("div"); dv.appendChild(el("b", null, x[0])); dv.appendChild(el("span", null, x[1])); li.appendChild(dv); ol.appendChild(li); reveal(li); });
+  }
+
+  // ---------- Duels ----------
+  function duels(d) {
+    var root = document.getElementById("duels");
+    var seen = {}, pick = d.duels.filter(function (x) {
+      var k = x.parent.handle + x.parent.idea;
+      if (seen[k] || !(x.parent.url || x.child.url)) return false;
+      seen[k] = 1; return true;
+    }).slice(0, 6);
+    pick.forEach(function (x) {
+      var card = el("div", { "class": "duel" });
+      [["parent", "Original"], ["child", "Answer"]].forEach(function (k, i) {
+        var u = x[k[0]];
+        if (i === 1) card.appendChild(el("div", { "class": "vs" }, "ANSWERED BY"));
+        var s = el("div", { "class": "side" });
+        s.appendChild(el("span", { "class": "chip " + u.side }, u.side === "NEU" ? "N" : u.side));
+        var p = el("div"); p.appendChild(el("p", null, u.idea));
+        var h = el("span", { "class": "h mono" });
+        if (u.url) h.appendChild(el("a", { href: u.url, target: "_blank", rel: "noopener" }, "@" + u.handle)); else h.appendChild(document.createTextNode("@" + u.handle));
+        h.appendChild(document.createTextNode(" · " + (COMM[u.community] || u.community)));
+        p.appendChild(h); s.appendChild(p);
+        s.appendChild(el("span", { "class": "v" }, cf.format(u.views)));
+        card.appendChild(s);
+      });
+      var r = el("div", { "class": "ratio" }, "Ratio " + x.ratio.toFixed(2) + (x.ratio > 1 ? ": the answer won" : ": the original kept the reach"));
+      var rb = el("div", { "class": "rb" }); var ri = el("i"); ri.style.width = Math.min(100, x.ratio * 100) + "%"; rb.appendChild(ri); r.appendChild(rb);
+      card.appendChild(r);
+      root.appendChild(card);
+    });
+  }
+
+  // ---------- Elo ----------
+  function elo(d) {
+    var root = document.getElementById("elo");
+    var C = d.concepts.filter(function (c) { return c.wins + c.losses > 0; }).sort(function (a, b) { return b.elo - a.elo; });
+    var lo = Math.min.apply(null, C.map(function (c) { return c.elo; })) - 20, hi = Math.max.apply(null, C.map(function (c) { return c.elo; }));
+    C.forEach(function (c, i) {
+      var sh = sideShares(c), dom = sh.FR > sh.JA ? (sh.FR > sh.NEU ? "FR" : "NEU") : (sh.JA > sh.NEU ? "JA" : "NEU");
+      var r = el("div", { "class": "r" });
+      r.appendChild(el("span", { "class": "n mono" }, (i + 1 < 10 ? "0" : "") + (i + 1)));
+      var mid = el("div"); mid.appendChild(el("span", null, c.label));
+      var bar = el("div", { "class": "bar" }); var fill = el("i"); fill.style.background = COLOR[dom]; bar.appendChild(fill); mid.appendChild(bar);
+      r.appendChild(mid);
+      r.appendChild(el("span", { "class": "s" }, String(c.elo)));
+      r.appendChild(el("span", { "class": "wl mono" }, c.wins + "–" + c.losses));
+      root.appendChild(r);
+      onView(r, function () { fill.style.width = ((c.elo - lo) / (hi - lo) * 100) + "%"; });
+    });
+  }
+
+  // ---------- Communities ----------
+  function communities(d, total) {
+    document.getElementById("commlead").textContent = "Views of the posts we read, by the community that posted them. " + Math.round(d.third_party_share * 100) + "% came from neither French nor Japanese speakers.";
+    var root = document.getElementById("comm"), max = Math.max.apply(null, Object.values(d.communities));
+    Object.keys(d.communities).forEach(function (k) {
+      var v = d.communities[k], r = el("div", { "class": "r" });
+      r.appendChild(el("span", { "class": "mono" }, COMM[k] || k));
+      var bar = el("div", { "class": "bar" }); var fill = el("i");
+      fill.style.background = k === "FR" ? "var(--fr)" : k === "JA" ? "var(--ja)" : "var(--neu)";
+      bar.appendChild(fill); r.appendChild(bar);
+      r.appendChild(el("span", { "class": "v" }, cf.format(v)));
+      root.appendChild(r);
+      onView(r, function () { fill.style.width = Math.max(1, v / max * 100) + "%"; });
+    });
+  }
+})();
+</script>
+</body>
+</html>
