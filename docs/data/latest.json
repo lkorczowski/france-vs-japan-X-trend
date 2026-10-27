@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-26T23:09:45+00:00",
-  "day": "2026-10-25",
+  "updated_at": "2026-10-27T01:54:38+00:00",
+  "day": "2026-10-26",
   "title": "French-speaking X vs Japanese-speaking X",
   "winner": "FR",
   "winner_label": "French-speaking X",
@@ -9,47 +9,47 @@
     "heat": "FR",
     "firepower": "FR"
   },
-  "firepower_mode": "total",
-  "firepower_window_hours": null,
+  "firepower_mode": "delta",
+  "firepower_window_hours": 2.7,
   "war_start": "2026-10-19",
   "sides": {
     "FR": {
       "label": "French-speaking X",
       "query": "(japonais OR japonaise OR japonaises OR japon) lang:fr -is:retweet",
       "baseline_avg": 1734,
-      "volume": 11199,
-      "heat": 6.46,
-      "firepower": 2290683,
+      "volume": 11411,
+      "heat": 6.58,
+      "firepower": 20639,
       "top_posts": [
         {
           "handle": "liistrk",
-          "likes": 49187,
-          "views": 17937125,
+          "likes": 49201,
+          "views": 17941573,
           "url": "https://x.com/liistrk/status/2112827916048310537"
         },
         {
           "handle": "BWhey69",
-          "likes": 426389,
-          "views": 11484479,
+          "likes": 428885,
+          "views": 11552542,
           "url": "https://x.com/BWhey69/status/2113756235056947455"
         },
         {
           "handle": "namekoisvnr",
-          "likes": 345556,
-          "views": 10000678,
+          "likes": 348039,
+          "views": 10321983,
           "url": "https://x.com/namekoisvnr/status/2113753261220004070"
         },
         {
           "handle": "usernontrouver9",
-          "likes": 285916,
-          "views": 8678489,
+          "likes": 287370,
+          "views": 8791882,
           "url": "https://x.com/usernontrouver9/status/2113911120268550405"
         },
         {
-          "handle": "pomleloupWP0",
-          "likes": 316646,
-          "views": 5504093,
-          "url": "https://x.com/pomleloupWP0/status/2114015538615906710"
+          "handle": "thecosmicnomad",
+          "likes": 468798,
+          "views": 7660190,
+          "url": "https://x.com/thecosmicnomad/status/2113727228596961619"
         }
       ]
     },
@@ -57,39 +57,39 @@
       "label": "Japanese-speaking X",
       "query": "(フランス人 OR フランス語 OR おフランス OR (フランス (差別 OR レイシスト OR 日本人 OR ヘイト OR 黒人 OR 原爆 OR 自殺))) lang:ja -is:retweet",
       "baseline_avg": 1565,
-      "volume": 8588,
-      "heat": 5.49,
-      "firepower": 116998,
+      "volume": 7926,
+      "heat": 5.06,
+      "firepower": 13,
       "top_posts": [
         {
-          "handle": "Freza_sama",
-          "likes": 47751,
-          "views": 2344603,
-          "url": "https://x.com/Freza_sama/status/2111688466740461660"
+          "handle": "amatsuuni",
+          "likes": 20988,
+          "views": 4854644,
+          "url": "https://x.com/amatsuuni/status/2112776123822346271"
         },
         {
-          "handle": "ganto_anime07",
-          "likes": 10796,
-          "views": 1854071,
-          "url": "https://x.com/ganto_anime07/status/2113600753524941210"
+          "handle": "yurupanda2019",
+          "likes": 42092,
+          "views": 3541509,
+          "url": "https://x.com/yurupanda2019/status/2112674939698643143"
+        },
+        {
+          "handle": "SOWIETK",
+          "likes": 69173,
+          "views": 3387122,
+          "url": "https://x.com/SOWIETK/status/2112093487223177425"
+        },
+        {
+          "handle": "Izumi_Sunagawa",
+          "likes": 78424,
+          "views": 3356462,
+          "url": "https://x.com/Izumi_Sunagawa/status/2111981057704923597"
         },
         {
           "handle": "4Ud1CCuftl19105",
-          "likes": 9410,
-          "views": 536475,
-          "url": "https://x.com/4Ud1CCuftl19105/status/2113562963651301824"
-        },
-        {
-          "handle": "zundamotisuki",
-          "likes": 35063,
-          "views": 534375,
-          "url": "https://x.com/zundamotisuki/status/2114233493928706288"
-        },
-        {
-          "handle": "kanajunk",
-          "likes": 41,
-          "views": 150118,
-          "url": "https://x.com/kanajunk/status/2114377523660525697"
+          "likes": 49019,
+          "views": 3254497,
+          "url": "https://x.com/4Ud1CCuftl19105/status/2111813174953681263"
         }
       ]
     }
@@ -97,168 +97,168 @@
   "feed": [
     {
       "side": "JA",
-      "handle": "dm6aNSoshrkKbvz",
-      "likes": 5,
-      "views": 992,
-      "created_at": "2026-10-26T17:00:01.000Z",
-      "url": "https://x.com/dm6aNSoshrkKbvz/status/2114763996733825338"
+      "handle": "in9hvozgfZcP5IP",
+      "likes": 34574,
+      "views": 1891168,
+      "created_at": "2026-10-26T13:07:38.000Z",
+      "url": "https://x.com/in9hvozgfZcP5IP/status/2114705514911453262"
     },
     {
       "side": "FR",
       "handle": "Vyce_pacKm",
-      "likes": 12504,
-      "views": 1381621,
+      "likes": 14685,
+      "views": 1744318,
       "created_at": "2026-10-26T12:11:03.000Z",
       "url": "https://x.com/Vyce_pacKm/status/2114691274791887329"
     },
     {
-      "side": "JA",
-      "handle": "junhagemay",
-      "likes": 1669,
-      "views": 96968,
-      "created_at": "2026-10-26T11:39:10.000Z",
-      "url": "https://x.com/junhagemay/status/2114683251768041612"
-    },
-    {
-      "side": "JA",
-      "handle": "ichiichiyon_114",
-      "likes": 7,
-      "views": 2904,
-      "created_at": "2026-10-26T03:02:21.000Z",
-      "url": "https://x.com/ichiichiyon_114/status/2114553188506554773"
+      "side": "FR",
+      "handle": "encorewassim",
+      "likes": 45316,
+      "views": 422275,
+      "created_at": "2026-10-25T17:23:33.000Z",
+      "url": "https://x.com/encorewassim/status/2114407527878107511"
     },
     {
       "side": "FR",
       "handle": "encorewassim",
-      "likes": 205198,
-      "views": 2742766,
+      "likes": 213164,
+      "views": 2872139,
       "created_at": "2026-10-25T16:04:48.000Z",
       "url": "https://x.com/encorewassim/status/2114387710693589225"
     },
     {
       "side": "JA",
-      "handle": "kanajunk",
-      "likes": 41,
-      "views": 150118,
-      "created_at": "2026-10-25T15:24:19.000Z",
-      "url": "https://x.com/kanajunk/status/2114377523660525697"
+      "handle": "WORIBA_",
+      "likes": 6716,
+      "views": 288946,
+      "created_at": "2026-10-25T13:27:19.000Z",
+      "url": "https://x.com/WORIBA_/status/2114348078853685366"
     },
     {
       "side": "JA",
-      "handle": "zundamotisuki",
-      "likes": 35063,
-      "views": 534375,
-      "created_at": "2026-10-25T05:52:00.000Z",
-      "url": "https://x.com/zundamotisuki/status/2114233493928706288"
+      "handle": "kekmoe1069",
+      "likes": 323,
+      "views": 189587,
+      "created_at": "2026-10-25T13:27:07.000Z",
+      "url": "https://x.com/kekmoe1069/status/2114348027746079086"
     },
     {
       "side": "JA",
-      "handle": "miwaty",
-      "likes": 21,
-      "views": 1507,
-      "created_at": "2026-10-25T03:17:39.000Z",
-      "url": "https://x.com/miwaty/status/2114194652056490299"
+      "handle": "hayatomiki92391",
+      "likes": 4994,
+      "views": 524559,
+      "created_at": "2026-10-25T11:13:40.000Z",
+      "url": "https://x.com/hayatomiki92391/status/2114314444713161028"
     },
     {
       "side": "FR",
-      "handle": "jaylabhar",
-      "likes": 69639,
-      "views": 951025,
-      "created_at": "2026-10-25T02:02:55.000Z",
-      "url": "https://x.com/jaylabhar/status/2114175842704384164"
-    },
-    {
-      "side": "JA",
-      "handle": "primogohan",
-      "likes": 0,
-      "views": 1007,
-      "created_at": "2026-10-24T22:18:15.000Z",
-      "url": "https://x.com/primogohan/status/2114119306175021377"
+      "handle": "Tagvno31",
+      "likes": 314193,
+      "views": 4394440,
+      "created_at": "2026-10-25T08:07:00.000Z",
+      "url": "https://x.com/Tagvno31/status/2114267468025778269"
     },
     {
       "side": "FR",
       "handle": "maai_as_",
-      "likes": 155930,
-      "views": 1354090,
+      "likes": 156255,
+      "views": 1363829,
       "created_at": "2026-10-24T20:51:14.000Z",
       "url": "https://x.com/maai_as_/status/2114097408304992641"
     },
     {
-      "side": "JA",
-      "handle": "miwaty",
-      "likes": 26,
-      "views": 3161,
-      "created_at": "2026-10-24T17:16:15.000Z",
-      "url": "https://x.com/miwaty/status/2114043305776525717"
-    },
-    {
-      "side": "JA",
-      "handle": "jakusyadansei40",
-      "likes": 8,
-      "views": 608,
-      "created_at": "2026-10-24T16:09:54.000Z",
-      "url": "https://x.com/jakusyadansei40/status/2114026606482342380"
-    },
-    {
       "side": "FR",
       "handle": "pomleloupWP0",
-      "likes": 316646,
-      "views": 5504093,
+      "likes": 318063,
+      "views": 5610876,
       "created_at": "2026-10-24T15:25:55.000Z",
       "url": "https://x.com/pomleloupWP0/status/2114015538615906710"
     },
     {
       "side": "FR",
+      "handle": "JB94MA",
+      "likes": 140892,
+      "views": 891631,
+      "created_at": "2026-10-24T14:34:10.000Z",
+      "url": "https://x.com/JB94MA/status/2114002515092226387"
+    },
+    {
+      "side": "FR",
       "handle": "usernontrouver9",
-      "likes": 285916,
-      "views": 8678489,
+      "likes": 287370,
+      "views": 8791882,
       "created_at": "2026-10-24T08:31:00.000Z",
       "url": "https://x.com/usernontrouver9/status/2113911120268550405"
     },
     {
       "side": "JA",
-      "handle": "ShinHori1",
-      "likes": 402,
-      "views": 20868,
-      "created_at": "2026-10-24T01:17:51.000Z",
-      "url": "https://x.com/ShinHori1/status/2113802116833898615"
+      "handle": "9KNzXzLihY87481",
+      "likes": 7872,
+      "views": 492407,
+      "created_at": "2026-10-24T07:01:33.000Z",
+      "url": "https://x.com/9KNzXzLihY87481/status/2113888608415625595"
+    },
+    {
+      "side": "JA",
+      "handle": "HamiJeJe",
+      "likes": 34780,
+      "views": 1336512,
+      "created_at": "2026-10-24T03:00:03.000Z",
+      "url": "https://x.com/HamiJeJe/status/2113827833034219781"
     },
     {
       "side": "FR",
       "handle": "BWhey69",
-      "likes": 426389,
-      "views": 11484479,
+      "likes": 428885,
+      "views": 11552542,
       "created_at": "2026-10-23T22:15:32.000Z",
       "url": "https://x.com/BWhey69/status/2113756235056947455"
     },
     {
       "side": "FR",
       "handle": "namekoisvnr",
-      "likes": 345556,
-      "views": 10000678,
+      "likes": 348039,
+      "views": 10321983,
       "created_at": "2026-10-23T22:03:43.000Z",
       "url": "https://x.com/namekoisvnr/status/2113753261220004070"
     },
     {
       "side": "FR",
+      "handle": "thecosmicnomad",
+      "likes": 468798,
+      "views": 7660190,
+      "created_at": "2026-10-23T20:20:17.000Z",
+      "url": "https://x.com/thecosmicnomad/status/2113727228596961619"
+    },
+    {
+      "side": "FR",
       "handle": "ecraseur2fachos",
-      "likes": 8989,
-      "views": 2928950,
+      "likes": 8990,
+      "views": 2935934,
       "created_at": "2026-10-23T20:00:56.000Z",
       "url": "https://x.com/ecraseur2fachos/status/2113722362445320375"
     },
     {
       "side": "JA",
-      "handle": "hentaisexpanpan",
-      "likes": 0,
-      "views": 495,
-      "created_at": "2026-10-23T18:23:04.000Z",
-      "url": "https://x.com/hentaisexpanpan/status/2113697731290243155"
+      "handle": "ganto_anime07",
+      "likes": 10802,
+      "views": 1854826,
+      "created_at": "2026-10-23T11:57:43.000Z",
+      "url": "https://x.com/ganto_anime07/status/2113600753524941210"
+    },
+    {
+      "side": "JA",
+      "handle": "4Ud1CCuftl19105",
+      "likes": 9410,
+      "views": 537058,
+      "created_at": "2026-10-23T09:27:33.000Z",
+      "url": "https://x.com/4Ud1CCuftl19105/status/2113562963651301824"
     }
   ],
   "run": {
-    "posts_read": 95,
-    "requests": 5,
-    "estimated_cost_usd": 0.485
+    "posts_read": 70,
+    "requests": 3,
+    "estimated_cost_usd": 0.36
   }
 }
