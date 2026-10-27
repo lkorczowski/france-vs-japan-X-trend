@@ -235,14 +235,33 @@ if os.environ.get("SAMPLE_AUDIT") == "1":
     save_json(os.path.join(ROOT, "audit", f"sample_{TODAY}.json"), sample)
     log("Sample audit saved:", {k: len(v) for k, v in sample.items()})
 
-# 5. Scores
-prev_files = sorted(f for f in os.listdir(SNAPSHOTS) if f.endswith(".json") and f[:10] < TODAY)
-prev = load_json(os.path.join(SNAPSHOTS, prev_files[-1]), None) if prev_files else None
-if prev:
-    window_h = round((NOW - datetime.fromisoformat(prev["run_at"])).total_seconds() / 3600, 1)
-    fire_mode = "delta"
-else:
-    window_h, fire_mode = None, "total"
+# 5. Scores over a rolling window (Louis, 2026-10-28: a single UTC day depends too much on the time zone).
+# Volume and heat: the last WINDOW_DAYS full UTC days. Firepower: likes + reposts gained by the tracked posts since
+# the snapshot closest to NOW - WINDOW_DAYS days. Snapshots are kept per run, so a post pinned today gets its
+# baseline at the next run instead of being lost when the day's file is overwritten.
+WINDOW_DAYS = CFG.get("window_days", 3)
+snaps = []
+for f in sorted(os.listdir(SNAPSHOTS)):
+    if f.endswith(".json"):
+        sd = load_json(os.path.join(SNAPSHOTS, f), None)
+        if sd and "run_at" in sd:
+            sd["_t"] = datetime.fromisoformat(sd["run_at"])
+            if sd["_t"] < NOW - timedelta(hours=1):
+                snaps.append(sd)
+anchor = NOW - timedelta(days=WINDOW_DAYS)
+
+
+def base_obs(i):
+    """Observation of post i closest to the start of the window (latest one before it, else the earliest after)."""
+    seen = [sd for sd in snaps if i in sd["posts"]]
+    before = [sd for sd in seen if sd["_t"] <= anchor]
+    sd = before[-1] if before else (seen[0] if seen else None)
+    return (sd["posts"][i], sd["_t"]) if sd else (None, None)
+
+
+fire_mode = "delta" if snaps else "total"
+starts = []
+days_w = sorted(d for d in set.intersection(*(set(v) for v in volume.values())) if d <= day)[-WINDOW_DAYS:]
 scores = {}
 for side in CFG["sides"]:
     fire = 0
@@ -250,17 +269,20 @@ for side in CFG["sides"]:
         if p["side"] != side:
             continue
         now_eng = p["likes"] + p["reposts"]
+        q, t0 = base_obs(i)
         if fire_mode == "total":
             fire += now_eng
-        elif i in prev["posts"]:
-            q = prev["posts"][i]
+        elif q:
             fire += max(0, now_eng - q["likes"] - q["reposts"])
+            starts.append(t0)
         else:
             created = tracked[i].get("created_at")
-            if created and datetime.fromisoformat(created.replace("Z", "+00:00")) > NOW - timedelta(hours=window_h):
+            if created and datetime.fromisoformat(created.replace("Z", "+00:00")) > anchor:
                 fire += now_eng
-    vol = volume[side][day]
-    scores[side] = {"volume": vol, "heat": round(vol / max(baseline[side]["avg_per_day"], 1), 2), "firepower": fire}
+    vol = sum(volume[side].get(d, 0) for d in days_w)
+    scores[side] = {"volume": vol, "heat": round(vol / max(baseline[side]["avg_per_day"] * len(days_w), 1), 2),
+                    "firepower": fire}
+window_h = round((NOW - min(starts)).total_seconds() / 3600, 1) if starts else None
 
 score_winners = {}
 for k in ("volume", "heat", "firepower"):
@@ -273,7 +295,7 @@ winner = next((s for s, n in wins.items() if n >= 2), "Draw")
 # 6. Write outputs
 snapshot = {"run_at": NOW.isoformat(), "day": day, "volume": volume, "scores": scores,
             "posts": {i: {k: p[k] for k in ("side", "handle", "likes", "reposts", "views")} for i, p in posts.items()}}
-save_json(os.path.join(SNAPSHOTS, f"{TODAY}.json"), snapshot)
+save_json(os.path.join(SNAPSHOTS, f"{NOW:%Y-%m-%dT%H%M}.json"), snapshot)
 save_json(tracked_path, sorted(tracked.values(), key=lambda t: t["id"]))
 save_json(baseline_path, baseline)
 
@@ -302,6 +324,8 @@ latest = {
     "score_winners": score_winners,
     "firepower_mode": fire_mode,
     "firepower_window_hours": window_h,
+    "window_days": len(days_w),
+    "window_from": days_w[0],
     "war_start": CFG["war_start"],
     "sides": {side: {
         "label": s["label"],
