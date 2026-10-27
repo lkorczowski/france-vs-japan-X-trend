@@ -1,12 +1,12 @@
 {
  "generated_at": "2026-10-27",
  "method": {
-  "units": 240,
+  "units": 299,
   "seeds": 59,
-  "searched": 58,
+  "searched": 117,
   "quotes": 115,
   "concepts": 22,
-  "ari_auto_vs_hand": 0.23,
+  "ari_auto_vs_hand": 0.2,
   "ari_raw_text": 0.1,
   "first_post": "2026-10-06",
   "last_post": "2026-10-26",
@@ -14,38 +14,39 @@
   "projection": "concept centroids, cosine distance, metric MDS (pyLDAvis style); UMAP and t-SNE of single ideas kept for comparison"
  },
  "sides": {
-  "FR": 185492485,
-  "JA": 97789808,
-  "NEU": 46339652
+  "FR": 193975906,
+  "JA": 108359710,
+  "NEU": 51947331
  },
  "communities": {
-  "FR": 145577254,
-  "JA": 92807306,
-  "EN": 67381921,
+  "FR": 152443410,
+  "JA": 104928167,
+  "EN": 73055906,
   "AR": 18341734,
   "ES": 2807417,
   "TH": 2532269,
   "PT": 162655,
   "CN": 11389
  },
- "third_party_share": 0.277,
+ "third_party_share": 0.274,
  "concepts": [
   {
    "id": "K03",
    "label": "Japan's sexual taboos",
-   "n": 24,
-   "views": 50325946,
-   "x": 0.1347,
-   "y": 0.1682,
+   "n": 32,
+   "views": 53331514,
+   "x": 0.7581,
+   "y": 0.1541,
    "side_views": {
-    "FR": 43959275,
-    "JA": 6366671
+    "FR": 45624062,
+    "JA": 7707452
    },
    "community_views": {
-    "FR": 40281458,
-    "EN": 6015863,
+    "FR": 41946245,
+    "EN": 6845735,
     "AR": 3677817,
-    "ES": 350808
+    "ES": 350808,
+    "JA": 510909
    },
    "lead_idea": "Japanese sexuality is so deviant that even a sperm cell ends up in a sex doll",
    "top": [
@@ -89,18 +90,18 @@
   {
    "id": "K02",
    "label": "Absurd appropriation",
-   "n": 14,
-   "views": 29080451,
-   "x": 0.0089,
-   "y": 0.4341,
+   "n": 15,
+   "views": 29448754,
+   "x": 0.5539,
+   "y": 0.1923,
    "side_views": {
-    "FR": 24372738,
+    "FR": 24741041,
     "JA": 4707713
    },
    "community_views": {
     "FR": 24234620,
-    "JA": 4707713,
-    "EN": 138118
+    "EN": 506421,
+    "JA": 4707713
    },
    "lead_idea": "Vegeta is Algerian: the diaspora claims anime heroes as its own",
    "top": [
@@ -144,19 +145,19 @@
   {
    "id": "K14",
    "label": "The spectators' verdict",
-   "n": 37,
-   "views": 28406624,
-   "x": 0.5979,
-   "y": 0.3926,
+   "n": 40,
+   "views": 29231797,
+   "x": 0.543,
+   "y": 0.3671,
    "side_views": {
-    "FR": 24515751,
+    "FR": 25054715,
     "NEU": 2377828,
-    "JA": 1513045
+    "JA": 1799254
    },
    "community_views": {
     "FR": 5274789,
-    "EN": 17483123,
-    "JA": 3002953,
+    "EN": 18022087,
+    "JA": 3289162,
     "ES": 1619600,
     "TH": 800855,
     "AR": 225304
@@ -203,16 +204,16 @@
   {
    "id": "K07",
    "label": "A Muslim and immigrant riot",
-   "n": 18,
-   "views": 26097743,
-   "x": 0.3182,
-   "y": 0.7043,
+   "n": 22,
+   "views": 27606911,
+   "x": 0.5341,
+   "y": 0.7295,
    "side_views": {
-    "JA": 22223914,
+    "JA": 23733082,
     "FR": 3873829
    },
    "community_views": {
-    "JA": 22223914,
+    "JA": 23733082,
     "FR": 2416461,
     "AR": 1457368
    },
@@ -258,15 +259,15 @@
   {
    "id": "K04",
    "label": "Suicide jokes",
-   "n": 6,
-   "views": 23848652,
-   "x": 0.421,
+   "n": 11,
+   "views": 25878596,
+   "x": 0.6441,
    "y": 0.0,
    "side_views": {
-    "FR": 23848652
+    "FR": 25878596
    },
    "community_views": {
-    "FR": 16226845,
+    "FR": 18256789,
     "EN": 7621807
    },
    "lead_idea": "A Japanese hiker whose feet do not touch the ground: suicide by hanging as a punchline",
@@ -309,12 +310,68 @@
    "losses": 0
   },
   {
+   "id": "K16",
+   "label": "Love for Japan, lost or kept",
+   "n": 18,
+   "views": 22888659,
+   "x": 0.5755,
+   "y": 0.4193,
+   "side_views": {
+    "FR": 8126899,
+    "JA": 9906681,
+    "NEU": 4855079
+   },
+   "community_views": {
+    "FR": 18010547,
+    "JA": 4358165,
+    "AR": 519947
+   },
+   "lead_idea": "Japan is an amazing country, only kind and helpful people, I never felt so good",
+   "top": [
+    {
+     "handle": "Sonny__Alves",
+     "views": 7697678,
+     "url": "https://x.com/Sonny__Alves/status/2113169900131041391",
+     "idea": "Japan is an amazing country, only kind and helpful people, I never felt so good",
+     "side": "JA",
+     "community": "FR"
+    },
+    {
+     "handle": "G1NGERB3ER",
+     "views": 3725162,
+     "url": "https://x.com/G1NGERB3ER/status/2112826374860013944",
+     "idea": "Japan was never as friendly as its fiction: it took 17 October for you to notice",
+     "side": "FR",
+     "community": "FR"
+    },
+    {
+     "handle": "areskipv",
+     "views": 3636591,
+     "url": "https://x.com/areskipv/status/2112536789575413866",
+     "idea": "One week on X turned French admiration for Japan into mockery and hate",
+     "side": "FR",
+     "community": "FR"
+    },
+    {
+     "handle": "Mileistesfr",
+     "views": 1193644,
+     "url": "https://x.com/Mileistesfr/status/2112806599731622036",
+     "idea": "The far left hates Japan, the great majority of French people love it",
+     "side": "JA",
+     "community": "FR"
+    }
+   ],
+   "elo": 1499,
+   "wins": 1,
+   "losses": 1
+  },
+  {
    "id": "K22",
    "label": "The translation world war",
    "n": 6,
    "views": 21033294,
    "x": 1.0,
-   "y": 0.493,
+   "y": 0.6459,
    "side_views": {
     "NEU": 21033294
    },
@@ -363,68 +420,12 @@
    "losses": 0
   },
   {
-   "id": "K16",
-   "label": "Love for Japan, lost or kept",
-   "n": 8,
-   "views": 18426924,
-   "x": 0.3353,
-   "y": 0.3479,
-   "side_views": {
-    "FR": 7775388,
-    "JA": 8891322,
-    "NEU": 1760214
-   },
-   "community_views": {
-    "FR": 16666710,
-    "JA": 1240267,
-    "AR": 519947
-   },
-   "lead_idea": "Japan is an amazing country, only kind and helpful people, I never felt so good",
-   "top": [
-    {
-     "handle": "Sonny__Alves",
-     "views": 7697678,
-     "url": "https://x.com/Sonny__Alves/status/2113169900131041391",
-     "idea": "Japan is an amazing country, only kind and helpful people, I never felt so good",
-     "side": "JA",
-     "community": "FR"
-    },
-    {
-     "handle": "G1NGERB3ER",
-     "views": 3725162,
-     "url": "https://x.com/G1NGERB3ER/status/2112826374860013944",
-     "idea": "Japan was never as friendly as its fiction: it took 17 October for you to notice",
-     "side": "FR",
-     "community": "FR"
-    },
-    {
-     "handle": "areskipv",
-     "views": 3636591,
-     "url": "https://x.com/areskipv/status/2112536789575413866",
-     "idea": "One week on X turned French admiration for Japan into mockery and hate",
-     "side": "FR",
-     "community": "FR"
-    },
-    {
-     "handle": "Mileistesfr",
-     "views": 1193644,
-     "url": "https://x.com/Mileistesfr/status/2112806599731622036",
-     "idea": "The far left hates Japan, the great majority of French people love it",
-     "side": "JA",
-     "community": "FR"
-    }
-   ],
-   "elo": 1499,
-   "wins": 1,
-   "losses": 1
-  },
-  {
    "id": "K01",
    "label": "Who owns anime",
    "n": 11,
    "views": 17242525,
-   "x": 0.0,
-   "y": 0.3163,
+   "x": 0.3761,
+   "y": 0.1092,
    "side_views": {
     "JA": 9690513,
     "FR": 5252012,
@@ -475,12 +476,69 @@
    "losses": 1
   },
   {
+   "id": "K21",
+   "label": "Why are they fighting?",
+   "n": 16,
+   "views": 14819575,
+   "x": 0.7802,
+   "y": 0.4096,
+   "side_views": {
+    "NEU": 9758318,
+    "FR": 5061257
+   },
+   "community_views": {
+    "JA": 4875581,
+    "AR": 526649,
+    "TH": 467844,
+    "EN": 8538185,
+    "ES": 411316
+   },
+   "lead_idea": "What could the Japanese possibly have done to France to make it this angry?",
+   "top": [
+    {
+     "handle": "LieuRiolu",
+     "views": 4156780,
+     "url": "https://x.com/LieuRiolu/status/2113814645723304156",
+     "idea": "What could the Japanese possibly have done to France to make it this angry?",
+     "side": "FR",
+     "community": "EN"
+    },
+    {
+     "handle": "obashuji",
+     "views": 2300608,
+     "url": "https://x.com/obashuji/status/2112759904301953365",
+     "idea": "Brazilians, Thais and French all mock Japan, but East Asian netizens look even meaner",
+     "side": "NEU",
+     "community": "JA"
+    },
+    {
+     "handle": "ganto_anime07",
+     "views": 1854283,
+     "url": "https://x.com/ganto_anime07/status/2113600753524941210",
+     "idea": "Why are the Japanese and the French fighting?",
+     "side": "NEU",
+     "community": "JA"
+    },
+    {
+     "handle": "CollinBCook",
+     "views": 809578,
+     "url": "https://x.com/CollinBCook/status/2113863101573386405",
+     "idea": "Why are the French and the Japanese beefing?",
+     "side": "NEU",
+     "community": "EN"
+    }
+   ],
+   "elo": 1500,
+   "wins": 0,
+   "losses": 0
+  },
+  {
    "id": "K05",
    "label": "Overwork and submission",
    "n": 9,
    "views": 14691457,
-   "x": 0.3233,
-   "y": 0.1886,
+   "x": 0.3834,
+   "y": 0.3071,
    "side_views": {
     "FR": 14691457
    },
@@ -529,75 +587,18 @@
    "losses": 4
   },
   {
-   "id": "K21",
-   "label": "Why are they fighting?",
-   "n": 13,
-   "views": 13693369,
-   "x": 0.5525,
-   "y": 0.3363,
-   "side_views": {
-    "NEU": 8632112,
-    "FR": 5061257
-   },
-   "community_views": {
-    "JA": 4875581,
-    "AR": 526649,
-    "TH": 467844,
-    "EN": 7411979,
-    "ES": 411316
-   },
-   "lead_idea": "What could the Japanese possibly have done to France to make it this angry?",
-   "top": [
-    {
-     "handle": "LieuRiolu",
-     "views": 4156780,
-     "url": "https://x.com/LieuRiolu/status/2113814645723304156",
-     "idea": "What could the Japanese possibly have done to France to make it this angry?",
-     "side": "FR",
-     "community": "EN"
-    },
-    {
-     "handle": "obashuji",
-     "views": 2300608,
-     "url": "https://x.com/obashuji/status/2112759904301953365",
-     "idea": "Brazilians, Thais and French all mock Japan, but East Asian netizens look even meaner",
-     "side": "NEU",
-     "community": "JA"
-    },
-    {
-     "handle": "ganto_anime07",
-     "views": 1854283,
-     "url": "https://x.com/ganto_anime07/status/2113600753524941210",
-     "idea": "Why are the Japanese and the French fighting?",
-     "side": "NEU",
-     "community": "JA"
-    },
-    {
-     "handle": "CollinBCook",
-     "views": 809578,
-     "url": "https://x.com/CollinBCook/status/2113863101573386405",
-     "idea": "Why are the French and the Japanese beefing?",
-     "side": "NEU",
-     "community": "EN"
-    }
-   ],
-   "elo": 1500,
-   "wins": 0,
-   "losses": 0
-  },
-  {
    "id": "K12",
    "label": "France in decline",
-   "n": 9,
-   "views": 11805288,
-   "x": 0.4837,
-   "y": 0.6633,
+   "n": 13,
+   "views": 14137233,
+   "x": 0.5197,
+   "y": 0.6395,
    "side_views": {
-    "JA": 10159230,
+    "JA": 12491175,
     "NEU": 1646058
    },
    "community_views": {
-    "JA": 11805288
+    "JA": 14137233
    },
    "lead_idea": "France is collapsing: luxury stores looted in daylight, this is multiculturalism",
    "top": [
@@ -641,17 +642,17 @@
   {
    "id": "K06",
    "label": "The bomb and WWII",
-   "n": 9,
-   "views": 11424992,
-   "x": 0.4997,
-   "y": 0.1952,
+   "n": 11,
+   "views": 12184268,
+   "x": 0.843,
+   "y": 0.3144,
    "side_views": {
-    "FR": 8627245,
-    "JA": 2797747
+    "FR": 8905445,
+    "JA": 3278823
    },
    "community_views": {
-    "FR": 7751466,
-    "JA": 2797747,
+    "FR": 8029666,
+    "JA": 3278823,
     "EN": 805537,
     "AR": 70242
    },
@@ -697,16 +698,16 @@
   {
    "id": "K15",
    "label": "Auto-translation",
-   "n": 11,
-   "views": 11254973,
-   "x": 0.8348,
-   "y": 0.2223,
+   "n": 12,
+   "views": 11691373,
+   "x": 0.1268,
+   "y": 0.3436,
    "side_views": {
     "FR": 8121509,
-    "NEU": 3133464
+    "NEU": 3569864
    },
    "community_views": {
-    "EN": 4792247,
+    "EN": 5228647,
     "AR": 6148180,
     "FR": 152369,
     "TH": 162177
@@ -753,15 +754,15 @@
   {
    "id": "K13",
    "label": "The riot's real victims",
-   "n": 6,
-   "views": 10125796,
-   "x": 0.7966,
-   "y": 0.7888,
+   "n": 8,
+   "views": 11020820,
+   "x": 0.0,
+   "y": 0.6135,
    "side_views": {
-    "JA": 10125796
+    "JA": 11020820
    },
    "community_views": {
-    "JA": 9005829,
+    "JA": 9900853,
     "FR": 1119967
    },
    "lead_idea": "A supermarket clerk says protest if you want but do not attack shops and people",
@@ -804,20 +805,136 @@
    "losses": 0
   },
   {
-   "id": "K19",
-   "label": "Who started it",
-   "n": 9,
-   "views": 8061675,
-   "x": 0.4373,
-   "y": 0.4704,
+   "id": "K11",
+   "label": "Japanese racism",
+   "n": 15,
+   "views": 9148738,
+   "x": 0.6266,
+   "y": 0.3568,
    "side_views": {
-    "JA": 5378640,
-    "NEU": 1788464,
-    "FR": 894571
+    "FR": 7183707,
+    "JA": 1965031
    },
    "community_views": {
-    "JA": 6365983,
-    "EN": 894571,
+    "FR": 4075219,
+    "AR": 1024847,
+    "EN": 4048672
+   },
+   "lead_idea": "Calling all Japanese pedophiles is racist",
+   "top": [
+    {
+     "handle": "monikapilledd",
+     "views": 1965031,
+     "url": "https://x.com/monikapilledd/status/2114461964835618880",
+     "idea": "Calling all Japanese pedophiles is racist",
+     "side": "JA",
+     "community": "EN"
+    },
+    {
+     "handle": "abdu__witcher",
+     "views": 976136,
+     "url": "https://x.com/abdu__witcher/status/2113884851615285376",
+     "idea": "Japanese tweets: 'you are black'; French tweets: devastating jokes",
+     "side": "FR",
+     "community": "AR"
+    },
+    {
+     "handle": "croissantkoo",
+     "views": 610913,
+     "url": "https://x.com/croissantkoo/status/2113762024089927747",
+     "idea": "My timeline is Japanese people calling the French monkeys and the French obliterating them",
+     "side": "FR",
+     "community": "EN"
+    },
+    {
+     "handle": "anaselfuego",
+     "views": 580386,
+     "url": "https://x.com/anaselfuego/status/2112268945252069502",
+     "idea": "Is all of Japan far right? Never seen a non-racist Japanese on X",
+     "side": "FR",
+     "community": "FR"
+    }
+   ],
+   "elo": 1455,
+   "wins": 1,
+   "losses": 4
+  },
+  {
+   "id": "K17",
+   "label": "Old grudges join in",
+   "n": 13,
+   "views": 9098973,
+   "x": 0.6866,
+   "y": 0.3923,
+   "side_views": {
+    "JA": 4392100,
+    "FR": 4288944,
+    "NEU": 417929
+   },
+   "community_views": {
+    "JA": 4392100,
+    "FR": 2390797,
+    "ES": 425693,
+    "TH": 300272,
+    "EN": 417929,
+    "CN": 11389,
+    "AR": 998138,
+    "PT": 162655
+   },
+   "lead_idea": "Korean users mock Japan yet side with it against Muslims: a Japan-Korea truce",
+   "top": [
+    {
+     "handle": "amatsuuni",
+     "views": 2365612,
+     "url": "https://x.com/amatsuuni/status/2112805392451559563",
+     "idea": "Korean users mock Japan yet side with it against Muslims: a Japan-Korea truce",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "am_mj44",
+     "views": 998138,
+     "url": "https://x.com/am_mj44/status/2113594717632106578",
+     "idea": "Japanese and Koreans, busy attacking Muslims, fix your own problems",
+     "side": "FR",
+     "community": "AR"
+    },
+    {
+     "handle": "at_takegawa",
+     "views": 893818,
+     "url": "https://x.com/at_takegawa/status/2114556575209959550",
+     "idea": "A self-proclaimed French user praises Koreans over Japanese, and a Korean user disagrees",
+     "side": "JA",
+     "community": "JA"
+    },
+    {
+     "handle": "requin19899",
+     "views": 853487,
+     "url": "https://x.com/requin19899/status/2112210311667216640",
+     "idea": "Chinese and Koreans, your hatred of the Japanese is understandable",
+     "side": "FR",
+     "community": "FR"
+    }
+   ],
+   "elo": 1470,
+   "wins": 0,
+   "losses": 2
+  },
+  {
+   "id": "K19",
+   "label": "Who started it",
+   "n": 11,
+   "views": 8741118,
+   "x": 0.4828,
+   "y": 0.4486,
+   "side_views": {
+    "JA": 5378640,
+    "NEU": 2134200,
+    "FR": 1228278
+   },
+   "community_views": {
+    "JA": 6711719,
+    "EN": 1228278,
     "TH": 801121
    },
    "lead_idea": "French speakers swarmed a Japanese voice who asked them not to misuse Naruto, like sharks smelling blood",
@@ -860,81 +977,20 @@
    "losses": 1
   },
   {
-   "id": "K17",
-   "label": "Old grudges join in",
-   "n": 10,
-   "views": 7072485,
-   "x": 0.44,
-   "y": 0.3206,
-   "side_views": {
-    "JA": 2365612,
-    "FR": 4288944,
-    "NEU": 417929
-   },
-   "community_views": {
-    "JA": 2365612,
-    "FR": 2390797,
-    "ES": 425693,
-    "TH": 300272,
-    "EN": 417929,
-    "CN": 11389,
-    "AR": 998138,
-    "PT": 162655
-   },
-   "lead_idea": "Korean users mock Japan yet side with it against Muslims: a Japan-Korea truce",
-   "top": [
-    {
-     "handle": "amatsuuni",
-     "views": 2365612,
-     "url": "https://x.com/amatsuuni/status/2112805392451559563",
-     "idea": "Korean users mock Japan yet side with it against Muslims: a Japan-Korea truce",
-     "side": "JA",
-     "community": "JA"
-    },
-    {
-     "handle": "am_mj44",
-     "views": 998138,
-     "url": "https://x.com/am_mj44/status/2113594717632106578",
-     "idea": "Japanese and Koreans, busy attacking Muslims, fix your own problems",
-     "side": "FR",
-     "community": "AR"
-    },
-    {
-     "handle": "requin19899",
-     "views": 853487,
-     "url": "https://x.com/requin19899/status/2112210311667216640",
-     "idea": "Chinese and Koreans, your hatred of the Japanese is understandable",
-     "side": "FR",
-     "community": "FR"
-    },
-    {
-     "handle": "Diazinho07",
-     "views": 767383,
-     "url": "https://x.com/Diazinho07/status/2114135083296653677",
-     "idea": "The French, the Arabs and the Chinese when it is time to mock the Japanese",
-     "side": "FR",
-     "community": "FR"
-    }
-   ],
-   "elo": 1470,
-   "wins": 0,
-   "losses": 2
-  },
-  {
    "id": "K10",
    "label": "Who is really French",
-   "n": 11,
-   "views": 6684833,
-   "x": 0.2791,
-   "y": 0.5445,
+   "n": 13,
+   "views": 7360200,
+   "x": 0.7078,
+   "y": 0.557,
    "side_views": {
-    "JA": 5636793,
-    "FR": 1048040
+    "JA": 6044819,
+    "FR": 1315381
    },
    "community_views": {
     "JA": 5541968,
-    "FR": 753295,
-    "EN": 389570
+    "FR": 1020636,
+    "EN": 797596
    },
    "lead_idea": "The French who mock Japan for drinking tap water are not real French, and safe tap water is a point of pride",
    "top": [
@@ -976,72 +1032,18 @@
    "losses": 4
   },
   {
-   "id": "K11",
-   "label": "Japanese racism",
-   "n": 9,
-   "views": 6498074,
-   "x": 0.2852,
-   "y": 0.406,
-   "side_views": {
-    "FR": 4533043,
-    "JA": 1965031
-   },
-   "community_views": {
-    "FR": 3057062,
-    "AR": 1024847,
-    "EN": 2416165
-   },
-   "lead_idea": "Calling all Japanese pedophiles is racist",
-   "top": [
-    {
-     "handle": "monikapilledd",
-     "views": 1965031,
-     "url": "https://x.com/monikapilledd/status/2114461964835618880",
-     "idea": "Calling all Japanese pedophiles is racist",
-     "side": "JA",
-     "community": "EN"
-    },
-    {
-     "handle": "abdu__witcher",
-     "views": 976136,
-     "url": "https://x.com/abdu__witcher/status/2113884851615285376",
-     "idea": "Japanese tweets: 'you are black'; French tweets: devastating jokes",
-     "side": "FR",
-     "community": "AR"
-    },
-    {
-     "handle": "anaselfuego",
-     "views": 580386,
-     "url": "https://x.com/anaselfuego/status/2112268945252069502",
-     "idea": "Is all of Japan far right? Never seen a non-racist Japanese on X",
-     "side": "FR",
-     "community": "FR"
-    },
-    {
-     "handle": "cadettrim",
-     "views": 269734,
-     "url": "https://x.com/cadettrim/status/2113872521506279841",
-     "idea": "Japan spams gorilla photos while the French cook the funniest tweets",
-     "side": "FR",
-     "community": "EN"
-    }
-   ],
-   "elo": 1455,
-   "wins": 1,
-   "losses": 4
-  },
-  {
    "id": "K20",
    "label": "French insolence",
-   "n": 8,
-   "views": 4628774,
-   "x": 0.8762,
-   "y": 0.373,
+   "n": 9,
+   "views": 4892664,
+   "x": 0.2811,
+   "y": 0.2468,
    "side_views": {
-    "FR": 4628774
+    "FR": 4628774,
+    "NEU": 263890
    },
    "community_views": {
-    "FR": 4628774
+    "FR": 4892664
    },
    "lead_idea": "Someone tell the French there is an ammunition crate here",
    "top": [
@@ -1085,16 +1087,16 @@
   {
    "id": "K08",
    "label": "Students born in France",
-   "n": 4,
-   "views": 4250250,
-   "x": 0.1571,
-   "y": 0.8423,
+   "n": 5,
+   "views": 4590832,
+   "x": 0.4574,
+   "y": 0.8037,
    "side_views": {
-    "NEU": 3250289,
+    "NEU": 3590871,
     "JA": 999961
    },
    "community_views": {
-    "JA": 4250250
+    "JA": 4590832
    },
    "lead_idea": "Official data: 70% of those arrested are French nationals, 95% born in France, mostly under 25",
    "top": [
@@ -1123,10 +1125,10 @@
      "community": "JA"
     },
     {
-     "handle": "kazu_fujisawa",
-     "views": 23288,
-     "url": "https://x.com/kazu_fujisawa/status/2114003881395159247",
-     "idea": "Statistically riots and immigrants are not related",
+     "handle": "PropTrader88",
+     "views": 340582,
+     "url": "https://x.com/PropTrader88/status/2111655764653900253",
+     "idea": "French high-school students think so clearly, as critics in Japan also said",
      "side": "NEU",
      "community": "JA"
     }
@@ -1138,15 +1140,15 @@
   {
    "id": "K09",
    "label": "What the media hides",
-   "n": 7,
-   "views": 3636208,
-   "x": 0.2632,
-   "y": 0.8537,
+   "n": 8,
+   "views": 3912034,
+   "x": 0.2326,
+   "y": 0.7822,
    "side_views": {
-    "JA": 3636208
+    "JA": 3912034
    },
    "community_views": {
-    "JA": 3636208
+    "JA": 3912034
    },
    "lead_idea": "How is this a student protest about education? (black bloc video)",
    "top": [
@@ -1192,7 +1194,7 @@
    "label": "Foreign money behind the riots",
    "n": 1,
    "views": 1331612,
-   "x": 0.6258,
+   "x": 0.3273,
    "y": 1.0,
    "side_views": {
     "JA": 1331612
@@ -3470,6 +3472,773 @@
    "handle": "wskk0102",
    "url": "https://x.com/wskk0102/status/2114405724617077057",
    "idea": "The French insult with the bomb's name; Thais were kinder in their last fight with Japan",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113661759999312084",
+   "concept": "K04",
+   "side": "FR",
+   "community": "FR",
+   "views": 498981,
+   "handle": "JitoTwt",
+   "url": "https://x.com/JitoTwt/status/2113661759999312084",
+   "idea": "Japanese hearing the idiom 'it is raining ropes' (hanging joke)",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113557490243899669",
+   "concept": "K11",
+   "side": "FR",
+   "community": "FR",
+   "views": 467248,
+   "handle": "Mirai_Itami",
+   "url": "https://x.com/Mirai_Itami/status/2113557490243899669",
+   "idea": "Apart from comparing Black people to monkeys, what jokes can the Japanese make?",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112171964181929994",
+   "concept": "K16",
+   "side": "NEU",
+   "community": "JA",
+   "views": 465603,
+   "handle": "flyingtsubame61",
+   "url": "https://x.com/flyingtsubame61/status/2112171964181929994",
+   "idea": "A Japanese user writes in French: most Japanese commenting on X do not represent Japan",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113977465890570373",
+   "concept": "K04",
+   "side": "FR",
+   "community": "FR",
+   "views": 455420,
+   "handle": "E2LaCaf",
+   "url": "https://x.com/E2LaCaf/status/2113977465890570373",
+   "idea": "Japanese when you use the 'earthquake' or 'surf' attack in Pokemon",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113680837447213417",
+   "concept": "K04",
+   "side": "FR",
+   "community": "FR",
+   "views": 446865,
+   "handle": "namekoisvnr",
+   "url": "https://x.com/namekoisvnr/status/2113680837447213417",
+   "idea": "The oak tree seeing the 15th Japanese of the day hang from it",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112333642106388483",
+   "concept": "K16",
+   "side": "JA",
+   "community": "FR",
+   "views": 436518,
+   "handle": "Kitty_Jinxed",
+   "url": "https://x.com/Kitty_Jinxed/status/2112333642106388483",
+   "idea": "A French far-right account loves the Japanese, especially those who want the shogunate back",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114145484277252111",
+   "concept": "K04",
+   "side": "FR",
+   "community": "FR",
+   "views": 361197,
+   "handle": "lordaemond",
+   "url": "https://x.com/lordaemond/status/2114145484277252111",
+   "idea": "The Japanese who finds his tree already taken (suicide joke)",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114327488109130146",
+   "concept": "K03",
+   "side": "FR",
+   "community": "FR",
+   "views": 354304,
+   "handle": "AbelToji",
+   "url": "https://x.com/AbelToji/status/2114327488109130146",
+   "idea": "Japanese men on a date with adults when the site was for minors (pedophilia joke)",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113518332716691836",
+   "concept": "K16",
+   "side": "FR",
+   "community": "FR",
+   "views": 351511,
+   "handle": "abdoull997",
+   "url": "https://x.com/abdoull997/status/2113518332716691836",
+   "idea": "I always believed the Japanese were the most educated and kind people in the world, until now",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114101964891922670",
+   "concept": "K03",
+   "side": "FR",
+   "community": "FR",
+   "views": 351078,
+   "handle": "yassbarrr",
+   "url": "https://x.com/yassbarrr/status/2114101964891922670",
+   "idea": "Suicide over a sex doll's betrayal (sex doll and penis joke)",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114424958101430331",
+   "concept": "K03",
+   "side": "FR",
+   "community": "FR",
+   "views": 345171,
+   "handle": "ymedkz",
+   "url": null,
+   "idea": "Suicide and incest joke about a Japanese father",
+   "register": "insult",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113997084823097625",
+   "concept": "K03",
+   "side": "FR",
+   "community": "FR",
+   "views": 340399,
+   "handle": "skr_5i",
+   "url": "https://x.com/skr_5i/status/2113997084823097625",
+   "idea": "Japanese starting the day sniffing collectible underwear",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112159696316444942",
+   "concept": "K16",
+   "side": "NEU",
+   "community": "JA",
+   "views": 335451,
+   "handle": "nabekuramasax",
+   "url": "https://x.com/nabekuramasax/status/2112159696316444942",
+   "idea": "A Japanese left-wing antifascist artist writes to the French from Tokyo: we are with you",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113236217735024916",
+   "concept": "K11",
+   "side": "FR",
+   "community": "FR",
+   "views": 291865,
+   "handle": "Stxrboy75",
+   "url": "https://x.com/Stxrboy75/status/2113236217735024916",
+   "idea": "There are three types of Japanese: the nice one, the nerd and the nazi",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112163444711415880",
+   "concept": "K16",
+   "side": "NEU",
+   "community": "FR",
+   "views": 288111,
+   "handle": "Noham552882",
+   "url": "https://x.com/Noham552882/status/2112163444711415880",
+   "idea": "The Japanese on X versus in real life",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2111715452950884685",
+   "concept": "K06",
+   "side": "FR",
+   "community": "FR",
+   "views": 278200,
+   "handle": "Visiteu25840912",
+   "url": "https://x.com/Visiteu25840912/status/2111715452950884685",
+   "idea": "Japan proves it is easier to recover from two nuclear bombs than from...",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113973651859009544",
+   "concept": "K03",
+   "side": "FR",
+   "community": "FR",
+   "views": 273835,
+   "handle": "Coach_Aizen",
+   "url": "https://x.com/Coach_Aizen/status/2113973651859009544",
+   "idea": "Japan if you remove all the pedophiles",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113663816357859695",
+   "concept": "K16",
+   "side": "NEU",
+   "community": "JA",
+   "views": 272907,
+   "handle": "nabekuramasax",
+   "url": "https://x.com/nabekuramasax/status/2113663816357859695",
+   "idea": "A Japanese left-wing activist, recently attacked with a knife for fighting racism, writes to the French",
+   "register": "testimony",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112821277597597965",
+   "concept": "K16",
+   "side": "JA",
+   "community": "FR",
+   "views": 267697,
+   "handle": "LuxEternel",
+   "url": "https://x.com/LuxEternel/status/2112821277597597965",
+   "idea": "The Japanese are the most polite people; if they dislike you, you behaved badly",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114467613183283510",
+   "concept": "K04",
+   "side": "FR",
+   "community": "FR",
+   "views": 267481,
+   "handle": "Akxzen_",
+   "url": "https://x.com/Akxzen_/status/2114467613183283510",
+   "idea": "Christmas trees in Japan (hanging joke)",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114438258402771167",
+   "concept": "K10",
+   "side": "FR",
+   "community": "FR",
+   "views": 267341,
+   "handle": "momoleking92",
+   "url": null,
+   "idea": "Filing a complaint against a Japanese man but having to describe him",
+   "register": "insult",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114274750537273799",
+   "concept": "K20",
+   "side": "NEU",
+   "community": "FR",
+   "views": 263890,
+   "handle": "KomolaRipOff",
+   "url": "https://x.com/KomolaRipOff/status/2114274750537273799",
+   "idea": "Mocking the Japanese is so easy it stops being funny",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114299098241106057",
+   "concept": "K11",
+   "side": "FR",
+   "community": "FR",
+   "views": 259044,
+   "handle": "layeee09",
+   "url": "https://x.com/layeee09/status/2114299098241106057",
+   "idea": "So the Japanese are racist, xenophobic, sexist, islamophobic and work-obsessed",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113953644013879574",
+   "concept": "K16",
+   "side": "NEU",
+   "community": "JA",
+   "views": 994007,
+   "handle": "ButanekoG",
+   "url": "https://x.com/ButanekoG/status/2113953644013879574",
+   "idea": "Warm joke to French visitors: sorry in advance, our bread is soft",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114556575209959550",
+   "concept": "K17",
+   "side": "JA",
+   "community": "JA",
+   "views": 893818,
+   "handle": "at_takegawa",
+   "url": "https://x.com/at_takegawa/status/2114556575209959550",
+   "idea": "A self-proclaimed French user praises Koreans over Japanese, and a Korean user disagrees",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113310342738759850",
+   "concept": "K17",
+   "side": "JA",
+   "community": "JA",
+   "views": 740943,
+   "handle": "tatsuvar",
+   "url": "https://x.com/tatsuvar/status/2113310342738759850",
+   "idea": "We have not forgotten when a French politician called Japanese homes rabbit hutches",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112398023473197212",
+   "concept": "K16",
+   "side": "NEU",
+   "community": "JA",
+   "views": 738786,
+   "handle": "hskenncutter",
+   "url": "https://x.com/hskenncutter/status/2112398023473197212",
+   "idea": "Through this commotion I came to see the French in a new light: a man stood up to the rioters",
+   "register": "testimony",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112851250865934413",
+   "concept": "K12",
+   "side": "JA",
+   "community": "JA",
+   "views": 721103,
+   "handle": "___loly_77",
+   "url": "https://x.com/___loly_77/status/2112851250865934413",
+   "idea": "French people vandalizing the national flag go free: Japan is done if it lets this in",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2111356330866774391",
+   "concept": "K12",
+   "side": "JA",
+   "community": "JA",
+   "views": 663053,
+   "handle": "TEHl9TXaKF48878",
+   "url": "https://x.com/TEHl9TXaKF48878/status/2111356330866774391",
+   "idea": "French laziness is too much to ignore, yet France's GDP per capita is higher",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112227156822745352",
+   "concept": "K12",
+   "side": "JA",
+   "community": "JA",
+   "views": 652641,
+   "handle": "Southern_X777",
+   "url": "https://x.com/Southern_X777/status/2112227156822745352",
+   "idea": "My four French friends in Singapore none want to go back to France",
+   "register": "testimony",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112256479528910921",
+   "concept": "K13",
+   "side": "JA",
+   "community": "JA",
+   "views": 621976,
+   "handle": "ulala_go",
+   "url": "https://x.com/ulala_go/status/2112256479528910921",
+   "idea": "A game store manager kicked down by rioters: what hurt most was people laughing",
+   "register": "testimony",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2111735850669392263",
+   "concept": "K07",
+   "side": "JA",
+   "community": "JA",
+   "views": 558658,
+   "handle": "yukikk36",
+   "url": "https://x.com/yukikk36/status/2111735850669392263",
+   "idea": "Look at France right now: stop immigration immediately",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114661557858910301",
+   "concept": "K03",
+   "side": "JA",
+   "community": "JA",
+   "views": 510909,
+   "handle": "PhantomPain178",
+   "url": "https://x.com/PhantomPain178/status/2114661557858910301",
+   "idea": "Are the French who make these images some kind of special fetish enthusiasts?",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112602481587101759",
+   "concept": "K06",
+   "side": "JA",
+   "community": "JA",
+   "views": 481076,
+   "handle": "emedon",
+   "url": "https://x.com/emedon/status/2112602481587101759",
+   "idea": "France calls it winning when it fell to the Nazis in 45 days",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2111755117494190156",
+   "concept": "K07",
+   "side": "JA",
+   "community": "JA",
+   "views": 415227,
+   "handle": "hkakeya",
+   "url": "https://x.com/hkakeya/status/2111755117494190156",
+   "idea": "I called the riots the reality of multicultural coexistence and got attacked for it",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113258356047761877",
+   "concept": "K17",
+   "side": "JA",
+   "community": "JA",
+   "views": 391727,
+   "handle": "rockfish31",
+   "url": "https://x.com/rockfish31/status/2113258356047761877",
+   "idea": "What makes Chinese people more rational than French people?",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114777795452878911",
+   "concept": "K19",
+   "side": "NEU",
+   "community": "JA",
+   "views": 345736,
+   "handle": "pumomoen_u",
+   "url": "https://x.com/pumomoen_u/status/2114777795452878911",
+   "idea": "It is gross that the story is becoming 'the Japanese discriminated first'",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2111655764653900253",
+   "concept": "K08",
+   "side": "NEU",
+   "community": "JA",
+   "views": 340582,
+   "handle": "PropTrader88",
+   "url": "https://x.com/PropTrader88/status/2111655764653900253",
+   "idea": "French high-school students think so clearly, as critics in Japan also said",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2111937429926252851",
+   "concept": "K12",
+   "side": "JA",
+   "community": "JA",
+   "views": 295148,
+   "handle": "toshio_tamogami",
+   "url": "https://x.com/toshio_tamogami/status/2111937429926252851",
+   "idea": "Riots this intense should not happen in an advanced country",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113606271798534552",
+   "concept": "K14",
+   "side": "JA",
+   "community": "JA",
+   "views": 286209,
+   "handle": "srRmRi3hP0D3AL2",
+   "url": "https://x.com/srRmRi3hP0D3AL2/status/2113606271798534552",
+   "idea": "Poor French guy, stuck with people whose only topic is penises",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2111920829839847509",
+   "concept": "K09",
+   "side": "JA",
+   "community": "JA",
+   "views": 275826,
+   "handle": "HashimotoKotoe",
+   "url": "https://x.com/HashimotoKotoe/status/2111920829839847509",
+   "idea": "NHK says high-school students, with no verification of who rioted",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2111921375653032024",
+   "concept": "K07",
+   "side": "JA",
+   "community": "JA",
+   "views": 275420,
+   "handle": "HashimotoKotoe",
+   "url": "https://x.com/HashimotoKotoe/status/2111921375653032024",
+   "idea": "A woman whose store was destroyed screams that she voted to let them in",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112384167669625085",
+   "concept": "K13",
+   "side": "JA",
+   "community": "JA",
+   "views": 273048,
+   "handle": "hideaki1978",
+   "url": "https://x.com/hideaki1978/status/2112384167669625085",
+   "idea": "Subtitled interview of a store manager whose shop was attacked",
+   "register": "testimony",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112085666440020409",
+   "concept": "K07",
+   "side": "JA",
+   "community": "JA",
+   "views": 259863,
+   "handle": "rockfish31",
+   "url": "https://x.com/rockfish31/status/2112085666440020409",
+   "idea": "How do leftist intellectuals cheering the riots as a revolution see this?",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113762024089927747",
+   "concept": "K11",
+   "side": "FR",
+   "community": "EN",
+   "views": 610913,
+   "handle": "croissantkoo",
+   "url": "https://x.com/croissantkoo/status/2113762024089927747",
+   "idea": "My timeline is Japanese people calling the French monkeys and the French obliterating them",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112230294799429823",
+   "concept": "K03",
+   "side": "JA",
+   "community": "EN",
+   "views": 579760,
+   "handle": "ShitpostRock",
+   "url": "https://x.com/ShitpostRock/status/2112230294799429823",
+   "idea": "Japan has lower suicide and rape rates than France (statistics retort)",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114195491617386645",
+   "concept": "K11",
+   "side": "FR",
+   "community": "EN",
+   "views": 529642,
+   "handle": "BaggyTweets123",
+   "url": "https://x.com/BaggyTweets123/status/2114195491617386645",
+   "idea": "Japanese people answer with a racist slur, French people answer with devastating jokes (meme)",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114480011919131109",
+   "concept": "K21",
+   "side": "NEU",
+   "community": "EN",
+   "views": 504149,
+   "handle": "vidsthatgohard",
+   "url": "https://x.com/vidsthatgohard/status/2114480011919131109",
+   "idea": "What did Japan do to make the French so mad?",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114468440731943242",
+   "concept": "K11",
+   "side": "FR",
+   "community": "EN",
+   "views": 491952,
+   "handle": "hatakesenjus",
+   "url": "https://x.com/hatakesenjus/status/2114468440731943242",
+   "idea": "The Japanese side singled out immigrants and Muslims with racist and xenophobic narratives",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114537851782144264",
+   "concept": "K15",
+   "side": "NEU",
+   "community": "EN",
+   "views": 436400,
+   "handle": "nyraanine_",
+   "url": "https://x.com/nyraanine_/status/2114537851782144264",
+   "idea": "Translated from Arabic, Portuguese, French, Japanese: the timeline this week",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114322440906256391",
+   "concept": "K10",
+   "side": "JA",
+   "community": "EN",
+   "views": 408026,
+   "handle": "UltraNosk",
+   "url": null,
+   "idea": "Questions whether the French side is really French",
+   "register": "insult",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114429745353932992",
+   "concept": "K02",
+   "side": "FR",
+   "community": "EN",
+   "views": 368303,
+   "handle": "lanxre",
+   "url": "https://x.com/lanxre/status/2114429745353932992",
+   "idea": "The funniest part: the French use anime to diss the Japanese",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113675487570477474",
+   "concept": "K21",
+   "side": "NEU",
+   "community": "EN",
+   "views": 355344,
+   "handle": "Problem_kid1202",
+   "url": "https://x.com/Problem_kid1202/status/2113675487570477474",
+   "idea": "Genuinely, what did the Japanese do to France?",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113818981496742388",
+   "concept": "K19",
+   "side": "FR",
+   "community": "EN",
+   "views": 333707,
+   "handle": "ConnorRadcliff1",
+   "url": "https://x.com/ConnorRadcliff1/status/2113818981496742388",
+   "idea": "Explainer: Japan hated on the use of One Piece imagery in the protests; Luffy would have joined them",
+   "register": "info",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113168476361941161",
+   "concept": "K16",
+   "side": "JA",
+   "community": "JA",
+   "views": 311144,
+   "handle": "harukaawake",
+   "url": "https://x.com/harukaawake/status/2113168476361941161",
+   "idea": "A Japanese user writes in English: dear France, we know you do not hate us, we know who is pretending",
+   "register": "argument",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113999828787339683",
+   "concept": "K14",
+   "side": "FR",
+   "community": "EN",
+   "views": 286265,
+   "handle": "imJustRed",
+   "url": "https://x.com/imJustRed/status/2113999828787339683",
+   "idea": "French insults versus the Japanese reaction (meme)",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2113954844889489736",
+   "concept": "K21",
+   "side": "NEU",
+   "community": "EN",
+   "views": 266713,
+   "handle": "zeniusboy",
+   "url": "https://x.com/zeniusboy/status/2113954844889489736",
+   "idea": "The funniest beef in a while, but what even started it?",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2114054392240656566",
+   "concept": "K14",
+   "side": "FR",
+   "community": "EN",
+   "views": 252699,
+   "handle": "yvngxkou",
+   "url": "https://x.com/yvngxkou/status/2114054392240656566",
+   "idea": "A Japanese delinquent versus a slightly irritated French person (meme repost)",
+   "register": "humor",
+   "parent": null,
+   "rel": null
+  },
+  {
+   "id": "2112530543774441615",
+   "concept": "K03",
+   "side": "JA",
+   "community": "EN",
+   "views": 250112,
+   "handle": "politicalawake",
+   "url": "https://x.com/politicalawake/status/2112530543774441615",
+   "idea": "The French are in no position to lecture Japan on rape culture (answering the list of vices)",
    "register": "argument",
    "parent": null,
    "rel": null

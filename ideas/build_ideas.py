@@ -50,7 +50,8 @@ for uid, ann in A.EXTRA.items():
 for uid, ann in A.ORIGINS.items():
     add(uid, "origin", ann[5], 0, ann, linkable=False)
 
-for uid, ann in A.SEARCH.items():
+import search2
+for uid, ann in list(A.SEARCH.items()) + list(search2.SEARCH2.items()):
     if uid in units:
         continue
     add(uid, ann[5], ann[6], ann[7], ann[:5])
@@ -179,7 +180,7 @@ total = sum(comm_views.values())
 
 out = dict(
     generated_at="2026-10-27",
-    method=dict(units=len(U), seeds=len(A.SEEDS), searched=len(A.SEARCH), quotes=sum(len(v) for v in A.QUOTES.values()),
+    method=dict(units=len(U), seeds=len(A.SEEDS), searched=len(A.SEARCH) + len(search2.SEARCH2), quotes=sum(len(v) for v in A.QUOTES.values()),
                 concepts=len(concepts), ari_auto_vs_hand=round(float(ari), 2), ari_raw_text=0.10,  # eval_raw.py, 238 posts, multilingual mpnet
                first_post="2026-10-06", last_post="2026-10-26", embedding="all-mpnet-base-v2",
                 projection="concept centroids, cosine distance, metric MDS (pyLDAvis style); UMAP and t-SNE of single ideas kept for comparison"),
