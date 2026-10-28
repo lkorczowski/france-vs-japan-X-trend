@@ -57,7 +57,7 @@ SEEDS = {
     "2111813174953681263": ("JA", "JA", "K19", "French speakers swarmed a Japanese voice who asked them not to misuse Naruto, like sharks smelling blood", "argument"),
     "2113722362445320375": ("FR", "FR", "K03", "Japanese men envy the French for their bigger penis", "humor"),
     "2114387710693589225": ("FR", "FR", "K03", "Three generations of Japanese: suicide tree, then paper for pedophile hentai", "humor"),
-    "2113554141339668767": ("JA", "NEU", "K08", "Official data: 70% of those arrested are French nationals, 95% born in France, mostly under 25", "info"),
+    "2113554141339668767": ("JA", "NEU", "K08", "Official data: 70% of those arrested are French nationals, 95% of them born in France, 68% aged 25 or under", "info"),
     "2114044814480343159": ("EN", "FR", "K15", "\"Translated from French\": the auto-translate button as the source of the chaos", "humor"),
     "2111960971350823239": ("JA", "JA", "K13", "A nerd defends his anime shop against rioters: LGBT protester versus nerd", "humor"),
     "2112805392451559563": ("JA", "JA", "K17", "Korean users mock Japan yet side with it against Muslims: a Japan-Korea truce", "argument"),

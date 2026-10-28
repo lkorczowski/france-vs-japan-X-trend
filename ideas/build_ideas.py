@@ -74,6 +74,12 @@ for parent, quotes in A.QUOTES.items():
 for child, (parent, rel) in A.API_EDGES.items():
     units[child]["parent"], units[child]["rel"] = parent, rel
 
+# Beliefs: each post carries one belief and a stance toward it (see beliefs.py)
+import beliefs as B
+for u in units.values():
+    u["k"] = u["concept"]
+    u["concept"], u["stance"] = B.assign(u["id"], u["k"], u["side"])
+
 U = list(units.values())
 print("units:", len(U), "| linked:", sum(1 for u in U if u["url"]))
 
@@ -109,23 +115,26 @@ for u in U:
 
 # Concepts
 concepts = {}
-for cid, label in A.CONCEPTS.items():
+for cid, label in B.BELIEFS.items():
     us = [u for u in U if u["concept"] == cid]
     if not us:
         continue
     w = np.array([max(u["views"], 1) for u in us], dtype=float)
-    sv, cv = Counter(), Counter()
+    sv, cv, st, sn = Counter(), Counter(), Counter(), Counter()
     for u in us:
         sv[u["side"]] += u["views"]
         cv[u["community"]] += u["views"]
+        st[u["stance"]] += u["views"]
+        sn[u["stance"]] += 1
     top = sorted(us, key=lambda u: -u["views"])
     concepts[cid] = dict(id=cid, label=label, n=len(us), views=int(w.sum()),
                          x=round(CPOS[cid][0], 4), y=round(CPOS[cid][1], 4),
-                         side_views=dict(sv), community_views=dict(cv),
+                         side_views=dict(sv), community_views=dict(cv), stance_views=dict(st), stance_n=dict(sn),
+                         owner=B.OWNER[cid], rope=B.OWNER[cid] is not None,
                          lead_idea=next((u["idea"] for u in top if u["register"] != "insult"), top[0]["idea"]),
                          top=[dict(handle=u["handle"], views=u["views"], url=u["url"], idea=u["idea"], side=u["side"],
-                                   community=u["community"]) for u in top if u["url"]][:4],
-                         elo=1500.0, wins=0, losses=0)
+                                   community=u["community"], stance=u["stance"]) for u in top if u["url"]][:4],
+                         elo=1500.0, wins=0, losses=0, inner=dict(attack_wins=0, support_wins=0))
 
 # Edges and duels
 edges = defaultdict(lambda: dict(views=0, n=0, rel=Counter()))
@@ -142,7 +151,11 @@ for u in sorted(U, key=lambda u: u["id"]):
         ratio = u["views"] / p["views"]
         duels.append(dict(parent=p["id"], child=u["id"], ratio=round(ratio, 3)))
         a, b = concepts[u["concept"]], concepts[p["concept"]]
-        if a is not b:
+        if a is b and {u["stance"], p["stance"]} == {"supports", "attacks"}:
+            # duel inside one belief: did the attack or the support reach more people?
+            winner = u if ratio > 1 else p
+            a["inner"]["attack_wins" if winner["stance"] == "attacks" else "support_wins"] += 1
+        if a is not b and a["rope"] and b["rope"]:
             ea = 1 / (1 + 10 ** ((b["elo"] - a["elo"]) / 400))
             s = 1.0 if ratio > 1 else 0.0
             a["elo"] += 32 * (s - ea)
@@ -156,7 +169,7 @@ for c in concepts.values():
 
 def card(x):
     return dict(handle=x["handle"], views=x["views"], idea=x["idea"], side=x["side"], community=x["community"],
-                concept=x["concept"], url=x["url"])
+                concept=x["concept"], stance=x["stance"], url=x["url"])
 
 
 duel_cards = []
@@ -179,7 +192,7 @@ for u in U:
 total = sum(comm_views.values())
 
 out = dict(
-    generated_at="2026-10-27",
+    generated_at="2026-10-28",
     method=dict(units=len(U), seeds=len(A.SEEDS), searched=len(A.SEARCH) + len(search2.SEARCH2), quotes=sum(len(v) for v in A.QUOTES.values()),
                 concepts=len(concepts), ari_auto_vs_hand=round(float(ari), 2), ari_raw_text=0.10,  # eval_raw.py, 238 posts, multilingual mpnet
                first_post="2026-10-06", last_post="2026-10-26", embedding="all-mpnet-base-v2",
@@ -191,7 +204,7 @@ out = dict(
     edges=[dict(source=s, target=t, views=e["views"], n=e["n"], rel=e["rel"].most_common(1)[0][0])
            for (s, t), e in edges.items()],
     duels=duel_cards[:10],
-    units=[dict(id=u["id"], concept=u["concept"], side=u["side"], community=u["community"],
+    units=[dict(id=u["id"], concept=u["concept"], stance=u["stance"], first_concept=u["k"], side=u["side"], community=u["community"],
                 views=u["views"], handle=u["handle"], url=u["url"], idea=u["idea"], register=u["register"],
                 parent=u["parent"], rel=u["rel"]) for u in U],
 )
@@ -204,5 +217,5 @@ print("sides:", dict(side_views))
 print("communities:", comm_views.most_common())
 print("third-party share of views:", out["third_party_share"])
 for c in out["concepts"]:
-    print(f"{c['id']} {c['label']:<32} views {c['views']/1e6:6.1f}M n={c['n']:<3} elo {c['elo']} {c['wins']}-{c['losses']} sides {({k: round(v/1e6,1) for k, v in c['side_views'].items()})}")
+    print(f"{c['id']} {c['label']:<44} {c['views']/1e6:6.1f}M n={c['n']:<3} elo {c['elo']} {c['wins']}-{c['losses']} inner {c['inner']} stance {({k: round(v/1e6,1) for k, v in c['stance_views'].items()})}")
 print("duels:", len(duels), "cross-side shown:", len(duel_cards))
