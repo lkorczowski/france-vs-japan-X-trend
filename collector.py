@@ -194,6 +194,15 @@ if os.path.exists(pinned_path):
             m = re.search(r"(\d{15,})\s*$", line.split("?")[0].strip()) if not line.startswith("#") else None
             if m:
                 pinned.add(m.group(1))
+# Vetting (Louis, 2026-10-28): every post is read by a human or an annotator before it counts.
+# docs/data/vetted.json lists the posts read and tagged (on_topic, with their concept) and the posts rejected
+# (off_topic, with the reason). A discovered post that is not vetted yet is tracked but stays out of the hall of
+# fame, the feed and firepower; it is listed in docs/data/pending.json for the next reading pass.
+vetted = load_json(os.path.join(DATA, "vetted.json"), {"on_topic": {}, "off_topic": {}})
+ON, OFF = vetted.get("on_topic", {}), vetted.get("off_topic", {})
+for i in [i for i in tracked if i in OFF]:
+    del tracked[i]
+pinned -= set(OFF)
 # Refresh first: it is the part the scores need. Discovery then spends what is left of the run cap.
 fresh = {p["id"]: p for p in lookup(sorted(set(tracked) | pinned))}
 # Discovery: the most relevant quotes of each side, plus the posts they quote.
@@ -206,7 +215,7 @@ if TRACK.get("discovery_handles"):
     candidates += search(handles_q, TRACK["discovery_handles"])
 for p in candidates:
     side = side_of(p)
-    if not side or not p.get("handle") or blocked(p["text"]):
+    if not side or not p.get("handle") or blocked(p["text"]) or p["id"] in OFF:
         tracked.pop(p["id"], None)
         fresh.pop(p["id"], None)
         continue
@@ -266,7 +275,7 @@ scores = {}
 for side in CFG["sides"]:
     fire = 0
     for i, p in posts.items():
-        if p["side"] != side:
+        if p["side"] != side or i not in ON:
             continue
         now_eng = p["likes"] + p["reposts"]
         q, t0 = base_obs(i)
@@ -333,18 +342,24 @@ latest = {
         "baseline_avg": baseline[side]["avg_per_day"],
         **scores[side],
         "top_posts": [{"handle": posts[i]["handle"], "likes": posts[i]["likes"], "views": posts[i]["views"],
-                       "url": f"https://x.com/{posts[i]['handle']}/status/{i}"}
-                      for i in sorted((i for i in posts if posts[i]["side"] == side),
+                       "url": f"https://x.com/{posts[i]['handle']}/status/{i}", "idea": ON[i].get("label")}
+                      for i in sorted((i for i in posts if posts[i]["side"] == side and i in ON and not ON[i].get("hide")),
                                       key=lambda i: -posts[i]["views"])[:5]],
     } for side, s in CFG["sides"].items()},
     "feed": [{"side": posts[i]["side"], "handle": posts[i]["handle"], "likes": posts[i]["likes"],
               "views": posts[i]["views"], "created_at": posts[i]["created_at"],
-              "url": f"https://x.com/{posts[i]['handle']}/status/{i}"}
-             for i in sorted((i for i in posts if posts[i]["created_at"]),
+              "url": f"https://x.com/{posts[i]['handle']}/status/{i}", "idea": ON[i].get("label")}
+             for i in sorted((i for i in posts if posts[i]["created_at"] and i in ON and not ON[i].get("hide")),
                              key=lambda i: posts[i]["created_at"], reverse=True)[:20]],
     "run": {"posts_read": spend["posts"], "requests": spend["requests"], "estimated_cost_usd": round(spend["cost"], 3)},
 }
 save_json(os.path.join(DATA, "latest.json"), latest)
+pending = [{"id": i, "side": p["side"], "handle": p["handle"], "views": p["views"], "added": tracked[i].get("added"),
+            "url": f"https://x.com/{p['handle']}/status/{i}"}
+           for i, p in sorted(posts.items(), key=lambda kv: -kv[1]["views"]) if i not in ON]
+save_json(os.path.join(DATA, "pending.json"), pending)
+if pending:
+    log(f"{len(pending)} tracked posts wait for vetting (docs/data/pending.json), kept out of the scores.")
 
 runs_path = os.path.join(DATA, "runs.csv")
 new_file = not os.path.exists(runs_path)

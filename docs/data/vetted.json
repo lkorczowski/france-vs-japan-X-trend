@@ -1,0 +1,1672 @@
+{
+ "note": "Posts read and tagged by hand (on_topic) or rejected (off_topic). Built by ideas/build_vetted.py.",
+ "on_topic": {
+  "2112827916048310537": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "FR"
+  },
+  "2113756235056947455": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2113753261220004070": {
+   "concept": "K05",
+   "label": "Overwork and submission",
+   "side": "FR"
+  },
+  "2113911120268550405": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2113727228596961619": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2114015538615906710": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "FR"
+  },
+  "2113295649768718363": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2112776123822346271": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2114267468025778269": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2112826374860013944": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "FR"
+  },
+  "2112674939698643143": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2112093487223177425": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2111981057704923597": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2111813174953681263": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "JA"
+  },
+  "2113722362445320375": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2114387710693589225": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2113554141339668767": {
+   "concept": "K08",
+   "label": "Students born in France",
+   "side": "NEU"
+  },
+  "2114044814480343159": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "FR"
+  },
+  "2111960971350823239": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2112805392451559563": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "JA"
+  },
+  "2111688466740461660": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2112759904301953365": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2113581141328572746": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "JA",
+   "hide": true
+  },
+  "2111637672838193337": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2113600753524941210": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2112461340099174569": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2111589436513493397": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2113427991627956730": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "JA",
+   "hide": true
+  },
+  "2114691274791887329": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114705514911453262": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "JA"
+  },
+  "2112487484672348183": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "JA"
+  },
+  "2114097408304992641": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2113827833034219781": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "JA"
+  },
+  "2109578941421728064": {
+   "concept": "K18",
+   "label": "Foreign money behind the riots",
+   "side": "JA"
+  },
+  "2111608202504872239": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2111771410418802911": {
+   "concept": "K09",
+   "label": "What the media hides",
+   "side": "JA"
+  },
+  "2112806599731622036": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "JA"
+  },
+  "2112189152343081468": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2107473982639530269": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2114175842704384164": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2111673757987373508": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2114002515092226387": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "FR"
+  },
+  "2111982884148101619": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2112268945252069502": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2112458439163261343": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2113562963651301824": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "JA"
+  },
+  "2114233493928706288": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "JA",
+   "hide": true
+  },
+  "2114314444713161028": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "JA",
+   "hide": true
+  },
+  "2112129777645817949": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2112100272449245554": {
+   "concept": "K08",
+   "label": "Students born in France",
+   "side": "NEU"
+  },
+  "2113888608415625595": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "JA"
+  },
+  "2112023208321003967": {
+   "concept": "K09",
+   "label": "What the media hides",
+   "side": "JA"
+  },
+  "2112485570605875482": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "NEU"
+  },
+  "2112829113585258659": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2112574440462782705": {
+   "concept": "K09",
+   "label": "What the media hides",
+   "side": "JA"
+  },
+  "2114407527878107511": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "FR"
+  },
+  "2112317876677828853": {
+   "concept": "K09",
+   "label": "What the media hides",
+   "side": "JA"
+  },
+  "2114348078853685366": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "JA"
+  },
+  "2114348027746079086": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "JA",
+   "hide": true
+  },
+  "2112102614045442491": {
+   "concept": "K01",
+   "label": "Who owns anime",
+   "side": "FR"
+  },
+  "2112536789575413866": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "FR"
+  },
+  "2112517857728741751": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "FR"
+  },
+  "2113755091761029340": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "JA"
+  },
+  "2114216029534429664": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "FR"
+  },
+  "2113995408976347202": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "FR"
+  },
+  "2112499335154012346": {
+   "concept": "K09",
+   "label": "What the media hides",
+   "side": "JA"
+  },
+  "2113750738572828880": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2113413245281112092": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "NEU"
+  },
+  "2114720123542007969": {
+   "concept": "K22",
+   "label": "The translation world war",
+   "side": "NEU"
+  },
+  "2113884851615285376": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2114376919177216018": {
+   "concept": "K05",
+   "label": "Overwork and submission",
+   "side": "FR"
+  },
+  "2114223773176234319": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2114379149523525802": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "NEU"
+  },
+  "2114517041012965406": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114045070261284918": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR",
+   "hide": true
+  },
+  "2113936112930472267": {
+   "concept": "K22",
+   "label": "The translation world war",
+   "side": "NEU"
+  },
+  "2114075294789472703": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113697473914929476": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "NEU"
+  },
+  "2114111657517662406": {
+   "concept": "K22",
+   "label": "The translation world war",
+   "side": "NEU"
+  },
+  "2114045397664764351": {
+   "concept": "K22",
+   "label": "The translation world war",
+   "side": "NEU"
+  },
+  "2114521665845797142": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "FR"
+  },
+  "2114077870398279807": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "JA"
+  },
+  "2113958637593092563": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "NEU"
+  },
+  "2111834743155355652": {
+   "concept": "K01",
+   "label": "Who owns anime",
+   "side": "JA"
+  },
+  "2111827307212230680": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2112504639480594890": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2111626965186953345": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "NEU"
+  },
+  "2114146295850086773": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2114362587836240112": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "JA"
+  },
+  "2111681875450450119": {
+   "concept": "K09",
+   "label": "What the media hides",
+   "side": "JA"
+  },
+  "2113847108763865306": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2114081089350480105": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2114250536224784720": {
+   "concept": "K20",
+   "label": "French insolence",
+   "side": "FR"
+  },
+  "2113908938643255803": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2113748669354643654": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "FR"
+  },
+  "2114391948471513123": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2114398218146451582": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2114337025478279570": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2114027870091723077": {
+   "concept": "K22",
+   "label": "The translation world war",
+   "side": "NEU"
+  },
+  "2114391840438776264": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2114345878664192399": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2113632990387638363": {
+   "concept": "K05",
+   "label": "Overwork and submission",
+   "side": "FR"
+  },
+  "2114016489774715088": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR",
+   "hide": true
+  },
+  "2114125647878426735": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2112210311667216640": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "FR"
+  },
+  "2114290809155797254": {
+   "concept": "K05",
+   "label": "Overwork and submission",
+   "side": "FR"
+  },
+  "2114065586598670575": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2112744844485660990": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "FR",
+   "hide": true
+  },
+  "2114135083296653677": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "FR"
+  },
+  "2113968749518967138": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "FR",
+   "hide": true
+  },
+  "2114319284109504572": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR",
+   "hide": true
+  },
+  "2113559618634793389": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR",
+   "hide": true
+  },
+  "2113562020507251122": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2114062693367754888": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "FR"
+  },
+  "2114328551323320410": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "FR"
+  },
+  "2113667020579389841": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "JA"
+  },
+  "2114127189268480480": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114055739220398480": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114298331962949653": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "NEU"
+  },
+  "2114323758899220582": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114547195936690679": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2114405724617077057": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "FR"
+  },
+  "2113661759999312084": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2113557490243899669": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2112171964181929994": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "NEU"
+  },
+  "2113977465890570373": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2113680837447213417": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2112333642106388483": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "JA"
+  },
+  "2114145484277252111": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2114327488109130146": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2113518332716691836": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "FR"
+  },
+  "2114101964891922670": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2114424958101430331": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR",
+   "hide": true
+  },
+  "2113997084823097625": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2112159696316444942": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "NEU"
+  },
+  "2113236217735024916": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2112163444711415880": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "NEU"
+  },
+  "2111715452950884685": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "FR"
+  },
+  "2113973651859009544": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2113663816357859695": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "NEU"
+  },
+  "2112821277597597965": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "JA"
+  },
+  "2114467613183283510": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2114438258402771167": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "FR",
+   "hide": true
+  },
+  "2114274750537273799": {
+   "concept": "K20",
+   "label": "French insolence",
+   "side": "NEU"
+  },
+  "2114299098241106057": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2113953644013879574": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "NEU"
+  },
+  "2114556575209959550": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "JA"
+  },
+  "2113310342738759850": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "JA"
+  },
+  "2112398023473197212": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "NEU"
+  },
+  "2112851250865934413": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2111356330866774391": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2112227156822745352": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2112256479528910921": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2111735850669392263": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2114661557858910301": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "JA"
+  },
+  "2112602481587101759": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "JA"
+  },
+  "2111755117494190156": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2113258356047761877": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "JA"
+  },
+  "2114777795452878911": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "NEU"
+  },
+  "2111655764653900253": {
+   "concept": "K08",
+   "label": "Students born in France",
+   "side": "NEU"
+  },
+  "2111937429926252851": {
+   "concept": "K12",
+   "label": "France in decline",
+   "side": "JA"
+  },
+  "2113606271798534552": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "JA"
+  },
+  "2111920829839847509": {
+   "concept": "K09",
+   "label": "What the media hides",
+   "side": "JA"
+  },
+  "2111921375653032024": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2112384167669625085": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2112085666440020409": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2113762024089927747": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2112230294799429823": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "JA"
+  },
+  "2114195491617386645": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2114480011919131109": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2114468440731943242": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2114537851782144264": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "NEU"
+  },
+  "2114322440906256391": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "JA",
+   "hide": true
+  },
+  "2114429745353932992": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "FR"
+  },
+  "2113675487570477474": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2113818981496742388": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "FR"
+  },
+  "2113168476361941161": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "JA"
+  },
+  "2113999828787339683": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113954844889489736": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2114054392240656566": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2112530543774441615": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "JA"
+  },
+  "2114634151399690296": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "NEU"
+  },
+  "2114634167267065862": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "NEU"
+  },
+  "2112397340632130025": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2114028721212698796": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA",
+   "hide": true
+  },
+  "2112799163822084186": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2112204373791293499": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2114155721076179389": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2112376456949256297": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2113479496158646316": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2112532553769078907": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2112318693967569123": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA",
+   "hide": true
+  },
+  "2112782655821615269": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "NEU"
+  },
+  "2113077655159689327": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2112472366987259925": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "NEU"
+  },
+  "2112441553100956089": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "NEU"
+  },
+  "2112724234665693455": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA",
+   "hide": true
+  },
+  "2112471258453643767": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2112418736137527412": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "NEU"
+  },
+  "2112840163521167530": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2112347183534297141": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2114176657712177617": {
+   "concept": "K01",
+   "label": "Who owns anime",
+   "side": "JA"
+  },
+  "2113930212702589049": {
+   "concept": "K01",
+   "label": "Who owns anime",
+   "side": "JA"
+  },
+  "2112786360256147587": {
+   "concept": "K01",
+   "label": "Who owns anime",
+   "side": "JA"
+  },
+  "2112074920658337879": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2112380780446134526": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2114351673896550807": {
+   "concept": "K09",
+   "label": "What the media hides",
+   "side": "JA"
+  },
+  "2114715657376059753": {
+   "concept": "K09",
+   "label": "What the media hides",
+   "side": "JA"
+  },
+  "2112562881283928110": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "NEU"
+  },
+  "2114387909730320437": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA",
+   "hide": true
+  },
+  "2112493980197769492": {
+   "concept": "K13",
+   "label": "The riot's real victims",
+   "side": "JA"
+  },
+  "2112715090999066784": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "JA"
+  },
+  "2113158310014906460": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2113219621822021704": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113060851720872065": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "JA"
+  },
+  "2113094162933526792": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "JA"
+  },
+  "2113307700423696419": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "FR"
+  },
+  "2113172774847942810": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113728617322852506": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "FR"
+  },
+  "2113190470390263959": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "JA"
+  },
+  "2113317505670238224": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "FR"
+  },
+  "2112969223391850830": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113033015781884286": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "FR"
+  },
+  "2113609188047782157": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113248616710025531": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "FR"
+  },
+  "2112906908101423556": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "JA"
+  },
+  "2113355436867072011": {
+   "concept": "K02",
+   "label": "Absurd appropriation",
+   "side": "JA"
+  },
+  "2113814645723304156": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "FR",
+   "hide": true
+  },
+  "2113893190818267387": {
+   "concept": "K20",
+   "label": "French insolence",
+   "side": "FR"
+  },
+  "2114104347218813045": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "JA"
+  },
+  "2113967583955489246": {
+   "concept": "K20",
+   "label": "French insolence",
+   "side": "FR"
+  },
+  "2113854942406672466": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "JA"
+  },
+  "2113902879937552562": {
+   "concept": "K20",
+   "label": "French insolence",
+   "side": "FR"
+  },
+  "2114011118033424833": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114423944694604130": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114381256926576824": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113975762198122777": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "FR"
+  },
+  "2114101452885135614": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "FR"
+  },
+  "2114475411296186442": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "NEU"
+  },
+  "2113826932689183092": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114059829471850916": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113863101573386405": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2113982056552370332": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "NEU"
+  },
+  "2113920265151185236": {
+   "concept": "K05",
+   "label": "Overwork and submission",
+   "side": "FR"
+  },
+  "2114397989842117011": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "FR"
+  },
+  "2113772305931223168": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113755978172625248": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113943924662325388": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114126583812296912": {
+   "concept": "K04",
+   "label": "Suicide jokes",
+   "side": "FR"
+  },
+  "2114151146491458010": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114021525363789936": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "NEU"
+  },
+  "2114115899972280372": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2114323378182267053": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2113944675237114268": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114364127724621902": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113951167076016344": {
+   "concept": "K20",
+   "label": "French insolence",
+   "side": "FR"
+  },
+  "2114012715354063138": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2114070853235220992": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2112173314617815523": {
+   "concept": "K01",
+   "label": "Who owns anime",
+   "side": "JA",
+   "hide": true
+  },
+  "2112697603808985313": {
+   "concept": "K01",
+   "label": "Who owns anime",
+   "side": "JA"
+  },
+  "2112189850166419816": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2112206864716825003": {
+   "concept": "K01",
+   "label": "Who owns anime",
+   "side": "JA",
+   "hide": true
+  },
+  "2112722666906165596": {
+   "concept": "K01",
+   "label": "Who owns anime",
+   "side": "JA"
+  },
+  "2112205245606695320": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "JA"
+  },
+  "2113541763361386803": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "FR"
+  },
+  "2113416864277926250": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "FR"
+  },
+  "2114333142324777074": {
+   "concept": "K05",
+   "label": "Overwork and submission",
+   "side": "FR"
+  },
+  "2113038589848150083": {
+   "concept": "K05",
+   "label": "Overwork and submission",
+   "side": "FR"
+  },
+  "2114431901242916918": {
+   "concept": "K05",
+   "label": "Overwork and submission",
+   "side": "FR"
+  },
+  "2113579061947605320": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "FR"
+  },
+  "2113613649457914197": {
+   "concept": "K06",
+   "label": "The bomb and WWII",
+   "side": "FR"
+  },
+  "2113607943610671549": {
+   "concept": "K05",
+   "label": "Overwork and submission",
+   "side": "FR"
+  },
+  "2113690470660350244": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2113090065542824079": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2112752137491141035": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2112736406900760885": {
+   "concept": "K09",
+   "label": "What the media hides",
+   "side": "JA"
+  },
+  "2111999114754035783": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2112050796485627939": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA",
+   "hide": true
+  },
+  "2112602278519775632": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "JA"
+  },
+  "2112304566364414164": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "FR"
+  },
+  "2112416156103655882": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "FR"
+  },
+  "2113822659670937921": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2112309975334990236": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2112265374934945865": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR",
+   "hide": true
+  },
+  "2113796789086355790": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2113691127849287706": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2113607084587503812": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2113608310759018550": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2114003881395159247": {
+   "concept": "K08",
+   "label": "Students born in France",
+   "side": "NEU"
+  },
+  "2113932149355368884": {
+   "concept": "K07",
+   "label": "A Muslim and immigrant riot",
+   "side": "JA"
+  },
+  "2113741603575865592": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "JA",
+   "hide": true
+  },
+  "2111990281470173464": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "FR",
+   "hide": true
+  },
+  "2114461964835618880": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "JA"
+  },
+  "2113764470157910059": {
+   "concept": "K03",
+   "label": "Japan's sexual taboos",
+   "side": "FR"
+  },
+  "2111814487988900137": {
+   "concept": "K19",
+   "label": "Who started it",
+   "side": "JA"
+  },
+  "2114344232110457209": {
+   "concept": "K16",
+   "label": "Love for Japan, lost or kept",
+   "side": "FR"
+  },
+  "2114390757339464184": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2111855460303487011": {
+   "concept": "K23",
+   "label": "Anime as a protest symbol",
+   "side": "FR"
+  },
+  "2113661628113645589": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "NEU"
+  },
+  "2113784258909352143": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "JA"
+  },
+  "2114024120346366356": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "FR"
+  },
+  "2113953805067059564": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "JA",
+   "hide": true
+  },
+  "2113778976422547566": {
+   "concept": "K10",
+   "label": "Who is really French",
+   "side": "JA",
+   "hide": true
+  },
+  "2113991781461397858": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2114155800876720211": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "NEU"
+  },
+  "2113879411749425366": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "FR"
+  },
+  "2113825653308940427": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "FR"
+  },
+  "2113883593147568214": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2113937974543208761": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "FR"
+  },
+  "2113878096528957869": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113977071143657832": {
+   "concept": "K20",
+   "label": "French insolence",
+   "side": "FR"
+  },
+  "2114080660646199398": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114336431803928787": {
+   "concept": "K21",
+   "label": "Why are they fighting?",
+   "side": "NEU"
+  },
+  "2114104290641903857": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114163617822364107": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "JA"
+  },
+  "2114073135280762952": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2114054453708116060": {
+   "concept": "K20",
+   "label": "French insolence",
+   "side": "FR"
+  },
+  "2114352779338854875": {
+   "concept": "K15",
+   "label": "Auto-translation",
+   "side": "FR"
+  },
+  "2114111040350720051": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113594717632106578": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "FR"
+  },
+  "2113821022743081301": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113978952893264350": {
+   "concept": "K14",
+   "label": "The spectators' verdict",
+   "side": "FR"
+  },
+  "2113872521506279841": {
+   "concept": "K11",
+   "label": "Japanese racism",
+   "side": "FR"
+  },
+  "2113378029938356224": {
+   "concept": "K17",
+   "label": "Old grudges join in",
+   "side": "FR"
+  },
+  "2113490741020569789": {
+   "concept": "K20",
+   "label": "French insolence",
+   "side": "FR"
+  }
+ },
+ "off_topic": {
+  "2114667214075027467": "modelpress, 18.7M: Tokyo International Film Festival photos, pulled in as the parent of a quote; unrelated to the war",
+  "2113468092684841104": "LunarBlue_429, 9.0M: travel anecdote on French pride, not about the conflict",
+  "2114246349562806381": "kazuki335656, 870K: Luxembourg travel anecdote",
+  "2112488166984949873": "CvxbGU9LvH45242, 662K: about a Japanese domestic issue",
+  "2114287456296239150": "Stormbricht, 880K: unclear camp",
+  "2112509699266679207": "kakenamitoriten, 1.4M: baguette riot photo joke, camp unclear",
+  "2113045722744717360": "fiveoutofnine, 4.2M: PHP security news, off topic",
+  "2112331806338937238": "Mythra_Hikari, 2.1M: one French sentence, target unclear",
+  "2113605443402776760": "amatsuuni, 683K: restaurant anecdote about a family, not about the conflict",
+  "2113698343369289945": "wN4lzRDDL, 183K: slur, under threshold",
+  "2113784985098326332": "ksapowery, 15.7M: Saudi Arabia vs Argentina joke, no mention of France or Japan",
+  "2109562806064308323": "mikomashiro_, 256K: video about Muslims and Japan, no link to France or the clash",
+  "2113169900131041391": "Sonny__Alves, 7.7M: travel praise of Japan with no reference to the clash"
+ }
+}

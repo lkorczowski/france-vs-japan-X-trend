@@ -92,6 +92,7 @@ h1 .ja { color: var(--accent); }
 @keyframes popin { 0% { opacity: 0; transform: translateY(12px) scale(0.95); } 10% { opacity: 1; transform: none; } 75% { opacity: 1; } 100% { opacity: 0; transform: translateY(-16px); } }
 .livetag { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2px; font: 700 0.6rem "JetBrains Mono", monospace; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); }
 .livetag i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 1.8s ease-out infinite; }
+.post .h .tag { display: block; font: 700 0.58rem "JetBrains Mono", monospace; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-3); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .bar .mid { position: absolute; left: 50%; top: -5px; bottom: -5px; width: 2px; margin-left: -1px; background: var(--bg); }
 .vals { display: flex; justify-content: space-between; font-variant-numeric: tabular-nums; }
 .vals b { font-weight: 900; font-size: 1.35rem; letter-spacing: -0.02em; }
@@ -250,6 +251,7 @@ footer p { margin: 4px 0; }
 <footer>
   <div class="wrap">
     <p><b>How it works.</b> Every morning, the X API counts the posts of each side and reads the most viewed ones. Sides are languages, not nationalities. Post text is never shown.</p>
+    <p><b>Vetted posts.</b> Every post in the hall of fame, the feed and firepower was read and tagged with the idea it carries. Posts off the topic are rejected, and a new post waits for its reading before it counts. Volume and heat count every post matching each side's search: a hand audit of the searches found 79% of French and 86% of Japanese posts on topic.</p>
     <p>Built by Dr. Louis Korczowski · <a href="https://statur.co">statur.co</a>, viral marketing lab · <a href="https://github.com/lkorczowski/france-vs-japan-X-trend">code</a></p>
     <p class="run" id="runinfo"></p>
   </div>
@@ -467,7 +469,7 @@ footer p { margin: 4px 0; }
       if (c) { a.setAttribute("aria-hidden", "true"); a.setAttribute("tabindex", "-1"); }
       a.appendChild(el("span", { "class": "chip mono " + p.side.toLowerCase() }, p.side));
       a.appendChild(el("span", { "class": "h" }, "@" + p.handle));
-      a.appendChild(el("span", { "class": "n" }, cf.format(p.views) + " views · " + ago(now - new Date(p.created_at)) + " ago"));
+      a.appendChild(el("span", { "class": "n" }, (p.idea ? p.idea + " · " : "") + cf.format(p.views) + " views · " + ago(now - new Date(p.created_at)) + " ago"));
       track.appendChild(a);
     });
     track.style.setProperty("--dur", Math.max(30, feed.length * 3.2) + "s");
@@ -602,7 +604,7 @@ footer p { margin: 4px 0; }
       var bars = [];
       d.sides[s].top_posts.forEach(function (p, i) {
         var a = el("a", { "class": "post", href: p.url, target: "_blank", rel: "noopener", "aria-label": "Open the post by @" + p.handle + " on X" });
-        a.appendChild(el("span", { "class": "rk" }, "0" + (i + 1))); a.appendChild(el("span", { "class": "h" }, "@" + p.handle)); a.appendChild(el("span", { "class": "v" }, cf.format(p.views)));
+        a.appendChild(el("span", { "class": "rk" }, "0" + (i + 1))); var hd = el("span", { "class": "h" }, "@" + p.handle); if (p.idea) hd.appendChild(el("small", { "class": "tag" }, p.idea)); a.appendChild(hd); a.appendChild(el("span", { "class": "v" }, cf.format(p.views)));
         var vb = el("span", { "class": "vb" }), f = el("i"); f.style.background = COLOR[s]; vb.appendChild(f); a.appendChild(vb); bars.push([f, p.views / max]);
         col.appendChild(a);
       });
