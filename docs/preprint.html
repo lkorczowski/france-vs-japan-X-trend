@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Beliefs in a Meme War</title>
+<style>
+@page { size: A4; margin: 22mm 20mm 20mm 20mm; }
+body { font-family: "Times New Roman", Times, serif; font-size: 10.5pt; line-height: 1.38; color: #111; background: #fff; max-width: 170mm; margin: 0 auto; }
+h1 { font-size: 17pt; line-height: 1.2; text-align: center; margin: 0 0 8pt; }
+.authors { text-align: center; margin-bottom: 2pt; }
+.affil { text-align: center; font-size: 9.5pt; color: #333; margin-bottom: 12pt; }
+.abstract { margin: 0 8mm 12pt; font-size: 9.8pt; }
+.abstract b { display: block; text-align: center; margin-bottom: 3pt; }
+h2 { font-size: 12pt; margin: 14pt 0 4pt; }
+h3 { font-size: 10.5pt; margin: 10pt 0 3pt; font-style: italic; }
+p { margin: 0 0 6pt; text-align: justify; }
+table { border-collapse: collapse; width: 100%; font-size: 9pt; margin: 6pt 0 4pt; }
+th, td { border-top: 0.6pt solid #888; padding: 2.5pt 4pt; text-align: left; vertical-align: top; }
+th { border-top: 1pt solid #111; border-bottom: 0.6pt solid #111; }
+tr:last-child td { border-bottom: 1pt solid #111; }
+td.n, th.n { text-align: right; }
+.cap { font-size: 9pt; color: #222; margin: 2pt 0 10pt; }
+figure { margin: 8pt 0; page-break-inside: avoid; }
+figure img { width: 100%; }
+.kw { font-size: 9.5pt; margin: 0 8mm 10pt; }
+ol.refs { font-size: 9pt; padding-left: 16pt; }
+ol.refs li { margin-bottom: 3pt; }
+a { color: #1D4ED8; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<h1>Beliefs in a Meme War: Belief and Stance Mapping of the France vs Japan Clash on X After the October 17, 2026 Riots</h1>
+<div class="authors">Louis Korczowski, PhD</div>
+<div class="affil">STATUR viral marketing lab, Cairn-Crea SASU, France · louis@cairn-crea.com<br>Preprint v1, October 29, 2026</div>
+
+<div class="abstract"><b>Abstract</b>
+After the October 17, 2026 protests in France ended in looting, a cosplay image and a One Piece flag at the riots set off a mass exchange between French-speaking and Japanese-speaking accounts on X. We read the 327 most viewed posts of the clash (356 million views, eight language communities) and tagged each one with the belief it carries, its stance toward that belief (supports, attacks, neutral), its camp, its language community and its register (humor, argument, information, testimony, insult, meta). Eighteen beliefs account for the conflict. Four results stand out. (1) On the Japanese side, 40% of views (51M) went to four beliefs about immigration and media distrust, led by "It's a Muslim invasion" (31M). (2) Official arrest data, posted by a well-known Japanese internet entrepreneur, out-reached every one of the five replies that defended the invasion belief, yet posts supporting that belief reached 8.7 times more views. (3) The French side answered the racism accusation mostly with stereotypes: three stereotype beliefs took 49% of French-side views, against 2% for posts accusing Japan of racism. (4) A Japanese plea to keep manga out of the riots lost 11 of 12 direct duels to French mockery. Accounts writing in neither French nor Japanese drew 23% of views. Humor made 39% of posts and 54% of views. Finally, we test whether beliefs can be recovered automatically. Clustering sentence embeddings recovers little of the hand labels (adjusted Rand index 0.10 on raw multilingual posts, 0.19 on written paraphrases), and zero-shot assignment to the 18 belief labels reaches 21% top-1 accuracy on raw text against 33% on paraphrases (chance 6%). Most of the gap lies in resolving what a joke implies, a step that sentence encoders do not perform. We release the belief map, per-post annotations (paraphrased, no post text) and code.
+</div>
+<div class="kw"><b>Keywords:</b> social media, X (Twitter), memes, virality, stance detection, concept induction, sentence embeddings, zero-shot classification, LLM-assisted annotation, immigration discourse, France, Japan.</div>
+
+<h2>1. Introduction</h2>
+<p>Studies of online virality usually count content: posts, hashtags, formats. A meme war shows the limit of this approach. The same belief can travel as a joke, a statistic, a testimony or an insult, and a debunk spreads the belief it attacks. Counting formats hides what each side believed and which beliefs won attention.</p>
+<p>We propose a simple unit of analysis for attention conflicts: the <i>belief</i>, a claim a person could state as "I believe that ...", independent of the packaging that carries it. Each post is tagged with one belief and a stance toward it. Reach is then measured per belief and per stance, and replies that quote another post are scored as duels.</p>
+<p>The paper makes three contributions: (1) a belief and stance annotation scheme for meme conflicts, with a four-question test for belief labels; (2) a measurement of the France vs Japan clash on X with this scheme; (3) a test of how far off-the-shelf sentence encoders can recover the beliefs, from raw multilingual posts and from written paraphrases.</p>
+<p>We apply this to the clash between French-speaking and Japanese-speaking accounts on X that followed the October 17, 2026 protests in France. The case is useful because it mixes humor, national stereotypes, immigration discourse and a factual correction, all within ten days, with X's automatic translation putting each side's posts in front of the other.</p>
+
+<h2>2. Context</h2>
+<p>On October 17, 2026, between 550,000 (Interior Ministry) and 800,000 (organizers) people marched across France for education funding and purchasing power [1, 2]. The evening ended in looting in Paris, Lyon, Marseille and other cities [2]. From October 18, images of rioters in anime cosplay and with the One Piece pirate flag circulated on X, and Japanese-speaking accounts asked the French not to involve Japanese culture. French-speaking accounts answered with jokes about Japan, and the exchange grew over the following week. On October 22, a note from the French Justice Ministry reported that, of 186 people jailed between October 18 and 21, 70% were French nationals, nearly all of them born in France, 68% were aged 25 or under and 95% were men [3]. In Japan, the debate ran alongside domestic discussion of immigration: permanent residency guidelines were revised on October 1, 2026 [4], and the Sanseito party, which campaigns on "Japanese First", had won 14 seats in the July 2025 upper house election [5]. Press coverage in late October described the clash without measuring it [5, 6].</p>
+
+<h2>3. Data</h2>
+<p>The corpus combines three sources: (a) 59 seed posts, every tracked post above 500,000 views plus posts found by hand; (b) 146 posts from manual searches by language at view thresholds of 500,000, 250,000 and 100,000; (c) 115 quote posts read in the Quotes tab of the 15 most viewed posts, sorted by views. Posts quoted by seeds were added through the X API. After relevance vetting, the corpus holds 327 posts with 356.5 million views. Most posts date from October 18 to 26, 2026; a few quoted posts are older (earliest October 6). Post metadata came from the X API v2 (post lookup and counts), at a total API cost under 5 USD; quote pages were read in a logged-in browser.</p>
+<p>Daily post volume confirms the event: on the final search queries, French-language volume was 3.4 to 6.5 times its September baseline (1,734 posts per day) from October 20 to 25, and Japanese-language volume 4.8 to 9.3 times its baseline (1,565 posts per day) from October 20 to 26.</p>
+
+<h2>4. Method</h2>
+<h3>4.1 Reading and annotation</h3>
+<p>Each post was read with its image or video, because the meaning of a meme often lives in the image [7]. A contact sheet of all thumbnails was inspected. Each post received: an <i>idea</i> sentence paraphrasing its claim in neutral English, including the implied meaning of a joke; a <i>belief</i>; a <i>stance</i>; a <i>side</i> (the camp the post serves: FR, JA or NEU); a <i>community</i> (the language the author writes in: FR, JA, EN, AR, ES, TH, PT, CN); a <i>register</i>; and, for quotes, a relation to the quoted post (rebut, amplify, verdict, restate). Side and community describe language and position, never nationality, ethnicity or religion. A first pass was made with a multimodal large language model (Claude), which received the post text, the quoted post when there was one, and the image or video thumbnail, and returned a literal reading and the implied idea, in the spirit of meme captioning [7]. The author then corrected every annotation while reading the posts. The idea sentence is the key intermediate representation: it turns a multilingual, image-dependent joke into one explicit English claim (for example, an anime character eating a whole pig is read as "Muslims cannot claim this hero"). Section 8 details the human and AI roles.</p>
+<h3>4.2 From concepts to beliefs</h3>
+<p>A first round induced 23 concepts from the posts, following concept induction [8, 9]. Many of these were named after their dominant packaging ("suicide jokes", "the spectators' verdict"), which mixed what was said with how it was said. We then renamed every concept as a belief and required each label to pass four tests: (1) someone can say "I believe that ..."; (2) a joke, a serious post and a debunk can all be about it; (3) one post can support it and another attack it; (4) the label contains no format word. This produced 18 beliefs plus two bins for posts with no belief (bewildered questions about the fight, and bare racial insults), kept off the comparison.</p>
+<h3>4.3 Stance</h3>
+<p>Each belief has an owner camp, the side whose voice it serves. By default, a post from the owner camp supports the belief, a post from the other camp attacks it, and a neutral post is neutral. Posts where this default is wrong were overridden by hand (for example, Japanese-speaking critics of the manga plea, or posts sharing the arrest data, which attack the invasion belief).</p>
+<h3>4.4 Metrics</h3>
+<p><i>Reach</i> of a belief is the sum of views of its posts, split by stance. A <i>duel</i> occurs when post B quotes post A; B wins if it has more views than A. <i>Inner duels</i> oppose supporters and attackers of the same belief. Duels across beliefs feed an Elo rating (K = 32, start 1500, chronological order) [10]. The <i>third-party share</i> is the share of views from communities other than FR and JA.</p>
+<h3>4.5 Map</h3>
+<p>Idea sentences were embedded with all-mpnet-base-v2 [11]; belief centroids were placed in two dimensions by metric multidimensional scaling of cosine distances, as in LDAvis [12].</p>
+<h3>4.6 Automatic recovery of beliefs</h3>
+<p>We ran two tests against the hand labels. <i>Unsupervised:</i> posts were embedded and clustered into as many groups as hand labels (20: 18 beliefs and 2 no-belief bins), with Ward linkage and with k-means (mean of 5 seeds); agreement is the adjusted Rand index (ARI) [13], where 0 is chance and 1 is perfect agreement. <i>Zero-shot:</i> each post was assigned to the belief label with the highest cosine similarity, over the 18 beliefs; we report top-1 and top-3 accuracy. Inputs were either the raw post text, in its original language, or the English idea sentence. Encoders were all-MiniLM-L6-v2, all-mpnet-base-v2 and paraphrase-multilingual-mpnet-base-v2 [11]. Raw text comparisons use the subset of posts whose text was stored (235 posts for clustering, 221 for zero-shot); the others were image-only posts or posts seen in screenshots.</p>
+
+<h2>5. Results</h2>
+<p>Posts serving the French side drew 193.1M views, the Japanese side 125.5M and neutral posts 37.8M. By language community, French-speaking authors drew 144.7M views, Japanese-speaking 130.5M, English-speaking 57.4M and Arabic-speaking 18.3M; third parties together drew 22.8%. Figure 1 shows reach by belief and stance.</p>
+
+<figure><img src="fig1.svg" alt="Horizontal bars of views per belief, split into supports, attacks and neutral"><div class="cap"><b>Figure 1.</b> Views per belief, split by stance. Largest: "The Japanese are perverts" (62.8M), "Don't use our manga for your riots" (57.8M, of which 30.5M attack it), "It's a Muslim invasion" (31.3M).</div></figure>
+
+<h3>5.1 In Japan, the riots became an immigration debate</h3>
+<p>Four beliefs owned by the Japanese side concern immigration or media distrust: "It's a Muslim invasion" (23.8M supporting views), "France is collapsing" (13.9M), "The media hide the truth" (7.5M) and "The rioters are not real French" (5.6M). Together they took 50.8M of 125.5M Japanese-side views (40%). "It's a Muslim invasion" also has the highest Elo of all beliefs (1591; 8 wins, 1 loss across beliefs). Its supporting posts were carried about equally by humor (11.9M) and argument (11.6M).</p>
+
+<h3>5.2 The correction won the duels and lost the reach</h3>
+<p>On October 23, Hiroyuki Nishimura, founder of the 2channel forum, posted the Justice Ministry figures in Japanese (2.73M views). Five quote posts answered it in support of the invasion belief; each reached fewer people than his post (5 wins, 0 losses). Overall, inner duels on this belief went 5 to 2 in favor of attackers. Yet posts supporting the belief totaled 23.8M views, 8.7 times the correction. Winning every direct exchange did not translate into reach, consistent with evidence that false news spreads further and faster than true news on Twitter [14].</p>
+
+<h3>5.3 Racism was answered with stereotypes</h3>
+<p>The largest French-side beliefs were "The Japanese are perverts" (53.1M supporting views), "The Japanese are suicidal" (25.9M) and "The Japanese are submissive" (14.8M): 93.8M of 193.1M French-side views (49%). Posts accusing Japan of racism ("The Japanese are racist") drew 4.7M French-side views (2%).</p>
+
+<h3>5.4 The manga plea met mockery</h3>
+<p>"Don't use our manga for your riots" drew 25.0M supporting views, all on the Japanese side. Posts attacking it drew 30.5M, mostly French mockery, and won 11 of 12 inner duels. Japanese-speaking critics of the plea added 1.45M views.</p>
+
+<h3>5.5 Packaging</h3>
+<table>
+<tr><th>Register</th><th class="n">Posts</th><th class="n">Share of posts</th><th class="n">Share of views</th></tr>
+<tr><td>Humor</td><td class="n">127</td><td class="n">39%</td><td class="n">54%</td></tr>
+<tr><td>Argument</td><td class="n">119</td><td class="n">36%</td><td class="n">27%</td></tr>
+<tr><td>Meta (about the fight itself)</td><td class="n">30</td><td class="n">9%</td><td class="n">5%</td></tr>
+<tr><td>Insult</td><td class="n">28</td><td class="n">9%</td><td class="n">7%</td></tr>
+<tr><td>Testimony</td><td class="n">13</td><td class="n">4%</td><td class="n">6%</td></tr>
+<tr><td>Information</td><td class="n">10</td><td class="n">3%</td><td class="n">2%</td></tr>
+</table>
+<div class="cap"><b>Table 1.</b> Register of the 327 posts. Humor over-performs its share of posts; information under-performs.</div>
+<p>A further 17.4M views went to posts about X's automatic translation itself ("Auto-translation turned X into a battlefield"), a belief shared by all sides. Translation made each camp's posts readable to the other and gave spectators a running joke.</p>
+
+<h3>5.6 Can the beliefs be recovered automatically?</h3>
+<table>
+<tr><th>Input</th><th>Encoder</th><th class="n">Posts</th><th class="n">Ward ARI</th><th class="n">k-means ARI</th></tr>
+<tr><td>Idea sentence</td><td>all-MiniLM-L6-v2</td><td class="n">327</td><td class="n">0.14</td><td class="n">0.15</td></tr>
+<tr><td>Idea sentence</td><td>all-mpnet-base-v2</td><td class="n">327</td><td class="n">0.19</td><td class="n">0.16</td></tr>
+<tr><td>Raw post text</td><td>paraphrase-multilingual-mpnet-base-v2</td><td class="n">235</td><td class="n">0.10</td><td class="n">n/a</td></tr>
+<tr><td>Idea sentence</td><td>paraphrase-multilingual-mpnet-base-v2</td><td class="n">235</td><td class="n">0.16</td><td class="n">n/a</td></tr>
+</table>
+<div class="cap"><b>Table 2.</b> Unsupervised clustering against the 20 hand labels. ARI 0 is chance, 1 is perfect agreement.</div>
+<table>
+<tr><th>Input</th><th>Encoder</th><th class="n">Posts</th><th class="n">Top-1</th><th class="n">Top-3</th></tr>
+<tr><td>Raw post text</td><td>multilingual mpnet</td><td class="n">221</td><td class="n">21.3%</td><td class="n">46.6%</td></tr>
+<tr><td>Idea sentence</td><td>multilingual mpnet</td><td class="n">221</td><td class="n">32.6%</td><td class="n">58.4%</td></tr>
+<tr><td>Idea sentence</td><td>multilingual mpnet</td><td class="n">309</td><td class="n">34.3%</td><td class="n">59.9%</td></tr>
+<tr><td>Idea sentence</td><td>all-mpnet-base-v2</td><td class="n">309</td><td class="n">33.3%</td><td class="n">53.4%</td></tr>
+</table>
+<div class="cap"><b>Table 3.</b> Zero-shot assignment to the 18 belief labels by cosine similarity. Chance: 5.6%. Majority class: 15.9% (309 posts).</div>
+<p>Neither test recovers the beliefs well. Clustering raw posts gives an ARI of 0.10; writing out each post's implied idea raises it to 0.16 with the same multilingual encoder, and to 0.19 with the best English encoder. Zero-shot assignment follows the same pattern: on the same 221 posts, the paraphrase lifts top-1 accuracy from 21.3% to 32.6%. The lift holds for humor (26.0% to 37.5%, 96 posts) and for argument (16.9% to 27.3%, 77 posts). Argument posts score below humor posts on both inputs; one possible reason, untested here, is that arguments about immigration use vocabulary close to several beliefs at once.</p>
+
+<h2>6. Discussion</h2>
+<p>Three observations follow. First, the belief, not the joke, is the useful unit: the same invasion belief traveled as memes and as arguments in nearly equal measure, and a meme count would have split it in two. Second, stance matters for reach accounting: the manga belief is the second largest by views, but more than half of those views attack it. Third, duels and reach measure different things. A correction can win every head-to-head exchange and still lose the audience, because supporters of a belief do not need to answer the correction to out-reach it.</p>
+<p>For automation, the results point to where the work lies. Sentence encoders compare surface meaning; a meme's belief often sits in what the joke implies, in the image, or in the post it quotes. The paraphrase step, done here by a multimodal model and corrected by a human, carries most of the gain, and even then embedding similarity stays far from the hand labels. A practical pipeline is therefore: collect posts by reach; have a vision-language model write the literal reading and the implied idea; induce belief labels with concept induction [8, 9] and the four-question test; assign belief and stance with a reasoning model rather than nearest-neighbor similarity; and audit a random sample by hand. Stance detection toward a stated target is an established task with shared benchmarks on tweets [15], which this pipeline can reuse.</p>
+
+<h2>7. Limitations</h2>
+<p>The corpus is built from the most viewed posts and from hand-chosen searches; it is not a random sample, and the French side is over-represented among the largest seeds. Views measure reach, not agreement or belief adoption. Annotation was done by one author with AI assistance; this version reports no inter-annotator agreement, and a second-reader audit of a random 10% sample is planned for the next version. Quote counts and order in the browser change over time, and deleted or protected posts are missing. The idea sentences were written with the belief list in mind, so the paraphrase scores in Tables 2 and 3 are an upper bound for that step. Owner camps and default stances are a modeling choice; overrides are listed in the released code.</p>
+
+<h2>8. Contributions and use of AI</h2>
+<p>This study was run by one human author working with an AI assistant (Claude Opus 5.5, Anthropic) in a single agentic coding session from October 26 to 29, 2026. We report who did what, because the AI assistant did a large share of the reading and annotation.</p>
+<p><i>Louis Korczowski (author)</i> set the research question (which ideas carry virality in an attention war, and why) and the project brief. He collected the first seed posts by hand from X search, on both sides, before any automated search, and pointed to posts the pipeline had missed, including the thread that revealed the manga-plea belief. He required that every post be read with its image, flagged off-topic posts that had entered the analysis, and asked for every post to be vetted and re-tagged. He proposed the reframing of concepts as beliefs ("what people believe"), relabeled the first example posts under that framing, and checked the annotations of the 20 most viewed posts (10 per side). He decided the political framing, the display rules, the naming of public figures, and wrote or approved the final text.</p>
+<p><i>The AI assistant</i> built the data collection (X API v2 queries, counts, post lookup), ran the language searches (500,000, 250,000 and, for Japanese, 100,000 views) and read the Quotes tabs in a logged-in browser, under the author's supervision. It made the first annotation pass on every post (idea sentence, concept then belief, stance, side, community, register, relation), proposed the first concept list and the four-question belief test, applied the author's corrections, ran the NLP models (sentence embeddings, multidimensional scaling, clustering, zero-shot assignment) and computed all metrics, and drafted the dashboard, the figures and this manuscript.</p>
+<p>All interpretation and every claim in this paper are the responsibility of the human author. API usage for the study was capped by the author at 10 USD and stayed under 5 USD.</p>
+
+<h2>9. Ethics and data availability</h2>
+<p>No post text is reproduced. Ideas are paraphrased in neutral language. Posts labeled as insults are counted but never linked. Sides are languages and positions, never ethnicity or religion. The only person named is a public figure, for a public post. The belief map, per-post annotations without post text, and code are public: map at <a href="https://lkorczowski.github.io/france-vs-japan-X-trend/ideas.html">lkorczowski.github.io/france-vs-japan-X-trend/ideas.html</a>, repository at <a href="https://github.com/lkorczowski/france-vs-japan-X-trend">github.com/lkorczowski/france-vs-japan-X-trend</a>, method for AI assistants at <a href="https://github.com/lkorczowski/content-strategist-AI-cookbook">github.com/lkorczowski/content-strategist-AI-cookbook</a>.</p>
+<p><b>Competing interests.</b> The author runs STATUR, a viral marketing lab. The study was not commissioned.</p>
+
+<h2>References</h2>
+<ol class="refs">
+<li>franceinfo. Mobilisation du 17 octobre (live coverage), October 17, 2026. <a href="https://www.franceinfo.fr/economie/greve/direct-mobilisation-du-17-octobre-lyceens-etudiants-gilets-jaunes-des-milliers-de-manifestants-attendus-dans-toute-la-france_8241022.html">franceinfo.fr</a></li>
+<li>Wikipedia (FR). Manifestations du 17 octobre 2026. <a href="https://fr.wikipedia.org/wiki/Manifestations_du_17_octobre_2026">fr.wikipedia.org</a>, accessed October 28, 2026.</li>
+<li>France 24 / AFP. Violences du 17 octobre : le profil type des personnes écrouées dévoilé, October 22, 2026. <a href="https://www.france24.com/fr/france/20261022-violences-17-octobre-profil-type-personnes-%C3%A9crou%C3%A9es-d%C3%A9voil%C3%A9">france24.com</a></li>
+<li>Jiji Press via nippon.com. Permanent residency guidelines revised, October 1, 2026. <a href="https://www.nippon.com/en/news/yjj2026100100012/">nippon.com</a></li>
+<li>Townsend, C. Why French and Japanese users are beefing on X, explained. Mashable, via Yahoo News, October 26, 2026. <a href="https://www.yahoo.com/news/world/articles/why-french-japanese-users-beefing-214654270.html">yahoo.com</a></li>
+<li>20 Minutes. Pourquoi Français et Japonais s'embrouillent sur les réseaux sociaux depuis une semaine, October 26, 2026. <a href="https://www.20minutes.fr/high-tech/by-the-web/4257599-20261026-pourquoi-francais-japonais-embrouillent-reseaux-sociaux-depuis-semaine">20minutes.fr</a></li>
+<li>Hwang, E., Shwartz, V. MemeCap: A Dataset for Captioning and Interpreting Memes. EMNLP 2023. arXiv:2305.13703.</li>
+<li>Lam, M. S., Teoh, J., Landay, J. A., Heer, J., Bernstein, M. S. Concept Induction: Analyzing Unstructured Text with High-Level Concepts Using LLooM. CHI 2024. arXiv:2404.12259.</li>
+<li>Pham, C. M., Hoyle, A., Sun, S., Resnik, P., Iyyer, M. TopicGPT: A Prompt-based Topic Modeling Framework. NAACL 2024. arXiv:2311.01449.</li>
+<li>Elo, A. E. The Rating of Chessplayers, Past and Present. Arco, 1978.</li>
+<li>Reimers, N., Gurevych, I. Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. EMNLP 2019. arXiv:1908.10084.</li>
+<li>Sievert, C., Shirley, K. LDAvis: A method for visualizing and interpreting topics. Workshop on Interactive Language Learning, Visualization, and Interfaces, ACL 2014.</li>
+<li>Hubert, L., Arabie, P. Comparing partitions. Journal of Classification 2, 193-218, 1985.</li>
+<li>Vosoughi, S., Roy, D., Aral, S. The spread of true and false news online. Science 359(6380), 1146-1151, 2018.</li>
+<li>Mohammad, S., Kiritchenko, S., Sobhani, P., Zhu, X., Cherry, C. SemEval-2016 Task 6: Detecting Stance in Tweets. SemEval 2016.</li>
+</ol>
+</body>
+</html>
