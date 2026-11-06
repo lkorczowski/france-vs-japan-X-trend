@@ -1,0 +1,463 @@
+{
+  "run_at": "2026-11-06T14:35:13.600822+00:00",
+  "day": "2026-11-05",
+  "volume": {
+    "FR": {
+      "2026-10-31": 2725,
+      "2026-11-01": 2298,
+      "2026-11-02": 2224,
+      "2026-11-03": 2108,
+      "2026-11-04": 1959,
+      "2026-11-05": 2005
+    },
+    "JA": {
+      "2026-10-31": 2363,
+      "2026-11-01": 2070,
+      "2026-11-02": 1848,
+      "2026-11-03": 1600,
+      "2026-11-04": 1405,
+      "2026-11-05": 1655
+    }
+  },
+  "scores": {
+    "FR": {
+      "volume": 6072,
+      "heat": 1.17,
+      "firepower": 1405
+    },
+    "JA": {
+      "volume": 4660,
+      "heat": 0.99,
+      "firepower": 109
+    }
+  },
+  "posts": {
+    "2107473982639530269": {
+      "side": "JA",
+      "handle": "ev0123456789",
+      "likes": 7791,
+      "reposts": 2551,
+      "views": 1001917
+    },
+    "2109578941421728064": {
+      "side": "JA",
+      "handle": "kumi11117777",
+      "likes": 30214,
+      "reposts": 12125,
+      "views": 1604949
+    },
+    "2111589436513493397": {
+      "side": "JA",
+      "handle": "Aoi_lyonFR",
+      "likes": 51974,
+      "reposts": 10789,
+      "views": 1590896
+    },
+    "2111608202504872239": {
+      "side": "JA",
+      "handle": "shota201907",
+      "likes": 77399,
+      "reposts": 19625,
+      "views": 1254283
+    },
+    "2111637672838193337": {
+      "side": "JA",
+      "handle": "nBwQSzmg3qU2ysd",
+      "likes": 49422,
+      "reposts": 15950,
+      "views": 2177640
+    },
+    "2111673757987373508": {
+      "side": "JA",
+      "handle": "mikomashiro_",
+      "likes": 18594,
+      "reposts": 7101,
+      "views": 940184
+    },
+    "2111688466740461660": {
+      "side": "JA",
+      "handle": "Freza_sama",
+      "likes": 47738,
+      "reposts": 3355,
+      "views": 2385263
+    },
+    "2111771410418802911": {
+      "side": "JA",
+      "handle": "May_Roma",
+      "likes": 70749,
+      "reposts": 17842,
+      "views": 1208024
+    },
+    "2111813174953681263": {
+      "side": "JA",
+      "handle": "4Ud1CCuftl19105",
+      "likes": 48931,
+      "reposts": 5522,
+      "views": 3264017
+    },
+    "2111960971350823239": {
+      "side": "JA",
+      "handle": "pondebekkio",
+      "likes": 41807,
+      "reposts": 3194,
+      "views": 2437010
+    },
+    "2111981057704923597": {
+      "side": "JA",
+      "handle": "Izumi_Sunagawa",
+      "likes": 78339,
+      "reposts": 15566,
+      "views": 3364800
+    },
+    "2111982884148101619": {
+      "side": "JA",
+      "handle": "JPN_First_ao",
+      "likes": 24493,
+      "reposts": 8218,
+      "views": 617448
+    },
+    "2112023208321003967": {
+      "side": "JA",
+      "handle": "hotahotasa45082",
+      "likes": 29465,
+      "reposts": 9092,
+      "views": 487313
+    },
+    "2112074920658337879": {
+      "side": "JA",
+      "handle": "amatsuuni",
+      "likes": 176911,
+      "reposts": 17651,
+      "views": 8462227
+    },
+    "2112093487223177425": {
+      "side": "JA",
+      "handle": "SOWIETK",
+      "likes": 69083,
+      "reposts": 8970,
+      "views": 3391821
+    },
+    "2112100272449245554": {
+      "side": "JA",
+      "handle": "MiyaHakuyo",
+      "likes": 9859,
+      "reposts": 4031,
+      "views": 501295
+    },
+    "2112129777645817949": {
+      "side": "JA",
+      "handle": "tomogang",
+      "likes": 37145,
+      "reposts": 12857,
+      "views": 508338
+    },
+    "2112189152343081468": {
+      "side": "FR",
+      "handle": "RafaelSereti",
+      "likes": 3450,
+      "reposts": 998,
+      "views": 1128497
+    },
+    "2112204373791293499": {
+      "side": "JA",
+      "handle": "sushi_zamurai_",
+      "likes": 35610,
+      "reposts": 2401,
+      "views": 1462890
+    },
+    "2112317876677828853": {
+      "side": "JA",
+      "handle": "amatsuuni",
+      "likes": 15989,
+      "reposts": 5271,
+      "views": 366735
+    },
+    "2112380780446134526": {
+      "side": "JA",
+      "handle": "V7NnRqa0uZbvFqZ",
+      "likes": 41151,
+      "reposts": 4261,
+      "views": 2281898
+    },
+    "2112397340632130025": {
+      "side": "JA",
+      "handle": "freezetheidiotz",
+      "likes": 41315,
+      "reposts": 4297,
+      "views": 1622669
+    },
+    "2112458439163261343": {
+      "side": "JA",
+      "handle": "SOWIETK",
+      "likes": 22748,
+      "reposts": 6748,
+      "views": 568245
+    },
+    "2112461340099174569": {
+      "side": "JA",
+      "handle": "Izumi_Sunagawa",
+      "likes": 53737,
+      "reposts": 12534,
+      "views": 1621415
+    },
+    "2112485570605875482": {
+      "side": "JA",
+      "handle": "akasa_tanashin",
+      "likes": 2885,
+      "reposts": 1054,
+      "views": 452941
+    },
+    "2112487484672348183": {
+      "side": "JA",
+      "handle": "4Ud1CCuftl19105",
+      "likes": 23668,
+      "reposts": 4657,
+      "views": 1373273
+    },
+    "2112574440462782705": {
+      "side": "JA",
+      "handle": "keiai154614",
+      "likes": 19671,
+      "reposts": 7627,
+      "views": 431463
+    },
+    "2112674939698643143": {
+      "side": "JA",
+      "handle": "yurupanda2019",
+      "likes": 42057,
+      "reposts": 8234,
+      "views": 3550520
+    },
+    "2112759904301953365": {
+      "side": "JA",
+      "handle": "obashuji",
+      "likes": 59633,
+      "reposts": 4992,
+      "views": 2310816
+    },
+    "2112776123822346271": {
+      "side": "JA",
+      "handle": "amatsuuni",
+      "likes": 21548,
+      "reposts": 6394,
+      "views": 5118632
+    },
+    "2112799163822084186": {
+      "side": "JA",
+      "handle": "milchass_223",
+      "likes": 3180,
+      "reposts": 218,
+      "views": 2366808
+    },
+    "2112805392451559563": {
+      "side": "JA",
+      "handle": "amatsuuni",
+      "likes": 43048,
+      "reposts": 3520,
+      "views": 2374429
+    },
+    "2112806599731622036": {
+      "side": "FR",
+      "handle": "Mileistesfr",
+      "likes": 28980,
+      "reposts": 2881,
+      "views": 1209311
+    },
+    "2112826374860013944": {
+      "side": "FR",
+      "handle": "G1NGERB3ER",
+      "likes": 1917,
+      "reposts": 264,
+      "views": 3738209
+    },
+    "2112827916048310537": {
+      "side": "FR",
+      "handle": "liistrk",
+      "likes": 49287,
+      "reposts": 3549,
+      "views": 18025439
+    },
+    "2112829113585258659": {
+      "side": "JA",
+      "handle": "akita_kia",
+      "likes": 13456,
+      "reposts": 1197,
+      "views": 449446
+    },
+    "2113427991627956730": {
+      "side": "JA",
+      "handle": "takayoshi50",
+      "likes": 26092,
+      "reposts": 1595,
+      "views": 1594985
+    },
+    "2113554141339668767": {
+      "side": "JA",
+      "handle": "hirox246",
+      "likes": 11853,
+      "reposts": 1649,
+      "views": 2775778
+    },
+    "2113562963651301824": {
+      "side": "JA",
+      "handle": "4Ud1CCuftl19105",
+      "likes": 9458,
+      "reposts": 2469,
+      "views": 547325
+    },
+    "2113722362445320375": {
+      "side": "FR",
+      "handle": "defonceur2pedos",
+      "likes": 8975,
+      "reposts": 463,
+      "views": 3008073
+    },
+    "2113727228596961619": {
+      "side": "FR",
+      "handle": "thecosmicnomad",
+      "likes": 480551,
+      "reposts": 42334,
+      "views": 8047520
+    },
+    "2113753261220004070": {
+      "side": "FR",
+      "handle": "namekoisvnr",
+      "likes": 366384,
+      "reposts": 23030,
+      "views": 12146853
+    },
+    "2113756235056947455": {
+      "side": "FR",
+      "handle": "BWhey69",
+      "likes": 466389,
+      "reposts": 39165,
+      "views": 12701779
+    },
+    "2113827833034219781": {
+      "side": "JA",
+      "handle": "HamiJeJe",
+      "likes": 34725,
+      "reposts": 5514,
+      "views": 1349071
+    },
+    "2113888608415625595": {
+      "side": "JA",
+      "handle": "9KNzXzLihY87481",
+      "likes": 7860,
+      "reposts": 971,
+      "views": 494700
+    },
+    "2113911120268550405": {
+      "side": "FR",
+      "handle": "usernontrouver9",
+      "likes": 299811,
+      "reposts": 20756,
+      "views": 9364501
+    },
+    "2114002515092226387": {
+      "side": "FR",
+      "handle": "JB94MA",
+      "likes": 146004,
+      "reposts": 24082,
+      "views": 1016555
+    },
+    "2114015538615906710": {
+      "side": "FR",
+      "handle": "pomleloupWP0",
+      "likes": 329611,
+      "reposts": 22729,
+      "views": 6089472
+    },
+    "2114097408304992641": {
+      "side": "FR",
+      "handle": "maai_as_",
+      "likes": 158411,
+      "reposts": 9786,
+      "views": 1462245
+    },
+    "2114267468025778269": {
+      "side": "FR",
+      "handle": "Tagvno31",
+      "likes": 330135,
+      "reposts": 23261,
+      "views": 4821678
+    },
+    "2114314444713161028": {
+      "side": "JA",
+      "handle": "hayatomiki92391",
+      "likes": 5081,
+      "reposts": 179,
+      "views": 696429
+    },
+    "2114348027746079086": {
+      "side": "JA",
+      "handle": "kekmoe1069",
+      "likes": 318,
+      "reposts": 7,
+      "views": 196659
+    },
+    "2114348078853685366": {
+      "side": "JA",
+      "handle": "WORIBA_",
+      "likes": 7837,
+      "reposts": 1825,
+      "views": 493831
+    },
+    "2114351673896550807": {
+      "side": "JA",
+      "handle": "amatsuuni",
+      "likes": 11025,
+      "reposts": 1081,
+      "views": 1713651
+    },
+    "2114387710693589225": {
+      "side": "FR",
+      "handle": "encorewassim",
+      "likes": 222572,
+      "reposts": 22480,
+      "views": 3204940
+    },
+    "2114407527878107511": {
+      "side": "FR",
+      "handle": "encorewassim",
+      "likes": 46502,
+      "reposts": 4174,
+      "views": 490514
+    },
+    "2114634151399690296": {
+      "side": "JA",
+      "handle": "konaske",
+      "likes": 1412,
+      "reposts": 454,
+      "views": 167434
+    },
+    "2114691274791887329": {
+      "side": "FR",
+      "handle": "Vyce_pacKm",
+      "likes": 22779,
+      "reposts": 717,
+      "views": 2927987
+    },
+    "2114705514911453262": {
+      "side": "JA",
+      "handle": "in9hvozgfZcP5IP",
+      "likes": 78283,
+      "reposts": 2691,
+      "views": 5799309
+    },
+    "2116426825605722295": {
+      "side": "FR",
+      "handle": "abdoull997",
+      "likes": 886,
+      "reposts": 181,
+      "views": 2149962
+    },
+    "2117188184262230222": {
+      "side": "JA",
+      "handle": "tngzhyn6",
+      "likes": 5120,
+      "reposts": 778,
+      "views": 2928419
+    }
+  }
+}
