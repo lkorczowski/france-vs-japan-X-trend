@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-06T14:35:13+00:00",
-  "day": "2026-11-05",
+  "updated_at": "2026-11-07T13:30:21+00:00",
+  "day": "2026-11-06",
   "title": "French-speaking X vs Japanese-speaking X",
   "winner": "FR",
   "winner_label": "French-speaking X",
@@ -10,51 +10,51 @@
     "firepower": "FR"
   },
   "firepower_mode": "delta",
-  "firepower_window_hours": 94.1,
+  "firepower_window_hours": 192.0,
   "window_days": 3,
-  "window_from": "2026-11-03",
+  "window_from": "2026-11-04",
   "war_start": "2026-10-19",
   "sides": {
     "FR": {
       "label": "French-speaking X",
       "query": "(japonais OR japonaise OR japonaises OR japon) lang:fr -is:retweet",
       "baseline_avg": 1734,
-      "volume": 6072,
+      "volume": 6073,
       "heat": 1.17,
-      "firepower": 1405,
+      "firepower": 942,
       "top_posts": [
         {
           "handle": "liistrk",
-          "likes": 49287,
-          "views": 18025439,
+          "likes": 49280,
+          "views": 18027211,
           "url": "https://x.com/liistrk/status/2112827916048310537",
           "idea": "Don't use our manga for your riots"
         },
         {
           "handle": "BWhey69",
-          "likes": 466389,
-          "views": 12701779,
+          "likes": 466283,
+          "views": 12707307,
           "url": "https://x.com/BWhey69/status/2113756235056947455",
           "idea": "The Japanese are perverts"
         },
         {
           "handle": "namekoisvnr",
-          "likes": 366384,
-          "views": 12146853,
+          "likes": 366301,
+          "views": 12151982,
           "url": "https://x.com/namekoisvnr/status/2113753261220004070",
           "idea": "The Japanese are submissive"
         },
         {
           "handle": "usernontrouver9",
-          "likes": 299811,
-          "views": 9364501,
+          "likes": 299764,
+          "views": 9367756,
           "url": "https://x.com/usernontrouver9/status/2113911120268550405",
           "idea": "The Japanese are suicidal"
         },
         {
           "handle": "thecosmicnomad",
-          "likes": 480551,
-          "views": 8047520,
+          "likes": 480513,
+          "views": 8054441,
           "url": "https://x.com/thecosmicnomad/status/2113727228596961619",
           "idea": "The Japanese are suicidal"
         }
@@ -64,42 +64,42 @@
       "label": "Japanese-speaking X",
       "query": "(フランス人 OR フランス語 OR おフランス OR (フランス (差別 OR レイシスト OR 日本人 OR ヘイト OR 黒人 OR 原爆 OR 自殺))) lang:ja -is:retweet",
       "baseline_avg": 1565,
-      "volume": 4660,
-      "heat": 0.99,
-      "firepower": 109,
+      "volume": 4593,
+      "heat": 0.98,
+      "firepower": 88,
       "top_posts": [
         {
           "handle": "amatsuuni",
-          "likes": 176911,
-          "views": 8462227,
+          "likes": 176891,
+          "views": 8463356,
           "url": "https://x.com/amatsuuni/status/2112074920658337879",
           "idea": "The protesters are just looters"
         },
         {
           "handle": "in9hvozgfZcP5IP",
-          "likes": 78283,
-          "views": 5799309,
+          "likes": 78260,
+          "views": 5801196,
           "url": "https://x.com/in9hvozgfZcP5IP/status/2114705514911453262",
           "idea": "The French are cowards"
         },
         {
           "handle": "amatsuuni",
-          "likes": 21548,
-          "views": 5118632,
+          "likes": 21547,
+          "views": 5119429,
           "url": "https://x.com/amatsuuni/status/2112776123822346271",
           "idea": "It's a Muslim invasion"
         },
         {
           "handle": "yurupanda2019",
-          "likes": 42057,
-          "views": 3550520,
+          "likes": 42049,
+          "views": 3550705,
           "url": "https://x.com/yurupanda2019/status/2112674939698643143",
           "idea": "It's a Muslim invasion"
         },
         {
           "handle": "SOWIETK",
-          "likes": 69083,
-          "views": 3391821,
+          "likes": 69072,
+          "views": 3391966,
           "url": "https://x.com/SOWIETK/status/2112093487223177425",
           "idea": "The protesters are just looters"
         }
@@ -110,8 +110,8 @@
     {
       "side": "JA",
       "handle": "in9hvozgfZcP5IP",
-      "likes": 78283,
-      "views": 5799309,
+      "likes": 78260,
+      "views": 5801196,
       "created_at": "2026-10-26T13:07:38.000Z",
       "url": "https://x.com/in9hvozgfZcP5IP/status/2114705514911453262",
       "idea": "The French are cowards"
@@ -120,7 +120,7 @@
       "side": "FR",
       "handle": "Vyce_pacKm",
       "likes": 22779,
-      "views": 2927987,
+      "views": 2928116,
       "created_at": "2026-10-26T12:11:03.000Z",
       "url": "https://x.com/Vyce_pacKm/status/2114691274791887329",
       "idea": "France won the meme war"
@@ -128,8 +128,8 @@
     {
       "side": "JA",
       "handle": "konaske",
-      "likes": 1412,
-      "views": 167434,
+      "likes": 1413,
+      "views": 167530,
       "created_at": "2026-10-26T08:24:04.000Z",
       "url": "https://x.com/konaske/status/2114634151399690296",
       "idea": "Don't use our manga for your riots"
@@ -137,8 +137,8 @@
     {
       "side": "FR",
       "handle": "encorewassim",
-      "likes": 46502,
-      "views": 490514,
+      "likes": 46488,
+      "views": 490892,
       "created_at": "2026-10-25T17:23:33.000Z",
       "url": "https://x.com/encorewassim/status/2114407527878107511",
       "idea": "The Japanese are perverts"
@@ -146,8 +146,8 @@
     {
       "side": "FR",
       "handle": "encorewassim",
-      "likes": 222572,
-      "views": 3204940,
+      "likes": 222689,
+      "views": 3210923,
       "created_at": "2026-10-25T16:04:48.000Z",
       "url": "https://x.com/encorewassim/status/2114387710693589225",
       "idea": "The Japanese are perverts"
@@ -155,8 +155,8 @@
     {
       "side": "JA",
       "handle": "amatsuuni",
-      "likes": 11025,
-      "views": 1713651,
+      "likes": 11021,
+      "views": 1714346,
       "created_at": "2026-10-25T13:41:36.000Z",
       "url": "https://x.com/amatsuuni/status/2114351673896550807",
       "idea": "The media hide the truth"
@@ -164,8 +164,8 @@
     {
       "side": "JA",
       "handle": "WORIBA_",
-      "likes": 7837,
-      "views": 493831,
+      "likes": 7836,
+      "views": 493953,
       "created_at": "2026-10-25T13:27:19.000Z",
       "url": "https://x.com/WORIBA_/status/2114348078853685366",
       "idea": "Japan started it"
@@ -173,8 +173,8 @@
     {
       "side": "FR",
       "handle": "Tagvno31",
-      "likes": 330135,
-      "views": 4821678,
+      "likes": 330110,
+      "views": 4824810,
       "created_at": "2026-10-25T08:07:00.000Z",
       "url": "https://x.com/Tagvno31/status/2114267468025778269",
       "idea": "The Japanese are perverts"
@@ -182,8 +182,8 @@
     {
       "side": "FR",
       "handle": "maai_as_",
-      "likes": 158411,
-      "views": 1462245,
+      "likes": 158386,
+      "views": 1462886,
       "created_at": "2026-10-24T20:51:14.000Z",
       "url": "https://x.com/maai_as_/status/2114097408304992641",
       "idea": "The Japanese are perverts"
@@ -191,8 +191,8 @@
     {
       "side": "FR",
       "handle": "pomleloupWP0",
-      "likes": 329611,
-      "views": 6089472,
+      "likes": 329513,
+      "views": 6092848,
       "created_at": "2026-10-24T15:25:55.000Z",
       "url": "https://x.com/pomleloupWP0/status/2114015538615906710",
       "idea": "The Japanese are perverts"
@@ -200,8 +200,8 @@
     {
       "side": "FR",
       "handle": "JB94MA",
-      "likes": 146004,
-      "views": 1016555,
+      "likes": 146047,
+      "views": 1018802,
       "created_at": "2026-10-24T14:34:10.000Z",
       "url": "https://x.com/JB94MA/status/2114002515092226387",
       "idea": "Don't use our manga for your riots"
@@ -209,8 +209,8 @@
     {
       "side": "FR",
       "handle": "usernontrouver9",
-      "likes": 299811,
-      "views": 9364501,
+      "likes": 299764,
+      "views": 9367756,
       "created_at": "2026-10-24T08:31:00.000Z",
       "url": "https://x.com/usernontrouver9/status/2113911120268550405",
       "idea": "The Japanese are suicidal"
@@ -218,8 +218,8 @@
     {
       "side": "JA",
       "handle": "9KNzXzLihY87481",
-      "likes": 7860,
-      "views": 494700,
+      "likes": 7857,
+      "views": 494751,
       "created_at": "2026-10-24T07:01:33.000Z",
       "url": "https://x.com/9KNzXzLihY87481/status/2113888608415625595",
       "idea": "Japan's kindness is a facade"
@@ -227,8 +227,8 @@
     {
       "side": "JA",
       "handle": "HamiJeJe",
-      "likes": 34725,
-      "views": 1349071,
+      "likes": 34724,
+      "views": 1349199,
       "created_at": "2026-10-24T03:00:03.000Z",
       "url": "https://x.com/HamiJeJe/status/2113827833034219781",
       "idea": "The French are cowards"
@@ -236,8 +236,8 @@
     {
       "side": "FR",
       "handle": "BWhey69",
-      "likes": 466389,
-      "views": 12701779,
+      "likes": 466283,
+      "views": 12707307,
       "created_at": "2026-10-23T22:15:32.000Z",
       "url": "https://x.com/BWhey69/status/2113756235056947455",
       "idea": "The Japanese are perverts"
@@ -245,8 +245,8 @@
     {
       "side": "FR",
       "handle": "namekoisvnr",
-      "likes": 366384,
-      "views": 12146853,
+      "likes": 366301,
+      "views": 12151982,
       "created_at": "2026-10-23T22:03:43.000Z",
       "url": "https://x.com/namekoisvnr/status/2113753261220004070",
       "idea": "The Japanese are submissive"
@@ -254,8 +254,8 @@
     {
       "side": "FR",
       "handle": "thecosmicnomad",
-      "likes": 480551,
-      "views": 8047520,
+      "likes": 480513,
+      "views": 8054441,
       "created_at": "2026-10-23T20:20:17.000Z",
       "url": "https://x.com/thecosmicnomad/status/2113727228596961619",
       "idea": "The Japanese are suicidal"
@@ -263,8 +263,8 @@
     {
       "side": "FR",
       "handle": "defonceur2pedos",
-      "likes": 8975,
-      "views": 3008073,
+      "likes": 8969,
+      "views": 3008722,
       "created_at": "2026-10-23T20:00:56.000Z",
       "url": "https://x.com/defonceur2pedos/status/2113722362445320375",
       "idea": "The Japanese are perverts"
@@ -272,8 +272,8 @@
     {
       "side": "JA",
       "handle": "4Ud1CCuftl19105",
-      "likes": 9458,
-      "views": 547325,
+      "likes": 9456,
+      "views": 547379,
       "created_at": "2026-10-23T09:27:33.000Z",
       "url": "https://x.com/4Ud1CCuftl19105/status/2113562963651301824",
       "idea": "Japan started it"
@@ -282,15 +282,15 @@
       "side": "JA",
       "handle": "hirox246",
       "likes": 11853,
-      "views": 2775778,
+      "views": 2776241,
       "created_at": "2026-10-23T08:52:29.000Z",
       "url": "https://x.com/hirox246/status/2113554141339668767",
       "idea": "It's a Muslim invasion"
     }
   ],
   "run": {
-    "posts_read": 92,
+    "posts_read": 94,
     "requests": 4,
-    "estimated_cost_usd": 0.47
+    "estimated_cost_usd": 0.48
   }
 }
