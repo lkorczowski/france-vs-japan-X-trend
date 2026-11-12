@@ -199,7 +199,7 @@ if os.path.exists(pinned_path):
 # (off_topic, with the reason). A discovered post that is not vetted yet is tracked but stays out of the hall of
 # fame, the feed and firepower; it is listed in docs/data/pending.json for the next reading pass.
 vetted = load_json(os.path.join(DATA, "vetted.json"), {"on_topic": {}, "off_topic": {}})
-ON, OFF = vetted.get("on_topic", {}), vetted.get("off_topic", {})
+ON, OFF, LATE = vetted.get("on_topic", {}), vetted.get("off_topic", {}), vetted.get("after_snapshot", {})
 for i in [i for i in tracked if i in OFF]:
     del tracked[i]
 pinned -= set(OFF)
@@ -356,7 +356,7 @@ latest = {
 save_json(os.path.join(DATA, "latest.json"), latest)
 pending = [{"id": i, "side": p["side"], "handle": p["handle"], "views": p["views"], "added": tracked[i].get("added"),
             "url": f"https://x.com/{p['handle']}/status/{i}"}
-           for i, p in sorted(posts.items(), key=lambda kv: -kv[1]["views"]) if i not in ON]
+           for i, p in sorted(posts.items(), key=lambda kv: -kv[1]["views"]) if i not in ON and i not in LATE]
 save_json(os.path.join(DATA, "pending.json"), pending)
 if pending:
     log(f"{len(pending)} tracked posts wait for vetting (docs/data/pending.json), kept out of the scores.")
