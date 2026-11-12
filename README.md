@@ -1,7 +1,9 @@
 # French-speaking X vs Japanese-speaking X
 
 A daily scoreboard of the clash between French-speaking and Japanese-speaking X.
-Live page: https://lkorczowski.github.io/france-vs-japan-X-trend/
+Page: https://lkorczowski.github.io/france-vs-japan-X-trend/
+
+**Closed on 2026-11-12.** The daily run went from 19 October to 11 November 2026 (last data day: 10 November) and is now disabled (the workflow stays in the repo; re-enable it from the Actions tab to reuse it). Both sides were back near their pre-clash volume from 2 November. Conclusion: https://statur.co/how-ideas-go-viral/ · preprint: https://lkorczowski.github.io/france-vs-japan-X-trend/preprint.pdf
 
 Every morning a GitHub Action reads the X API, scores both sides and updates the page.
 Sides are the language of the post, not the nationality of the author.

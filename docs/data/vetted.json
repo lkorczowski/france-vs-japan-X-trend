@@ -1667,6 +1667,17 @@
   "2113698343369289945": "wN4lzRDDL, 183K: slur, under threshold",
   "2113784985098326332": "ksapowery, 15.7M: Saudi Arabia vs Argentina joke, no mention of France or Japan",
   "2109562806064308323": "mikomashiro_, 256K: video about Muslims and Japan, no link to France or the clash",
-  "2113169900131041391": "Sonny__Alves, 7.7M: travel praise of Japan with no reference to the clash"
+  "2113169900131041391": "Sonny__Alves, 7.7M: travel praise of Japan with no reference to the clash",
+  "2117188184262230222": "China and Japan WWII history (Nanjing, Unit 731), no link to France",
+  "2117449844348657928": "French streamer gossip, unrelated to the clash"
+ },
+ "after_snapshot": {
+  "2116426825605722295": {
+   "concept": "B07",
+   "label": "It's a Muslim invasion",
+   "stance": "attacks",
+   "side": "FR",
+   "idea": "A Muslim in Japan answers the invasion belief: a tiny community that wants to live in peace"
+  }
  }
 }

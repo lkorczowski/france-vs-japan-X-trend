@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>French vs Japanese X</title>
-<meta name="description" content="Who is winning the French vs Japanese war on X today? A live tug of war, the hottest posts and the ideas behind them. Updated daily. A STATUR viral marketing lab experiment.">
-<meta property="og:title" content="French-speaking X vs Japanese-speaking X: who is winning today?">
-<meta property="og:description" content="A daily tug of war, the hottest posts and the ideas behind them. Updated every morning.">
+<meta name="description" content="Final scoreboard of the French vs Japanese war on X, 19 October to 10 November 2026: the tug of war, the most viewed posts and the ideas behind them. A STATUR viral marketing lab experiment.">
+<meta property="og:title" content="French-speaking X vs Japanese-speaking X: the final scoreboard">
+<meta property="og:description" content="The final tug of war, the most viewed posts and the ideas behind them. Tracking closed on 12 November 2026.">
 <link rel="canonical" href="https://lkorczowski.github.io/france-vs-japan-X-trend/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lkorczowski.github.io/france-vs-japan-X-trend/">
 <meta property="og:image" content="https://lkorczowski.github.io/france-vs-japan-X-trend/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"French-speaking X vs Japanese-speaking X: daily tug of war","description":"Daily post counts, baseline ratios and most viewed posts of the French vs Japanese war on X since 19 October 2026, collected with the X API.","url":"https://lkorczowski.github.io/france-vs-japan-X-trend/","license":"https://opensource.org/licenses/MIT","creator":{"@type":"Organization","name":"STATUR","url":"https://statur.co"},"isBasedOn":"https://statur.co/how-ideas-go-viral/","distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://lkorczowski.github.io/france-vs-japan-X-trend/data/history.csv"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://lkorczowski.github.io/france-vs-japan-X-trend/data/latest.json"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"French-speaking X vs Japanese-speaking X: daily tug of war","description":"Daily post counts, baseline ratios and most viewed posts of the French vs Japanese war on X from 19 October to 10 November 2026, collected with the X API.","url":"https://lkorczowski.github.io/france-vs-japan-X-trend/","license":"https://opensource.org/licenses/MIT","creator":{"@type":"Organization","name":"STATUR","url":"https://statur.co"},"isBasedOn":"https://statur.co/how-ideas-go-viral/","distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://lkorczowski.github.io/france-vs-japan-X-trend/data/history.csv"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://lkorczowski.github.io/france-vs-japan-X-trend/data/latest.json"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -176,22 +176,22 @@ footer p { margin: 4px 0; }
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="kicker"><i aria-hidden="true"></i>Daily tug of war</span>
+      <span class="kicker"><i aria-hidden="true"></i>Final result · tracking closed</span>
       <h1>French X <span class="vs">vs</span> <span class="ja">Japanese X</span></h1>
-      <p class="sub">Who is winning the war on X today? Computed on real posts, rolling 72 hours.</p>
+      <p class="sub">The war is over. Japanese-speaking X peaked first (20 October, 9.3 times its usual volume), French-speaking X a few days later (25 October, 6.5 times). Both sides were back near their usual level from 2 November. Below, the last tracked days. <a href="https://statur.co/how-ideas-go-viral/">Read the conclusion</a>.</p>
       <div class="stage">
         <svg id="scene" viewBox="0 0 400 170" role="img" aria-label="Tug of war"></svg>
         <canvas id="confetti" aria-hidden="true"></canvas>
         <div class="pops" id="pops" aria-hidden="true"></div>
       </div>
-      <p class="livetag" id="livetag"><i aria-hidden="true"></i><span>Real posts from the last 72 hours pull the rope</span></p>
+      <p class="livetag" id="livetag"><i aria-hidden="true"></i><span>The last 72 tracked hours pull the rope</span></p>
       <div class="pullbar">
         <div class="s"><b id="pull-FR">50%</b><span>French-speaking X</span></div>
         <div class="s ja"><b id="pull-JA">50%</b><span>Japanese-speaking X</span></div>
       </div>
       <div class="winner" id="winbox">
         <div class="cup" aria-hidden="true">1</div>
-        <div><div class="k" id="winmeta">Winner of the day</div><div class="w" id="winner">Loading</div></div>
+        <div><div class="k" id="winmeta">Winner of the last tracked day</div><div class="w" id="winner">Loading</div></div>
       </div>
     </div>
   </section>
@@ -200,14 +200,14 @@ footer p { margin: 4px 0; }
     <div class="wrap">
       <p class="label mono">Three ropes</p>
       <h2>Win two, win the day</h2>
-      <p class="sub">Rolling 72 hours of real posts, recomputed every morning.</p>
+      <p class="sub">Last rolling 72 hours before tracking closed.</p>
       <div class="ropes" id="ropes"></div>
     </div>
   </section>
 
   <section class="sec" style="padding-top:8px">
     <div class="wrap">
-      <p class="label mono">Hot right now</p>
+      <p class="label mono">Last tracked</p>
       <h2>The posts pulling the rope</h2>
       <div class="ticker" id="ticker"><div class="track" id="track"></div></div>
     </div>
@@ -250,7 +250,7 @@ footer p { margin: 4px 0; }
 
 <footer>
   <div class="wrap">
-    <p><b>How it works.</b> Every morning, the X API counts the posts of each side and reads the most viewed ones. Sides are languages, not nationalities. Post text is never shown.</p>
+    <p><b>How it worked.</b> From 19 October to 11 November 2026, every morning, the X API counted the posts of each side and read the most viewed ones. Tracking closed on 12 November, once both sides were back near their usual volume. Sides are languages, not nationalities. Post text is never shown.</p>
     <p><b>Vetted posts.</b> Every post in the hall of fame, the feed and firepower was read and tagged with the idea it carries. Posts off the topic are rejected, and a new post waits for its reading before it counts. Volume and heat count every post matching each side's search: a hand audit of the searches found 79% of French and 86% of Japanese posts on topic.</p>
     <p>Built by Dr. Louis Korczowski · <a href="https://statur.co">statur.co</a>, viral marketing lab · <a href="https://github.com/lkorczowski/france-vs-japan-X-trend">code</a></p>
     <p class="run" id="runinfo"></p>
@@ -304,8 +304,7 @@ footer p { margin: 4px 0; }
     function tick() {
       var now = new Date(), next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 6, 37));
       if (next <= now) next = new Date(next.getTime() + 86400000);
-      node.textContent = "Updated " + ago(now - upd) + " ago";
-      node.appendChild(el("span", { "class": "nx" }, " · next in " + ago(next - now)));
+      node.textContent = "Final data · tracking closed 12 Nov";
     }
     tick(); setInterval(tick, 30000);
   }
